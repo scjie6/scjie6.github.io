@@ -160,6 +160,67 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://scjie6.github.io/2022/02/15/Aura%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="scj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/15/Aura%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">Aura异常处理</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-15 22:48:19 / 修改时间：23:12:14" itemprop="dateCreated datePublished" datetime="2022-02-15T22:48:19+08:00">2022-02-15</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在重写自定义报价单对象列表页新建按钮时，复用了详情页自定义按钮对应的 lightning component 组件。在点击列表页新建按钮后，加载出lightning component 组件后，关闭该组件后发现其他对象标准的新建按钮弹出的modal框样式被lightning component 组件覆盖。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aura:html</span> <span class="attr">tag</span>=<span class="string">&quot;style&quot;</span>&gt;</span></span><br><span class="line">	.slds-modal__container&#123;</span><br><span class="line">		width:90% !important;</span><br><span class="line">		max-width: 90% !important;</span><br><span class="line">		height:auto;</span><br><span class="line">		top: 10%;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">aura:html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>处理方法：<br>判断在列表页时，样式覆盖加上 .THIS 确定作用域<br>在详情页时，去掉 .THIS，覆盖modal框固定宽度</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aura:renderif</span> <span class="attr">istrue</span>=<span class="string">&quot;&#123;! v.recordId != undefined&#125;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aura:html</span> <span class="attr">tag</span>=<span class="string">&quot;style&quot;</span>&gt;</span></span><br><span class="line">        .slds-modal__container&#123;</span><br><span class="line">                width:90% !important;</span><br><span class="line">                max-width: 90% !important;</span><br><span class="line">                height:auto;</span><br><span class="line">                top: 10%;</span><br><span class="line">            &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">aura:html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aura:renderif</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">aura:renderif</span> <span class="attr">istrue</span>=<span class="string">&quot;&#123;! v.recordId == undefined&#125;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aura:html</span> <span class="attr">tag</span>=<span class="string">&quot;style&quot;</span>&gt;</span></span><br><span class="line">        .THIS .slds-modal__container&#123;</span><br><span class="line">                width:90% !important;</span><br><span class="line">                max-width: 90% !important;</span><br><span class="line">                height:auto;</span><br><span class="line">                top: 10%;</span><br><span class="line">            &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">aura:html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aura:renderif</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://scjie6.github.io/2022/02/05/mianshi/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -409,7 +470,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
