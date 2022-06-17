@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"scjie6.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="计算机系统基础知识计算机系统硬件基本组成控制器，运算器，存储器，输入设备，输出设备 CPU运算器，控制器被集成在CPU(Central Processing Unit,CPU,中央处理单元)CPU功能 程序控制，操作控制，时间控制，数据处理 运算器组成 算术逻辑单元（ALU）arithmetic and logic unit 累加寄存器（AC）accumulation register 数据缓冲寄">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软考笔记">
+<meta property="og:url" content="https://scjie6.github.io/2022/06/14/%E8%BD%AF%E8%80%83%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="计算机系统基础知识计算机系统硬件基本组成控制器，运算器，存储器，输入设备，输出设备 CPU运算器，控制器被集成在CPU(Central Processing Unit,CPU,中央处理单元)CPU功能 程序控制，操作控制，时间控制，数据处理 运算器组成 算术逻辑单元（ALU）arithmetic and logic unit 累加寄存器（AC）accumulation register 数据缓冲寄">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-06-14T09:56:57.000Z">
+<meta property="article:modified_time" content="2022-06-17T15:16:56.194Z">
+<meta property="article:author" content="scj">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://scjie6.github.io/2022/06/14/%E8%BD%AF%E8%80%83%E7%AC%94%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>软考笔记 | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://scjie6.github.io/2022/06/14/%E8%BD%AF%E8%80%83%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="scj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          软考笔记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-06-14 17:56:57" itemprop="dateCreated datePublished" datetime="2022-06-14T17:56:57+08:00">2022-06-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-06-17 23:16:56" itemprop="dateModified" datetime="2022-06-17T23:16:56+08:00">2022-06-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="计算机系统基础知识"><a href="#计算机系统基础知识" class="headerlink" title="计算机系统基础知识"></a>计算机系统基础知识</h1><p>计算机系统硬件基本组成<br>控制器，运算器，存储器，输入设备，输出设备</p>
+<h2 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h2><p>运算器，控制器被集成在CPU(Central Processing Unit,CPU,中央处理单元)<br>CPU功能</p>
+<p>程序控制，操作控制，时间控制，数据处理</p>
+<h3 id="运算器组成"><a href="#运算器组成" class="headerlink" title="运算器组成"></a>运算器组成</h3><ol>
+<li>算术逻辑单元（ALU）arithmetic and logic unit</li>
+<li>累加寄存器（AC）accumulation register</li>
+<li>数据缓冲寄存器（DR）Data register</li>
+<li>状态条件寄存器（PSW）program status word</li>
+</ol>
+<h3 id="控制器组成"><a href="#控制器组成" class="headerlink" title="控制器组成"></a>控制器组成</h3><ol>
+<li>指令寄存器（IR）Instruction Register</li>
+<li>程序计数器（PC）Program Counter</li>
+<li>地址寄存器（AR）Address Register</li>
+<li>指令译码器（ID）Instruction Decoder</li>
+</ol>
+<p>指令：操作码+地址码</p>
+<h2 id="计算机基本单位"><a href="#计算机基本单位" class="headerlink" title="计算机基本单位"></a>计算机基本单位</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>EN</th>
+<th>简称</th>
+<th>换算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>位（比特）</td>
+<td>bit</td>
+<td>b</td>
+<td></td>
+</tr>
+<tr>
+<td>字节</td>
+<td>byte</td>
+<td>B</td>
+<td>1B=8b</td>
+</tr>
+<tr>
+<td>千字节</td>
+<td></td>
+<td>KB</td>
+<td>1KB=1024B</td>
+</tr>
+<tr>
+<td>兆字节</td>
+<td></td>
+<td>MB</td>
+<td>1MB=1024KB</td>
+</tr>
+<tr>
+<td>吉字节</td>
+<td></td>
+<td>GB</td>
+<td>1GB=1024MB</td>
+</tr>
+<tr>
+<td>太字节</td>
+<td></td>
+<td>TB</td>
+<td>1TB=1024GB</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>最小的数据单位：b</p>
+<p>最小的存储单位：byte</p>
+<h2 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>简称</th>
+<th>EN</th>
+<th>一位表示范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>十进制</td>
+<td>D</td>
+<td>Decimal System</td>
+<td>0～9</td>
+</tr>
+<tr>
+<td>二进制</td>
+<td>B</td>
+<td>Binary number</td>
+<td>0～1</td>
+</tr>
+<tr>
+<td>八进制</td>
+<td>O</td>
+<td>Octal</td>
+<td>0～7</td>
+</tr>
+<tr>
+<td>十六进制</td>
+<td>H</td>
+<td>Hex</td>
+<td>0～15 （0～9 a～f）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ol>
+<li>按权展开求和 n进制-&gt;十进制</li>
+<li>除n取余法 十进制-&gt;n进制</li>
+</ol>
+<p>一位十六进制的数=4位二进制的数<br>一位八进制的数=3位二进制的数</p>
+<h3 id="进制加减法"><a href="#进制加减法" class="headerlink" title="进制加减法"></a>进制加减法</h3><p>加法 逢n进1</p>
+<p>减法 逢n借1</p>
+<h3 id="数据表示"><a href="#数据表示" class="headerlink" title="数据表示"></a>数据表示</h3><p>原码表示法：最高位为符号位，0表示正号，1表示负号，其余的n-1表示数值的绝对值。</p>
+<p>0的原码有两种形式：[+0]原=0 0000000，[-0]原=1 0000000</p>
+<p>反码表示法：最高位为符号位，0表示正号，1表示负号，正数的反码与原码相同，负数的反码则是其绝对值按位求反。</p>
+<p>0的反码有两种形式：[+0]反=0 0000000，[-0]反=1 1111111</p>
+<p>补码表示法：最高位为符号位，0表示正号，1表示负号，正数的补码与原码，反码相同，负数的补码等于其反码的末尾加1</p>
+<p> 0有唯一的编码：[+0]补=0 000000，[-0]补=0 000000</p>
+<p>移码表示法：补码的符号取反</p>
+<p>补码的补码等于原码</p>
+<p>1735年，年仅28岁欧拉大神居然算出了级数 </p>
+<script type="math/tex; mode=display">\sum_{n=1}^{\infty}\frac{1}{n^{2k}}=\frac{\pi^2}{6}</script><p>轰动了整个数学界, 要知道, 这个问题可是莱布尼茨，牛顿都搞不定的.6年之后的1741年，欧拉终于把这个瑕疵也补上了，此时巴塞尔问题才算真正被完全解决。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>码制</th>
+<th>定点整数</th>
+<th>定点小数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原码</td>
+<td><script type="math/tex">-(2^n-1 -1) ~ +(2^n-1 -1)</script></td>
+<td>-(1-2^-(n-1))~+(1-2^-(n-1))</td>
+</tr>
+<tr>
+<td>反码</td>
+<td>-(2^n-1 -1) ~ +(2^n-1 -1)</td>
+<td>-(1-2^-(n-1))~+(1-2^-(n-1))</td>
+</tr>
+<tr>
+<td>补码</td>
+<td>-2^n-1 ~ +(2^n-1 -1)</td>
+<td>-1 ~ +(1-2^-(n-1))</td>
+</tr>
+<tr>
+<td>移码</td>
+<td>-2^n-1 ~ +(2^n-1 -1)</td>
+<td>-1 ~ +(1-2^-(n-1))</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="寻址"><a href="#寻址" class="headerlink" title="寻址"></a>寻址</h2><p>立即寻址：操作数就在指令中。</p>
+<p>直接寻址：操作数存放在内存单元中，指令中直接给出操作数所在存储单元的地址。</p>
+<p>寄存器寻址：操作数存放在某一寄存器中，指令中给出存放操作数的寄存器名。</p>
+<p>寄存器间接寻址：操作数存放在内存单元中，操作数所在存储单元的地址在某个寄存器中。</p>
+<p>间接寻址：指令中给出操作数地址的地址。</p>
+<h2 id="校验码"><a href="#校验码" class="headerlink" title="校验码"></a>校验码</h2><p>码距=2，有检错能力<br>码距&gt;=3，才可能有纠错能力</p>
+<ol>
+<li>奇偶检验码</li>
+<li>海明码（设数据位是n位，校验位是k位，则n和k必须满足以下关系：<br>2^k -1 &gt;= n+k）（利用多组数位的奇偶性来检错和纠错）</li>
+<li>循环冗余校验码(可以检错，不能纠错，码距=2)</li>
+</ol>
+<h2 id="指令集"><a href="#指令集" class="headerlink" title="指令集"></a>指令集</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>精简指令集RISC</th>
+<th>复杂指令集CISC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>指令种类</td>
+<td>少，精简</td>
+<td>多，丰富</td>
+</tr>
+<tr>
+<td>指令复杂度</td>
+<td>低（简单）</td>
+<td>高（复杂）</td>
+</tr>
+<tr>
+<td>指令长度</td>
+<td>固定</td>
+<td>变化</td>
+</tr>
+<tr>
+<td>寻址方式</td>
+<td>少</td>
+<td>复杂多样</td>
+</tr>
+<tr>
+<td>实现（译码）方式</td>
+<td>硬布线控制逻辑（组合逻辑控制器）</td>
+<td>微程序控制技术</td>
+</tr>
+<tr>
+<td>通用寄存器数量</td>
+<td>多，大量</td>
+<td>一般</td>
+</tr>
+<tr>
+<td>流水线技术</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="指令流水线"><a href="#指令流水线" class="headerlink" title="指令流水线"></a>指令流水线</h2><p>流水线:第1条指令的执行时间+（n-1）*(最长的时间段)</p>
+<p>加速比=不采用流水线/采用流水线 </p>
+<p>操作周期=最长时间段</p>
+<p>吞吐率=1/最长时间段</p>
+<p>执行n条指令的吞吐率=n/流水线</p>
+<h2 id="存储器"><a href="#存储器" class="headerlink" title="存储器"></a>存储器</h2><p>按存储器所处位置可分为：内存，外存</p>
+<p>按存储器工作方式可分为：</p>
+<ol>
+<li>读写存储器RAM</li>
+<li>只读存储器ROM</li>
+<li>闪速存储器Flash Memory,可以整块删除</li>
+</ol>
+<p>按访问方式可分为：地址访问存储器，内容访问存储器</p>
+<p>按寻址方式可分为：</p>
+<ol>
+<li>随机存储器 RAM</li>
+<li>顺序存储器 SAM</li>
+<li>直接存储器 DAM</li>
+</ol>
+<p>相联存储器是一种按内容访问的存储器</p>
+<p>虚拟存储器由主存，辅存构成</p>
+<p>DRAM 动态随机存储，是一种需要通过周期性刷新来保持数据的存储器件</p>
+<h2 id="Cache"><a href="#Cache" class="headerlink" title="Cache"></a>Cache</h2><p>高速缓存用于存放最活跃的程序和数据，特点：位于CPU与主存之间；容量一般在几千字节到几兆字节之间</p>
+<p>高速缓存对程序员来说是透明的</p>
+<p>Cache与主存地址的映射是由硬件自动完成</p>
+<h3 id="替换算法"><a href="#替换算法" class="headerlink" title="替换算法"></a>替换算法</h3><p>替换算法的目标就是使Cache获得尽可能高的命中率</p>
+<p>高速缓存中的地址映像方法</p>
+<ol>
+<li>直接映像(冲突大)</li>
+<li>全相联映像(冲突小)</li>
+<li>组相联映像(冲突较小)</li>
+</ol>
+<h2 id="中断"><a href="#中断" class="headerlink" title="中断"></a>中断</h2><ol>
+<li>中断向量:把所有中断服务程序的入口地址（或称为中断向量）汇集为中断向量表</li>
+<li>中断响应时间：发出中断请求开始，到进入中断服务程序</li>
+<li>保存现场：返回执行源程序</li>
+</ol>
+<h2 id="输入输出（IO）控制方式"><a href="#输入输出（IO）控制方式" class="headerlink" title="输入输出（IO）控制方式"></a>输入输出（IO）控制方式</h2><ol>
+<li>程序查询方式:<ol>
+<li>cpu和I/O（外设）只能串行工作，CPU需要一直轮询检查，长期处于忙等状态。CPU利用率低</li>
+<li>一次只能读/写一个字8bit</li>
+<li>由CPU将数放入内存</li>
+</ol>
+</li>
+<li>中断驱动方式：<ol>
+<li>I/O设备通过中断信号主动报告I/O操作已完成</li>
+<li>CPU和I/O（外设）可并行工作</li>
+<li>CPU利用率得到提升</li>
+<li>一次只能读/写一个字8bit</li>
+<li>由CPU将数据放入内存</li>
+</ol>
+</li>
+<li>直接存储器方式（DMA）<ol>
+<li>CPU和I/O（外设）可并行工作</li>
+<li>仅在传输数据块的开始和结束时才需要CPU的干预</li>
+<li>有外设直接将数据放入内存</li>
+<li>一次读写的单位为快而不是字</li>
+<li>DMA操作占用系统总线资源</li>
+</ol>
+</li>
+</ol>
+<h2 id="总线Bus（了解）"><a href="#总线Bus（了解）" class="headerlink" title="总线Bus（了解）"></a>总线Bus（了解）</h2><p>数据总线，地址总线，控制总线</p>
+<p>PCI总线，内总线，采用并行传输方式</p>
+<p>SCSI:并行外总线</p>
+<p>总线复用可以减少总线中信号线的数量</p>
+<h2 id="加密技术与认证技术"><a href="#加密技术与认证技术" class="headerlink" title="加密技术与认证技术"></a>加密技术与认证技术</h2><p>窃听 ：加密</p>
+<p>篡改：摘要</p>
+<p>假冒，否认：数字证书，数字签名</p>
+<h3 id="加密技术："><a href="#加密技术：" class="headerlink" title="加密技术："></a>加密技术：</h3><pre><code>1. 对称加密（私有密钥加密）：加密和解密是同一把密钥，密钥分发有缺陷
+        优点：加密解密速度快，适合大量明文数据
+2. 非对称加密（公开密钥加密）：加密和解密不是同一把密钥，一共有两把密钥，分别是公钥和私钥
+        公钥加密，验证
+        私钥解密，签名
+        不能通过一把推出另一把
+
+        用接收方的公钥加密明文可以实现防止窃听的效果
+        密钥分发没有缺陷
+        1. 加密解密速度慢
+3. 混合加密
+</code></pre><h3 id="认证技术："><a href="#认证技术：" class="headerlink" title="认证技术："></a>认证技术：</h3><p>认证处理主动攻击</p>
+<ol>
+<li>摘要：将发送的明文进行Hash算法后得到摘要放在密文后一起发出，与接收方解密后的明文进行相同Hash算法得到的摘要进行对比，如果一致则没有篡改，否则有篡改</li>
+<li><p>数字签名：发送方用自己的私钥对摘要进行签名（加密），得到数字签名放在密文后一起发送过去<br> 接收方用发送方的公钥对数字签名进行验证（解密）如果验证成功则该消息没有被假冒且不能否认，否则该消息的真实性为假冒发送</p>
+</li>
+<li><p>数字证书：</p>
+<pre><code>     用户向CA机构申请数字证书
+     将个人信息和公钥发给CA机构
+     CA机构颁发给用户数字证书
+     数字证书用CA的私钥进行签名（加密）
+     用CA的公钥验证（解密）数字证书
+     得到用户的公钥
+</code></pre></li>
+</ol>
+<h3 id="加密算法："><a href="#加密算法：" class="headerlink" title="加密算法："></a>加密算法：</h3><p>对称密钥（私钥，私有密钥加密）算法：<br>（共享密钥加密算法）</p>
+<ol>
+<li>DES</li>
+<li>3DES</li>
+<li>RC-5</li>
+<li>IDEA</li>
+<li>AES（分组加密）</li>
+<li>RC4</li>
+</ol>
+<p>非对称密钥（公钥，公开密钥加密）算法：</p>
+<ol>
+<li>RSA</li>
+<li>ECC</li>
+<li>DSA</li>
+</ol>
+<p>Hash函数</p>
+<p>MD5摘要算法（生成128位）</p>
+<p>SHA-1安全散列算法</p>
+<h3 id="可靠性公式："><a href="#可靠性公式：" class="headerlink" title="可靠性公式："></a>可靠性公式：</h3><ol>
+<li>串联系统：R=R1R2…Rn</li>
+<li>并联系统:R=1-(1-R1)(1-R2)…(1-Rn)</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/02/15/Aura%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="prev" title="Aura异常处理">
+      <i class="fa fa-chevron-left"></i> Aura异常处理
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">计算机系统基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CPU"><span class="nav-number">1.1.</span> <span class="nav-text">CPU</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E5%99%A8%E7%BB%84%E6%88%90"><span class="nav-number">1.1.1.</span> <span class="nav-text">运算器组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8%E7%BB%84%E6%88%90"><span class="nav-number">1.1.2.</span> <span class="nav-text">控制器组成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D"><span class="nav-number">1.2.</span> <span class="nav-text">计算机基本单位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.3.</span> <span class="nav-text">进制转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%88%B6%E5%8A%A0%E5%87%8F%E6%B3%95"><span class="nav-number">1.3.2.</span> <span class="nav-text">进制加减法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA"><span class="nav-number">1.3.3.</span> <span class="nav-text">数据表示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BB%E5%9D%80"><span class="nav-number">1.4.</span> <span class="nav-text">寻址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%A1%E9%AA%8C%E7%A0%81"><span class="nav-number">1.5.</span> <span class="nav-text">校验码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E9%9B%86"><span class="nav-number">1.6.</span> <span class="nav-text">指令集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF"><span class="nav-number">1.7.</span> <span class="nav-text">指令流水线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8"><span class="nav-number">1.8.</span> <span class="nav-text">存储器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cache"><span class="nav-number">1.9.</span> <span class="nav-text">Cache</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2%E7%AE%97%E6%B3%95"><span class="nav-number">1.9.1.</span> <span class="nav-text">替换算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%AD"><span class="nav-number">1.10.</span> <span class="nav-text">中断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%EF%BC%88IO%EF%BC%89%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F"><span class="nav-number">1.11.</span> <span class="nav-text">输入输出（IO）控制方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BA%BFBus%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">1.12.</span> <span class="nav-text">总线Bus（了解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E6%8A%80%E6%9C%AF%E4%B8%8E%E8%AE%A4%E8%AF%81%E6%8A%80%E6%9C%AF"><span class="nav-number">1.13.</span> <span class="nav-text">加密技术与认证技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E6%8A%80%E6%9C%AF%EF%BC%9A"><span class="nav-number">1.13.1.</span> <span class="nav-text">加密技术：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A4%E8%AF%81%E6%8A%80%E6%9C%AF%EF%BC%9A"><span class="nav-number">1.13.2.</span> <span class="nav-text">认证技术：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%EF%BC%9A"><span class="nav-number">1.13.3.</span> <span class="nav-text">加密算法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E9%9D%A0%E6%80%A7%E5%85%AC%E5%BC%8F%EF%BC%9A"><span class="nav-number">1.13.4.</span> <span class="nav-text">可靠性公式：</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">scj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">scj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
