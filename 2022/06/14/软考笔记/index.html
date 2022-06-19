@@ -28,7 +28,7 @@
 <meta property="og:description" content="计算机系统基础知识计算机系统硬件基本组成控制器，运算器，存储器，输入设备，输出设备 CPU运算器，控制器被集成在CPU(Central Processing Unit,CPU,中央处理单元)CPU功能 程序控制，操作控制，时间控制，数据处理 运算器组成 算术逻辑单元（ALU）arithmetic and logic unit 累加寄存器（AC）accumulation register 数据缓冲寄">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-14T09:56:57.000Z">
-<meta property="article:modified_time" content="2022-06-17T15:16:56.194Z">
+<meta property="article:modified_time" content="2022-06-19T14:55:29.959Z">
 <meta property="article:author" content="scj">
 <meta name="twitter:card" content="summary">
 
@@ -195,7 +195,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-17 23:16:56" itemprop="dateModified" datetime="2022-06-17T23:16:56+08:00">2022-06-17</time>
+                <time title="修改时间：2022-06-19 22:55:29" itemprop="dateModified" datetime="2022-06-19T22:55:29+08:00">2022-06-19</time>
               </span>
 
           
@@ -330,8 +330,6 @@
 <p> 0有唯一的编码：[+0]补=0 000000，[-0]补=0 000000</p>
 <p>移码表示法：补码的符号取反</p>
 <p>补码的补码等于原码</p>
-<p>1735年，年仅28岁欧拉大神居然算出了级数 </p>
-<script type="math/tex; mode=display">\sum_{n=1}^{\infty}\frac{1}{n^{2k}}=\frac{\pi^2}{6}</script><p>轰动了整个数学界, 要知道, 这个问题可是莱布尼茨，牛顿都搞不定的.6年之后的1741年，欧拉终于把这个瑕疵也补上了，此时巴塞尔问题才算真正被完全解决。</p>
 <div class="table-container">
 <table>
 <thead>
@@ -344,7 +342,7 @@
 <tbody>
 <tr>
 <td>原码</td>
-<td><script type="math/tex">-(2^n-1 -1) ~ +(2^n-1 -1)</script></td>
+<td>-(2^n-1 -1) ~ +(2^n-1 -1)</td>
 <td>-(1-2^-(n-1))~+(1-2^-(n-1))</td>
 </tr>
 <tr>
@@ -539,7 +537,53 @@
 <li>串联系统：R=R1R2…Rn</li>
 <li>并联系统:R=1-(1-R1)(1-R2)…(1-Rn)</li>
 </ol>
+<h1 id="程序设计语言基础知识"><a href="#程序设计语言基础知识" class="headerlink" title="程序设计语言基础知识"></a>程序设计语言基础知识</h1><p>低级语言：机器语言和汇编语言</p>
+<p>高级语言：C,C++,JAVA….</p>
+<p>解释器：</p>
+<pre><code>    翻译源程序时不生成独立的目标程序
+    解释程序和源程序要参与到程序的运行过程中
+</code></pre><p>编译器：</p>
+<pre><code>    翻译时将源程序翻译成独立保存的目标程序
+    源程序和编译程序都不再参与目标程序的运行过程
+</code></pre><p>程序三种基本控制结构：</p>
+<pre><code>1. 顺序
+2. 选择
+3. 重复
+</code></pre><p>程序设计语言规定其程序中的数据必须具有类型，则有利于：</p>
+<pre><code>1. 便于为数据合理分配存储单元
+2. 便于对参与表达式计算的数据对象进行检查
+3. 便于规定数据对象的取值范围及能够进行的运算
+</code></pre><h3 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h3><p>返回值类型 函数名（形式参数） {函数体；} </p>
+<ol>
+<li>值调用（Call by Value）:将实参的值传递给形参，实参可以是变量，常量和表达式。不可以实现形参和实参间双向传递数据的效果</li>
+<li>引用调用（Call by Reference）:将实参的地址传递给形参，形参必须有地址，实参不能是常量（值），表达式。可以实现形参和实参间双向传递数据的效果，即改变形参的值同时也改变了实参的值</li>
+</ol>
+<h3 id="编译方式"><a href="#编译方式" class="headerlink" title="编译方式"></a>编译方式</h3><p>词法分析，语法分析，语义分析，中间代码生成，代码优化，目标代码生成</p>
+<h3 id="解释方式"><a href="#解释方式" class="headerlink" title="解释方式"></a>解释方式</h3><p>词法分析，语法分析，语义分析</p>
+<p>编译器和解释器都不可省略词法分析，语法分析，语义分析且顺序不可交换</p>
+<p>即词法分析，语法分析，语义分析是必须的</p>
+<p>编译器方式中中间代码生成和代码优化不是必要，可省略</p>
+<p>即编译器方式可以在词法分析，语法分析，语义分析阶段后直接生成目标代码</p>
+<h3 id="符号表："><a href="#符号表：" class="headerlink" title="符号表："></a>符号表：</h3><pre><code>不断收集，记录和使用源程序中一些相关符号的类型和特征等信息，并将其存入符号表中
+记录源程序中各个字符的必要信息，以辅助语义的正确性检查和代码生成
+</code></pre><h3 id="词法分析"><a href="#词法分析" class="headerlink" title="词法分析"></a>词法分析</h3><pre><code>输入：源程序
+输出：记号流
+词法分析阶段的主要作用是分析构成程序的字符及由字符按照构造规则构成的符号是否符合程序语言的规定
+</code></pre><h3 id="语法分析"><a href="#语法分析" class="headerlink" title="语法分析"></a>语法分析</h3><pre><code>输入：记号流
+输出：语法树（分析树）
+语法分析阶段的主要作用是
+对各条语句的结构进行合法性分析
+分析程序中的句子结构是否正确
+</code></pre><h3 id="语义分析"><a href="#语义分析" class="headerlink" title="语义分析"></a>语义分析</h3><p>分析个语法结构的含义，检查源程序是否包含静态语义错误</p>
+<pre><code>输入：语法树（分析树）
+语义分析阶段的主要作用是进行类型分析和检查
 
+语义分析阶段不能发现程序中所有的语义错误
+语义分析阶段可以发现静态语义错误
+不能发现动态语义错误，动态语义错误运行时才能发现
+</code></pre><h3 id="目标代码生成"><a href="#目标代码生成" class="headerlink" title="目标代码生成"></a>目标代码生成</h3><pre><code>目标代码生成阶段的工作与具体的机器密切相关
+寄存器的分配处于目标代码生成阶段
+</code></pre>
     </div>
 
     
@@ -616,7 +660,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">计算机系统基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CPU"><span class="nav-number">1.1.</span> <span class="nav-text">CPU</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E5%99%A8%E7%BB%84%E6%88%90"><span class="nav-number">1.1.1.</span> <span class="nav-text">运算器组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8%E7%BB%84%E6%88%90"><span class="nav-number">1.1.2.</span> <span class="nav-text">控制器组成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D"><span class="nav-number">1.2.</span> <span class="nav-text">计算机基本单位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.3.</span> <span class="nav-text">进制转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%88%B6%E5%8A%A0%E5%87%8F%E6%B3%95"><span class="nav-number">1.3.2.</span> <span class="nav-text">进制加减法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA"><span class="nav-number">1.3.3.</span> <span class="nav-text">数据表示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BB%E5%9D%80"><span class="nav-number">1.4.</span> <span class="nav-text">寻址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%A1%E9%AA%8C%E7%A0%81"><span class="nav-number">1.5.</span> <span class="nav-text">校验码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E9%9B%86"><span class="nav-number">1.6.</span> <span class="nav-text">指令集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF"><span class="nav-number">1.7.</span> <span class="nav-text">指令流水线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8"><span class="nav-number">1.8.</span> <span class="nav-text">存储器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cache"><span class="nav-number">1.9.</span> <span class="nav-text">Cache</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2%E7%AE%97%E6%B3%95"><span class="nav-number">1.9.1.</span> <span class="nav-text">替换算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%AD"><span class="nav-number">1.10.</span> <span class="nav-text">中断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%EF%BC%88IO%EF%BC%89%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F"><span class="nav-number">1.11.</span> <span class="nav-text">输入输出（IO）控制方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BA%BFBus%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">1.12.</span> <span class="nav-text">总线Bus（了解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E6%8A%80%E6%9C%AF%E4%B8%8E%E8%AE%A4%E8%AF%81%E6%8A%80%E6%9C%AF"><span class="nav-number">1.13.</span> <span class="nav-text">加密技术与认证技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E6%8A%80%E6%9C%AF%EF%BC%9A"><span class="nav-number">1.13.1.</span> <span class="nav-text">加密技术：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A4%E8%AF%81%E6%8A%80%E6%9C%AF%EF%BC%9A"><span class="nav-number">1.13.2.</span> <span class="nav-text">认证技术：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%EF%BC%9A"><span class="nav-number">1.13.3.</span> <span class="nav-text">加密算法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E9%9D%A0%E6%80%A7%E5%85%AC%E5%BC%8F%EF%BC%9A"><span class="nav-number">1.13.4.</span> <span class="nav-text">可靠性公式：</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">计算机系统基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CPU"><span class="nav-number">1.1.</span> <span class="nav-text">CPU</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E5%99%A8%E7%BB%84%E6%88%90"><span class="nav-number">1.1.1.</span> <span class="nav-text">运算器组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8%E7%BB%84%E6%88%90"><span class="nav-number">1.1.2.</span> <span class="nav-text">控制器组成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D"><span class="nav-number">1.2.</span> <span class="nav-text">计算机基本单位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.3.</span> <span class="nav-text">进制转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%88%B6%E5%8A%A0%E5%87%8F%E6%B3%95"><span class="nav-number">1.3.2.</span> <span class="nav-text">进制加减法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA"><span class="nav-number">1.3.3.</span> <span class="nav-text">数据表示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BB%E5%9D%80"><span class="nav-number">1.4.</span> <span class="nav-text">寻址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%A1%E9%AA%8C%E7%A0%81"><span class="nav-number">1.5.</span> <span class="nav-text">校验码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E9%9B%86"><span class="nav-number">1.6.</span> <span class="nav-text">指令集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF"><span class="nav-number">1.7.</span> <span class="nav-text">指令流水线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%99%A8"><span class="nav-number">1.8.</span> <span class="nav-text">存储器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cache"><span class="nav-number">1.9.</span> <span class="nav-text">Cache</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2%E7%AE%97%E6%B3%95"><span class="nav-number">1.9.1.</span> <span class="nav-text">替换算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%AD"><span class="nav-number">1.10.</span> <span class="nav-text">中断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%EF%BC%88IO%EF%BC%89%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F"><span class="nav-number">1.11.</span> <span class="nav-text">输入输出（IO）控制方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BA%BFBus%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">1.12.</span> <span class="nav-text">总线Bus（了解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E6%8A%80%E6%9C%AF%E4%B8%8E%E8%AE%A4%E8%AF%81%E6%8A%80%E6%9C%AF"><span class="nav-number">1.13.</span> <span class="nav-text">加密技术与认证技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E6%8A%80%E6%9C%AF%EF%BC%9A"><span class="nav-number">1.13.1.</span> <span class="nav-text">加密技术：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A4%E8%AF%81%E6%8A%80%E6%9C%AF%EF%BC%9A"><span class="nav-number">1.13.2.</span> <span class="nav-text">认证技术：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%EF%BC%9A"><span class="nav-number">1.13.3.</span> <span class="nav-text">加密算法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E9%9D%A0%E6%80%A7%E5%85%AC%E5%BC%8F%EF%BC%9A"><span class="nav-number">1.13.4.</span> <span class="nav-text">可靠性公式：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">2.</span> <span class="nav-text">程序设计语言基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89"><span class="nav-number">2.0.1.</span> <span class="nav-text">函数定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E6%96%B9%E5%BC%8F"><span class="nav-number">2.0.2.</span> <span class="nav-text">编译方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E9%87%8A%E6%96%B9%E5%BC%8F"><span class="nav-number">2.0.3.</span> <span class="nav-text">解释方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E8%A1%A8%EF%BC%9A"><span class="nav-number">2.0.4.</span> <span class="nav-text">符号表：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%8D%E6%B3%95%E5%88%86%E6%9E%90"><span class="nav-number">2.0.5.</span> <span class="nav-text">词法分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90"><span class="nav-number">2.0.6.</span> <span class="nav-text">语法分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E4%B9%89%E5%88%86%E6%9E%90"><span class="nav-number">2.0.7.</span> <span class="nav-text">语义分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90"><span class="nav-number">2.0.8.</span> <span class="nav-text">目标代码生成</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
