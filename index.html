@@ -191,7 +191,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-22 19:57:42" itemprop="dateModified" datetime="2022-06-22T19:57:42+08:00">2022-06-22</time>
+                <time title="修改时间：2022-06-24 23:41:49" itemprop="dateModified" datetime="2022-06-24T23:41:49+08:00">2022-06-24</time>
               </span>
 
           
@@ -220,12 +220,53 @@
 </ol>
 <h2 id="递归式-时间复杂度，空间复杂度"><a href="#递归式-时间复杂度，空间复杂度" class="headerlink" title="递归式 时间复杂度，空间复杂度"></a>递归式 时间复杂度，空间复杂度</h2><p>（每次递归的时间复杂度不变的情况）时间复杂度=递归的次数 * 每次递归的时间复杂度</p>
 <p>主方法，主定理，求解递归</p>
-<p>zd<br><strong>The Cauchy-Schwarz Inequality</strong></p>
-<script type="math/tex; mode=display">\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)</script><iframe src="https://scjie6.github.io/jax/t.html?a=%24%24%20J%28%5Ctheta%29%3D%5Csqrt%7B%5Cfrac%7B1%7D%7BN%7D%5Csum_%7Bi%3D1%7D%5E%7BN%7D%7B%28h_%5Ctheta%28x_i%29-y_i%29%5E2%7D%7D%20%24%24" height="100px" width="700px" frameborder="0" scrolling="no"> </iframe>
-
-
-<p><img src="https://render.githubusercontent.com/render/math?math=e_%7Bij%7D%20%3D%20s_%7Bi-1%7D%5ET%20W%20h_j" alt="math"></p>
-<p>123123</p>
+<h2 id="线性结构"><a href="#线性结构" class="headerlink" title="线性结构"></a>线性结构</h2><p>是一种基本数据结构，对单一前驱和后继的数据关系进行描述（即元素一个接一个排列）</p>
+<h3 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h3><p>常采用顺序存储和链式存储，基本操作是插入，删除和查找</p>
+<p>定义：一个线性表是n(n&gt;=0)个元素的有限序列，通常表示为（a1,a2,a3…an）.</p>
+<h4 id="线性表存储结构"><a href="#线性表存储结构" class="headerlink" title="线性表存储结构"></a>线性表存储结构</h4><ol>
+<li><p>顺序存储</p>
+<pre><code> 用一组地址连续的存储单元依次存储线性表中的数据元素。从而使逻辑上相邻的两个元素物理位置上也相邻。
+ 优点：随机存取表中的元素
+ 缺点：插入和删除操作需要移动元素
+ 插入的时间复杂度：最好O(1),最坏O(n),平均O(n)
+ 删除的时间复杂度：最好O(1),最坏O(n),平均O(n)
+ 查找的时间复杂度：最好O(1),最坏O(1),平均O(1)
+</code></pre></li>
+<li><p>链式存储</p>
+<pre><code> 用通过指针链接起来的结点来存储数据元素（数据域｜指针域）
+ 数据域存储数据元素值，指针域存储当前元素的直接前驱或直接后继的位置信息
+ 带头结点
+         插入时间复杂度：最好O(1),最坏O(n),平均O(n)
+         删除时间复杂度：最好O(1),最坏O(n),平均O(n)
+         查找的时间复杂度：最好O(1),最坏O(n),平均O(n)
+ 不带头结点
+         插入时间复杂度：最好O(1),最坏O(n),平均O(n)
+         删除时间复杂度：最好O(1),最坏O(n),平均O(n)
+         查找的时间复杂度：最好O(1),最坏O(n),平均O(n)åå
+</code></pre></li>
+</ol>
+<h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><p>栈是只能通过访问它的一端来实现数据存储和检索的一种线性数据结构。</p>
+<p>栈也被称为是后进先出（LIFO,Last In First Out）的线性表</p>
+<p>在栈中进行插入和删除操作的一端称为栈顶（Top）,另一端称为栈底（Bottom）</p>
+<h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><p>队列是一种先进先出（FIFO,First in First Out）的线性表,只允许在表的一端插入元素，在表的另一端删除元素。在队列中，允许插入元素的一端称为队尾（Rear）,允许删除元素的一端称为队头（Front）</p>
+<h4 id="队列的顺序存储"><a href="#队列的顺序存储" class="headerlink" title="队列的顺序存储"></a>队列的顺序存储</h4><p>队列的顺序存储结构又称为顺序队列，它是利用一组地址连续的存储单元存放队列中的元素，设置队头指针和队尾指针。</p>
+<h4 id="队列的链式存储"><a href="#队列的链式存储" class="headerlink" title="队列的链式存储"></a>队列的链式存储</h4><h3 id="串"><a href="#串" class="headerlink" title="串"></a>串</h3><h4 id="串的模式匹配"><a href="#串的模式匹配" class="headerlink" title="串的模式匹配"></a>串的模式匹配</h4><pre><code>    n:主串，m:子串
+    最好：O(m)
+    最坏：O(n*m)
+    平均：O(n+m)
+</code></pre><p>KMP</p>
+<pre><code>    串的前缀：包含第一个字符并且不包含最后一个字符的子串
+    串的后缀：包含最后一个字符并且不包含第一个字符的子串
+    第i个字符的next值=从1～i-1串中最长相等前后缀长度+1
+    特殊情况：next[1]=0
+</code></pre><h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><p>LOC：第一个元素的首地址，L：元素大小</p>
+<p>下标从0开始：ai=LOC+i*L</p>
+<p>下标从1开始：ai=LOC+(i-1)*L</p>
+<h3 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h3><p>LOC：第一个元素的首地址，N:行数，M:列数，L：元素大小</p>
+<p>按行优先存储并且下标从0开始：ai,j=LOC+(i<em>M+j)</em>L</p>
+<p>按行优先存储并且下标从1开始：ai,j=LOC+[(i-1)<em>M+(j-1)]</em>L</p>
+<p>按列优先存储并且下标从0开始：ai,j=LOC+(j<em>N+i)</em>L</p>
+<p>按列优先存储并且下标从1开始：ai,j=LOC+[(j-1)<em>N+(i-1)]</em>L</p>
 
       
     </div>
