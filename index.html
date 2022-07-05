@@ -191,7 +191,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-04 11:45:45" itemprop="dateModified" datetime="2022-07-04T11:45:45+08:00">2022-07-04</time>
+                <time title="修改时间：2022-07-05 17:59:34" itemprop="dateModified" datetime="2022-07-05T17:59:34+08:00">2022-07-05</time>
               </span>
 
           
@@ -209,13 +209,13 @@
 <p>时间空间复杂度，线性表，矩阵，树，图，查找，排序</p>
 <h2 id="时间复杂度">时间复杂度</h2>
 <p>算法时间复杂度以算法中基本操作重复执行的次数（简称为频度）作为算法的时间度量。</p>
-<p>O(1)&lt;O(log2n)&lt;O(n)&lt;O(nlog2n)&lt;O(n<sup>2)&lt;O(n</sup>3)&lt;O(2<sup>n)&lt;O(n!)&lt;O(n</sup>n)</p>
+<p><span class="math inline">\(O(1)\)</span>&lt;<span class="math inline">\(O(log_2n)\)</span>&lt;<span class="math inline">\(O(n)\)</span>&lt;<span class="math inline">\(O(nlog_2n)\)</span>&lt;<span class="math inline">\(O(n^2)\)</span>&lt;<span class="math inline">\(O(n^3)\)</span>&lt;<span class="math inline">\(O(2^n)\)</span>&lt;<span class="math inline">\(O(n!)\)</span>&lt;<span class="math inline">\(O(n^n)\)</span></p>
 <p>常数阶&lt;对数阶&lt;线性阶&lt;线性对数阶&lt;平方阶&lt;立方阶&lt;指数阶&lt;阶乘阶&lt;N次方阶</p>
 <p>加法规则：多项相加，保留最高阶项，并将系数化为1</p>
 <p>乘法规则：多项相乘都保留，并将系数化为1</p>
 <p>加法乘法混合规则：小括号再乘法规则最后加法规则</p>
 <h2 id="空间复杂度">空间复杂度</h2>
-<p>O(1),O(n),O(n^2)</p>
+<p><span class="math inline">\(O(1)\)</span>,<span class="math inline">\(O(n)\)</span>,<span class="math inline">\(O(n^2)\)</span></p>
 <h2 id="渐进符号">渐进符号</h2>
 <ol type="1">
 <li>O记号，渐进上界</li>
@@ -229,7 +229,7 @@
 <p>是一种基本数据结构，对单一前驱和后继的数据关系进行描述（即元素一个接一个排列）</p>
 <h3 id="线性表">线性表</h3>
 <p>常采用顺序存储和链式存储，基本操作是插入，删除和查找</p>
-<p>定义：一个线性表是n(n&gt;=0)个元素的有限序列，通常表示为（a1,a2,a3...an）.</p>
+<p>定义：一个线性表是n(<span class="math inline">\(n\ge0\)</span>)个元素的有限序列，通常表示为（a1,a2,a3...an）.</p>
 <h4 id="线性表存储结构">线性表存储结构</h4>
 <ol type="1">
 <li><p>顺序存储</p>
@@ -249,7 +249,7 @@
  不带头结点
          插入时间复杂度：最好O(1),最坏O(n),平均O(n)
          删除时间复杂度：最好O(1),最坏O(n),平均O(n)
-         查找的时间复杂度：最好O(1),最坏O(n),平均O(n)åå</code></pre></li>
+         查找的时间复杂度：最好O(1),最坏O(n),平均O(n)</code></pre></li>
 </ol>
 <h3 id="栈">栈</h3>
 <p>栈是只能通过访问它的一端来实现数据存储和检索的一种线性数据结构。</p>
@@ -342,13 +342,21 @@
 <p>根结点的关键字 大于左子树所有结点的关键字，小于右字数所有结点的关键字，左右子树也是一颗二叉排序树</p>
 <p>中序遍历得到的序列是有序数列</p>
 <h3 id="最优二叉树哈夫曼树">最优二叉树（哈夫曼树）</h3>
-<p>它是一类带权路径长度最短的树。结点的 <span class="math inline">\(e=mc^2\)</span></p>
-<p><span class="math display">\[a+b=b+a\]</span></p>
-<p>apple is fruit.apple is fruit. <span class="math display">\[
+<p>它是一类带权路径长度最短的树。结点的带权路径长度为从该结点到树根之间的路径长度与该结点权值的乘积 <span class="math display">\[WPL=\sum_{k=1}^nw_kl_k\]</span> <span class="math inline">\(n\)</span>为带权叶子结点数目，<span class="math inline">\(w_k\)</span>为叶子结点的权值，<span class="math inline">\(l_k\)</span>为叶子结点到根的路径长度</p>
+<h4 id="如何构造最优二叉树">如何构造最优二叉树</h4>
+<ol type="1">
+<li>从前往后找两个权值最小</li>
+<li>小左大右</li>
+<li>加入末尾</li>
+<li>权值相同 从前往后</li>
+<li>用时再调</li>
+</ol>
+<p>最优二叉树不唯一，但其WPL是唯一确定的</p>
+<p>哈夫曼编码计算：最优二叉树标左0右1</p>
+<p>哈夫曼树压缩比计算：最优二叉树标左0右1 apple is fruit.apple is fruit. <span class="math display">\[
     A(t) = M(t) + F(t) + w(t)
 \]</span> apple is fruit.apple is fruit.apple is fruit. <span class="math display">\[
 \begin{equation}
-    \label{eq:hhh}
     A(t) = M(t) + F(t) + w(t)
 \end{equation}
 \]</span> apple is fruit.apple is fruit,such as <span class="math inline">\(\eqref{eq:hhh}\)</span></p>
