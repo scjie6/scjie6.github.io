@@ -191,7 +191,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-05 23:30:52" itemprop="dateModified" datetime="2022-07-05T23:30:52+08:00">2022-07-05</time>
+                <time title="修改时间：2022-07-06 17:59:18" itemprop="dateModified" datetime="2022-07-06T17:59:18+08:00">2022-07-06</time>
               </span>
 
           
@@ -360,9 +360,27 @@
 <h3 id="图的定义">图的定义</h3>
 <p>图G是由集合V和E构成的二元组，记作<span class="math inline">\(G=(V,\,E)\)</span>,其中，V是图中顶点的非空有限集合，E是图中边的有限集合。</p>
 <ol type="1">
-<li>有向图</li>
-<li>无向图</li>
+<li>有向图 <span class="math inline">\(&lt;V_i,V_j&gt;\)</span></li>
+<li>无向图 <span class="math inline">\((V_i,V_j)\)</span></li>
+<li>完全图 无向完全图，有向完全图</li>
+<li>度，出度，入度 顶点V的度是指关联于该顶点的边的数目，记作<span class="math inline">\(D(v)\)</span>。若G为有向图，顶点的度表示该顶点的入度和出度之和，记作<span class="math inline">\(ID(v)\)</span>,<span class="math inline">\(OD(v)\)</span>。无论是有向图还是无向图，顶点数n,边数e与各顶点的度之间有以下关系: <span class="math display">\[e=\frac{1}{2}\sum_{i=1}^nD(v_i)\]</span></li>
+<li>路径</li>
+<li>连通图与连通分量。在无向图G中，若从顶点<span class="math inline">\(v_i\)</span>到顶点<span class="math inline">\(v_j\)</span>有路径，则称顶点<span class="math inline">\(v_i\)</span>和顶点<span class="math inline">\(v_j\)</span>是连通的。如果无向图G的任意两个顶点都是连通的，则称其为连通图。无向图G的极大连通子图称为G的连通分量。</li>
+<li>强连通图与强连通分量。在有向图G中，如果对于每一对顶点<span class="math inline">\(v_i,v_j \in V\)</span>且<span class="math inline">\(v_i \neq v_j\)</span>，从顶点<span class="math inline">\(v_i\)</span>到顶点<span class="math inline">\(v_j\)</span>和从顶点<span class="math inline">\(v_j\)</span>到顶点<span class="math inline">\(v_i\)</span>都存在路径，则称图G为强连通图。有向图中的极大连通子图称为有向图的强连通分量。</li>
 </ol>
+<h3 id="图的存储结构">图的存储结构</h3>
+<ol type="1">
+<li>邻接矩阵表示法 用矩阵来表示顶点之间的关系。</li>
+<li>邻接链表表示法 为图的每个顶点建立一个链表</li>
+</ol>
+<p>稠密图（边多，用邻接矩阵），稀疏图（边少，用邻接表）</p>
+<h3 id="网">网</h3>
+<p>边（或弧）带权值的图称为网。</p>
+<h3 id="图的遍历">图的遍历</h3>
+<p>是指从某个顶点出发，沿着某条搜索路径对图中的所有顶点进行访问且只访问一次的过程。</p>
+<h4 id="深度优先遍历depth-first-sesrchdfs">深度优先遍历（Depth First Sesrch,DFS）</h4>
+<p>实现思想：递归</p>
+<h4 id="广度优先遍历depth-first-sesrchdfs">广度优先遍历（Depth First Sesrch,DFS）</h4>
 
       
     </div>
