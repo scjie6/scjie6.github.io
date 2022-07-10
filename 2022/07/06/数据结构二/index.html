@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"scjie6.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="查找 查找是一种常见的基本运算。查找表是指由同一类型的数据元素（或记录）构成的集合。查找表是一种非常灵活的数据结构。 静态查找表有：顺序查找，折半（二分）查找，分块查找 1. 查询某个特定元素是否在查找表中 2. 检索某个特定的数据元素的各个属性 动态查找表有：二叉排序树，平衡二叉树，B_树，哈希表 1. 在查找表中插入一个数据元素 2. 在查找表中删除一个数据元素 关键字是数据元素（或记录）的某">
+  <meta name="description" content="查找查找是一种常见的基本运算。查找表是指由同一类型的数据元素（或记录）构成的集合。查找表是一种非常灵活的数据结构。 静态查找表有：顺序查找，折半（二分）查找，分块查找  查询某个特定元素是否在查找表中 检索某个特定的数据元素的各个属性   动态查找表有：二叉排序树，平衡二叉树，B_树，哈希表  在查找表中插入一个数据元素 在查找表中删除一个数据元素  关键字是数据元素（或记录）的某个数据项的值，用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构二">
 <meta property="og:url" content="https://scjie6.github.io/2022/07/06/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BA%8C/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="查找 查找是一种常见的基本运算。查找表是指由同一类型的数据元素（或记录）构成的集合。查找表是一种非常灵活的数据结构。 静态查找表有：顺序查找，折半（二分）查找，分块查找 1. 查询某个特定元素是否在查找表中 2. 检索某个特定的数据元素的各个属性 动态查找表有：二叉排序树，平衡二叉树，B_树，哈希表 1. 在查找表中插入一个数据元素 2. 在查找表中删除一个数据元素 关键字是数据元素（或记录）的某">
+<meta property="og:description" content="查找查找是一种常见的基本运算。查找表是指由同一类型的数据元素（或记录）构成的集合。查找表是一种非常灵活的数据结构。 静态查找表有：顺序查找，折半（二分）查找，分块查找  查询某个特定元素是否在查找表中 检索某个特定的数据元素的各个属性   动态查找表有：二叉排序树，平衡二叉树，B_树，哈希表  在查找表中插入一个数据元素 在查找表中删除一个数据元素  关键字是数据元素（或记录）的某个数据项的值，用">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-06T15:05:35.000Z">
 <meta property="article:modified_time" content="2022-07-09T06:17:04.121Z">
@@ -209,125 +209,204 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="查找">查找</h1>
-<p>查找是一种常见的基本运算。查找表是指由同一类型的数据元素（或记录）构成的集合。查找表是一种非常灵活的数据结构。</p>
-<p>静态查找表有：顺序查找，折半（二分）查找，分块查找 1. 查询某个特定元素是否在查找表中 2. 检索某个特定的数据元素的各个属性</p>
-<p>动态查找表有：二叉排序树，平衡二叉树，B_树，哈希表 1. 在查找表中插入一个数据元素 2. 在查找表中删除一个数据元素</p>
+        <h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><p>查找是一种常见的基本运算。查找表是指由同一类型的数据元素（或记录）构成的集合。查找表是一种非常灵活的数据结构。</p>
+<p>静态查找表有：顺序查找，折半（二分）查找，分块查找</p>
+<ol>
+<li>查询某个特定元素是否在查找表中</li>
+<li>检索某个特定的数据元素的各个属性 </li>
+</ol>
+<p>动态查找表有：二叉排序树，平衡二叉树，B_树，哈希表</p>
+<ol>
+<li>在查找表中插入一个数据元素</li>
+<li>在查找表中删除一个数据元素</li>
+</ol>
 <p>关键字是数据元素（或记录）的某个数据项的值，用它来识别（标识）这个数据元素。主关键字是指能唯一标识一个数据元素的关键字。次关键字是指能标志多个数据元素的关键字。</p>
-<h2 id="顺序查找">顺序查找</h2>
-<p>顺序查找的方法对于顺序存储方式和链式存储方式的查找表都适用。</p>
-<p>顺序查找成功的平均查找长度为 <span class="math display">\[ASL_{ss}=\sum_{i=1}^nP_iC_i=\frac{1}{n}\sum_{i=1}^n(n-i+1)=\frac{n+1}{2}\]</span></p>
-<h2 id="折半查找">折半查找</h2>
-<p>顺序存储，有序</p>
-<p>最多的比较次数为 <span class="math display">\[\lfloor\log_2n\rfloor+1\]</span> 折半查找成功的平均查找长度为 <span class="math display">\[ASL_{bs}=\sum_{j=1}^nP_iC_i=\frac{1}{n}\sum_{j=1}^nj\times2^{j-1}=\frac{n+1}{n}\log_2{(n+1)}-1\]</span> 当n值较大时，<span class="math inline">\(ASL_{bs}\approx\log_2{(n+1)}-1\)</span> # 哈希表</p>
-<h2 id="哈希函数构造方法">哈希函数构造方法</h2>
-<p>n个元素，m取接近n但是不大于n的质数</p>
-<p>除留余数法<span class="math inline">\(H(key)=key\%m\)</span></p>
+<h2 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h2><p>顺序查找的方法对于顺序存储方式和链式存储方式的查找表都适用。</p>
+<p>顺序查找成功的平均查找长度为</p>
+<script type="math/tex; mode=display">ASL_{ss}=\sum_{i=1}^nP_iC_i=\frac{1}{n}\sum_{i=1}^n(n-i+1)=\frac{n+1}{2}</script><h2 id="折半查找"><a href="#折半查找" class="headerlink" title="折半查找"></a>折半查找</h2><p>顺序存储，有序</p>
+<p>最多的比较次数为</p>
+<script type="math/tex; mode=display">\lfloor\log_2n\rfloor+1</script><p>折半查找成功的平均查找长度为</p>
+<script type="math/tex; mode=display">ASL_{bs}=\sum_{j=1}^nP_iC_i=\frac{1}{n}\sum_{j=1}^nj\times2^{j-1}=\frac{n+1}{n}\log_2{(n+1)}-1</script><p>当n值较大时，$ASL_{bs}\approx\log_2{(n+1)}-1$</p>
+<h1 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h1><h2 id="哈希函数构造方法"><a href="#哈希函数构造方法" class="headerlink" title="哈希函数构造方法"></a>哈希函数构造方法</h2><p>n个元素，m取接近n但是不大于n的质数</p>
+<p>除留余数法$H(key)=key\%m$</p>
 <p>在构造哈希函数时，一般都要对关键字进行计算，且尽可能使关键字的所有组成部分都能起作用。</p>
-<h2 id="处理冲突的方法">处理冲突的方法</h2>
-<ol type="1">
-<li>开放定址法 <span class="math display">\[H_i=(H(key)+d_i)\%m i=1,2,...,k(k\le m-1)\]</span></li>
-<li>二次探测再散列 <span class="math inline">\(d_i=1^2,-1^2,2^2,-2^2,...,\pm k^2(k\le \frac{m}{2})\)</span></li>
+<h2 id="处理冲突的方法"><a href="#处理冲突的方法" class="headerlink" title="处理冲突的方法"></a>处理冲突的方法</h2><ol>
+<li>开放定址法<script type="math/tex; mode=display">H_i=(H(key)+d_i)\%m i=1,2,...,k(k\le m-1)</script></li>
+<li>二次探测再散列<br>$d_i=1^2,-1^2,2^2,-2^2,…,\pm k^2(k\le \frac{m}{2})$</li>
 <li>随机探测再散列</li>
 </ol>
 <p>解决冲突的方法：链地址法（或拉链法）</p>
-<h2 id="哈希表查找">哈希表查找</h2>
-<p>哈希函数，处理冲突的方法和哈希表的装填因子</p>
-<p>哈希表的装填因子定义为 <span class="math display">\[\alpha=\frac{表中装入的记录数}{哈希表的长度}\]</span> <span class="math inline">\(\alpha\)</span>标志着哈希表的装满程度，<span class="math inline">\(\alpha\)</span>越小，发生冲突可能性越小</p>
-<h1 id="堆">堆</h1>
-<p>n个关键码构成的序列<span class="math inline">\(\{k_1,k_2,...,k_n\}\)</span>,当且仅当满足以下关系</p>
-<p>小顶堆 <span class="math display">\[
+<h2 id="哈希表查找"><a href="#哈希表查找" class="headerlink" title="哈希表查找"></a>哈希表查找</h2><p>哈希函数，处理冲突的方法和哈希表的装填因子</p>
+<p>哈希表的装填因子定义为</p>
+<script type="math/tex; mode=display">\alpha=\frac{表中装入的记录数}{哈希表的长度}</script><p>$\alpha$标志着哈希表的装满程度，$\alpha$越小，发生冲突可能性越小</p>
+<h1 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h1><p>n个关键码构成的序列$\{k_1,k_2,…,k_n\}$,当且仅当满足以下关系</p>
+<p>小顶堆</p>
+<script type="math/tex; mode=display">
     \begin{cases}
     k_i \le k_{2i} \\
     k_i \le k_{2i+1}
-    \end{cases}
-\]</span> 大顶堆 <span class="math display">\[
+    \end{cases}</script><p>大顶堆</p>
+<script type="math/tex; mode=display">
     \begin{cases}
     k_i \ge k_{2i} \\
     k_i \ge k_{2i+1}
-    \end{cases}
-\]</span> # 排序 | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 | 归位 | | :----: | :----: | :----: | :----: | :----: | :----: | :----: | | 直接插入排序 | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n)\)</span> | <span class="math inline">\(O(1)\)</span> | 稳定 | |<br />
-| 希尔排序 | <span class="math inline">\(O(n^{1.3})\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n)\)</span> | <span class="math inline">\(O(1)\)</span> | 不稳定 | |<br />
-| 简单选择排序 | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(1)\)</span> | 不稳定 | 可以 |<br />
-| 堆排序 | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(1)\)</span> | 不稳定 | 可以 |<br />
-| 冒泡排序 | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n)\)</span> | <span class="math inline">\(O(1)\)</span> | 稳定 | 可以 |<br />
-| 快速排序 | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | 不稳定 | 可以 |<br />
-| 归并排序 | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(n)\)</span> | 稳定 | |</p>
-<h2 id="直接插入排序">直接插入排序</h2>
-<p>在插入第i个记录时，<span class="math inline">\(R_1,R_2,...,R_{i-1}\)</span> 已经排好序，这时将<span class="math inline">\(R_i\)</span>的关键字<span class="math inline">\(k_i\)</span>依次与关键字<span class="math inline">\(k_{i-1},k_{i-2}\)</span>等进行比较，从而找到应该插入的位置并将<span class="math inline">\(R_i\)</span>插入，插入位置及其后的记录依次向后移动。 | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 | | :----: | :----: | :----: | :----: | :----: | :----: | | 直接插入排序 | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n)\)</span> | <span class="math inline">\(O(1)\)</span> | 稳定 |</p>
-<h2 id="希尔排序了解">希尔排序（了解）</h2>
+    \end{cases}</script><h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><div class="table-container">
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">排序算法</th>
-<th style="text-align: center;">平均时间复杂度</th>
-<th style="text-align: center;">最坏时间复杂度</th>
-<th style="text-align: center;">最好时间复杂度</th>
-<th style="text-align: center;">空间复杂度</th>
-<th style="text-align: center;">稳定性</th>
+<tr>
+<th style="text-align:center">排序算法</th>
+<th style="text-align:center">平均时间复杂度</th>
+<th style="text-align:center">最坏时间复杂度</th>
+<th style="text-align:center">最好时间复杂度</th>
+<th style="text-align:center">空间复杂度</th>
+<th style="text-align:center">稳定性</th>
+<th style="text-align:center">归位</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;">希尔排序</td>
-<td style="text-align: center;"><span class="math inline">\(O(n^{1.3})\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(n^2)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(n)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(1)\)</span></td>
-<td style="text-align: center;">不稳定</td>
+<tr>
+<td style="text-align:center">直接插入排序</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">稳定</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">希尔排序</td>
+<td style="text-align:center">$O(n^{1.3})$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">不稳定</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">简单选择排序</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">不稳定</td>
+<td style="text-align:center">可以</td>
+</tr>
+<tr>
+<td style="text-align:center">堆排序</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">不稳定</td>
+<td style="text-align:center">可以</td>
+</tr>
+<tr>
+<td style="text-align:center">冒泡排序</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">稳定</td>
+<td style="text-align:center">可以</td>
+</tr>
+<tr>
+<td style="text-align:center">快速排序</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">不稳定</td>
+<td style="text-align:center">可以</td>
+</tr>
+<tr>
+<td style="text-align:center">归并排序</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">稳定</td>
 </tr>
 </tbody>
 </table>
-<h2 id="简单选择排序">简单选择排序</h2>
-<p>通过<span class="math inline">\(n-1(1\le i\le n)\)</span>在次关键字之间的比较，从<span class="math inline">\(n-i+1\)</span>个记录中选出关键字最小的记录，并和第i个记录进行交换</p>
-<p>每次遍历找到最小元素放在第一个 | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 | | :----: | :----: | :----: | :----: | :----: | :----: | | 简单选择排序 | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(1)\)</span> | 不稳定 |</p>
-<h2 id="堆排序">堆排序</h2>
-<p>可以进行归位 | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 | | :----: | :----: | :----: | :----: | :----: | :----: | | 堆排序 | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(1)\)</span> | 不稳定 | ## 冒泡排序 可以进行归位 | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 | | :----: | :----: | :----: | :----: | :----: | :----: | | 冒泡排序 | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n)\)</span> | <span class="math inline">\(O(1)\)</span> | 稳定 | ## 快速排序 分治的思想</p>
+</div>
+<h2 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h2><p>在插入第i个记录时，$R_1,R_2,…,R_{i-1}$ 已经排好序，这时将$R_i$的关键字$k_i$依次与关键字$k_{i-1},k_{i-2}$等进行比较，从而找到应该插入的位置并将$R_i$插入，插入位置及其后的记录依次向后移动。<br> | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 |<br> | :——: | :——: | :——: | :——: | :——: | :——: |<br> | 直接插入排序 | $O(n^2)$ | $O(n^2)$ | $O(n)$ | $O(1)$ | 稳定 | </p>
+<h2 id="希尔排序（了解）"><a href="#希尔排序（了解）" class="headerlink" title="希尔排序（了解）"></a>希尔排序（了解）</h2><div class="table-container">
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">排序算法</th>
-<th style="text-align: center;">平均时间复杂度</th>
-<th style="text-align: center;">最坏时间复杂度</th>
-<th style="text-align: center;">最好时间复杂度</th>
-<th style="text-align: center;">空间复杂度</th>
-<th style="text-align: center;">稳定性</th>
+<tr>
+<th style="text-align:center">排序算法</th>
+<th style="text-align:center">平均时间复杂度</th>
+<th style="text-align:center">最坏时间复杂度</th>
+<th style="text-align:center">最好时间复杂度</th>
+<th style="text-align:center">空间复杂度</th>
+<th style="text-align:center">稳定性</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;">快速排序</td>
-<td style="text-align: center;"><span class="math inline">\(O(nlog_2n)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(n^2)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(nlog_2n)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(nlog_2n)\)</span></td>
-<td style="text-align: center;">不稳定</td>
+<tr>
+<td style="text-align:center">希尔排序</td>
+<td style="text-align:center">$O(n^{1.3})$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">不稳定</td>
 </tr>
 </tbody>
 </table>
-<h2 id="归并排序">归并排序</h2>
+</div>
+<h2 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h2><p>通过$n-1(1\le i\le n)$在次关键字之间的比较，从$n-i+1$个记录中选出关键字最小的记录，并和第i个记录进行交换</p>
+<p>每次遍历找到最小元素放在第一个<br> | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 |<br> | :——: | :——: | :——: | :——: | :——: | :——: |<br> | 简单选择排序 | $O(n^2)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | 不稳定 | </p>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>可以进行归位<br> | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 |<br> | :——: | :——: | :——: | :——: | :——: | :——: |<br> | 堆排序 | $O(nlog_2n)$ | $O(nlog_2n)$ | $O(nlog_2n)$ | $O(1)$ | 不稳定 | </p>
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>可以进行归位<br> | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 |<br> | :——: | :——: | :——: | :——: | :——: | :——: |<br> | 冒泡排序 | $O(n^2)$ | $O(n^2)$ | $O(n)$ | $O(1)$ | 稳定 | </p>
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>分治的思想</p>
+<div class="table-container">
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">排序算法</th>
-<th style="text-align: center;">平均时间复杂度</th>
-<th style="text-align: center;">最坏时间复杂度</th>
-<th style="text-align: center;">最好时间复杂度</th>
-<th style="text-align: center;">空间复杂度</th>
-<th style="text-align: center;">稳定性</th>
+<tr>
+<th style="text-align:center">排序算法</th>
+<th style="text-align:center">平均时间复杂度</th>
+<th style="text-align:center">最坏时间复杂度</th>
+<th style="text-align:center">最好时间复杂度</th>
+<th style="text-align:center">空间复杂度</th>
+<th style="text-align:center">稳定性</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;">归并排序</td>
-<td style="text-align: center;"><span class="math inline">\(O(nlog_2n)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(nlog_2n)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(nlog_2n)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(n)\)</span></td>
-<td style="text-align: center;">稳定</td>
+<tr>
+<td style="text-align:center">快速排序</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">不稳定</td>
 </tr>
 </tbody>
 </table>
+</div>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">排序算法</th>
+<th style="text-align:center">平均时间复杂度</th>
+<th style="text-align:center">最坏时间复杂度</th>
+<th style="text-align:center">最好时间复杂度</th>
+<th style="text-align:center">空间复杂度</th>
+<th style="text-align:center">稳定性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">归并排序</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">稳定</td>
+</tr>
+</tbody>
+</table>
+</div>
 
     </div>
 
@@ -408,7 +487,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-number">1.</span> <span class="nav-text">查找</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE"><span class="nav-number">1.1.</span> <span class="nav-text">顺序查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE"><span class="nav-number">1.2.</span> <span class="nav-text">折半查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.</span> <span class="nav-text">哈希函数构造方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E5%86%B2%E7%AA%81%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">1.4.</span> <span class="nav-text">处理冲突的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8%E6%9F%A5%E6%89%BE"><span class="nav-number">1.5.</span> <span class="nav-text">哈希表查找</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A0%86"><span class="nav-number">2.</span> <span class="nav-text">堆</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="nav-number">2.1.</span> <span class="nav-text">直接插入排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F%E4%BA%86%E8%A7%A3"><span class="nav-number">2.2.</span> <span class="nav-text">希尔排序（了解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="nav-number">2.3.</span> <span class="nav-text">简单选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A0%86%E6%8E%92%E5%BA%8F"><span class="nav-number">2.4.</span> <span class="nav-text">堆排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="nav-number">2.5.</span> <span class="nav-text">归并排序</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE"><span class="nav-number">1.</span> <span class="nav-text">查找</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE"><span class="nav-number">1.1.</span> <span class="nav-text">顺序查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE"><span class="nav-number">1.2.</span> <span class="nav-text">折半查找</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="nav-number">2.</span> <span class="nav-text">哈希表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">哈希函数构造方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E5%86%B2%E7%AA%81%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">处理冲突的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8%E6%9F%A5%E6%89%BE"><span class="nav-number">2.3.</span> <span class="nav-text">哈希表查找</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A0%86"><span class="nav-number">3.</span> <span class="nav-text">堆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F"><span class="nav-number">4.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"><span class="nav-number">4.1.</span> <span class="nav-text">直接插入排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="nav-number">4.2.</span> <span class="nav-text">希尔排序（了解）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F"><span class="nav-number">4.3.</span> <span class="nav-text">简单选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A0%86%E6%8E%92%E5%BA%8F"><span class="nav-number">4.4.</span> <span class="nav-text">堆排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="nav-number">4.5.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="nav-number">4.6.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="nav-number">4.7.</span> <span class="nav-text">归并排序</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
