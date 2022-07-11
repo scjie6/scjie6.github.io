@@ -20,13 +20,15 @@
     var CONFIG = {"hostname":"scjie6.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="数据库E-R图实体型用矩形表示，属性用椭圆形表示，联系用菱形表示。 三级模式结构 概念模式，也称为模式。—&gt;基本表 外模式，也称为用户模式，子模式。—&gt;视图 内模式，也称为存储模式。—&gt;存储文件  两级映像两级映像保证了数据库中的数据具有较高的逻辑独立性和物理独立性  模式&#x2F;内模式映像（物理独立性） 存在于概念级和内部级之间，实现了概念模式和内模式之间的相互转换 外模式&#x2F;模式映像">
+<meta property="og:type" content="article">
 <meta property="og:title" content="数据库">
 <meta property="og:url" content="https://scjie6.github.io/2022/07/10/%E6%95%B0%E6%8D%AE%E5%BA%93/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数据库E-R图实体型用矩形表示，属性用椭圆形表示，联系用菱形表示。 三级模式结构 概念模式，也称为模式。—&gt;基本表 外模式，也称为用户模式，子模式。—&gt;视图 内模式，也称为存储模式。—&gt;存储文件  两级映像两级映像保证了数据库中的数据具有较高的逻辑独立性和物理独立性  模式&#x2F;内模式映像（物理独立性） 存在于概念级和内部级之间，实现了概念模式和内模式之间的相互转换 外模式&#x2F;模式映像">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-10T08:41:46.000Z">
-<meta property="article:modified_time" content="2022-07-10T08:41:46.262Z">
+<meta property="article:modified_time" content="2022-07-11T09:47:09.487Z">
 <meta property="article:author" content="scj">
 <meta name="twitter:card" content="summary">
 
@@ -188,6 +190,13 @@
 
               <time title="创建时间：2022-07-10 16:41:46" itemprop="dateCreated datePublished" datetime="2022-07-10T16:41:46+08:00">2022-07-10</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-11 17:47:09" itemprop="dateModified" datetime="2022-07-11T17:47:09+08:00">2022-07-11</time>
+              </span>
 
           
 
@@ -200,7 +209,66 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="E-R图"><a href="#E-R图" class="headerlink" title="E-R图"></a>E-R图</h2><p>实体型用矩形表示，属性用椭圆形表示，联系用菱形表示。</p>
+<h2 id="三级模式结构"><a href="#三级模式结构" class="headerlink" title="三级模式结构"></a>三级模式结构</h2><ol>
+<li>概念模式，也称为模式。—&gt;基本表</li>
+<li>外模式，也称为用户模式，子模式。—&gt;视图</li>
+<li>内模式，也称为存储模式。—&gt;存储文件</li>
+</ol>
+<h2 id="两级映像"><a href="#两级映像" class="headerlink" title="两级映像"></a>两级映像</h2><p>两级映像保证了数据库中的数据具有较高的逻辑独立性和物理独立性</p>
+<ol>
+<li>模式/内模式映像（物理独立性） 存在于概念级和内部级之间，实现了概念模式和内模式之间的相互转换</li>
+<li>外模式/模式映像（逻辑独立性） 存在于外部级和概念级之间，实现了外模式和概念模式之间的相互转换</li>
+</ol>
+<h3 id="关系模型中的基本术语"><a href="#关系模型中的基本术语" class="headerlink" title="关系模型中的基本术语"></a>关系模型中的基本术语</h3><ul>
+<li>关系：一个关系就是一张二维表，每个关系有一个关系名。</li>
+<li>元组：表中的一行即为一个元组，对应存储文件中的一个记录值。</li>
+<li>属性：表中的列称为属性。</li>
+<li>域：属性的取值范围。</li>
+<li>关系模式：对关系的描述称为关系模式，由关系名和其属性集合构成，关系模式的格式为：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">关系名（属性名1，属性名2，...,属性名n）</span><br></pre></td></tr></table></figure></li>
+<li>候选码（或候选键）：属性或属性组合，其值能够唯一地标识一个元组。</li>
+<li>主码（或主键）：在一个关系中可能有多个候选码，从中选择一个作为主码。</li>
+<li>主属性：包含在任何候选码中诸属性称为主属性。</li>
+<li>外码（或外键）：如果一个关系中的属性或属性组并非该关系的码，但它是另外一个关系的码，则称其为该关系的外码。</li>
+<li>全码：所有属性组是这个关系模式的候选码，称为全码。</li>
+<li>超码（超键）：一个包含码的属性集称为超码。</li>
+</ul>
+<h3 id="关系模型"><a href="#关系模型" class="headerlink" title="关系模型"></a>关系模型</h3><p>关系模型由关系数据结构，关系操作集合和关系完整性约束三部分组成。</p>
+<ol>
+<li>关系数据结构<br> 关系模型中数据的逻辑关系是一张二维表格。</li>
+<li>关系操作集合（关系代数）<br> 关系模型给出了关系操作的能力。常用的关系操作有：选择，投影，连接，除，并，交，差等查询操作和增加，删除操作等。</li>
+<li>关系完整性约束<ul>
+<li>实体完整性：关系中主码的值不能为空或部分为空。</li>
+<li>参照完整性：外键必须对应上。</li>
+<li>用户定义的完整性：指用户对某一具体数据指定的约束条件进行检验。</li>
+</ul>
+</li>
+</ol>
+<h4 id="关系的数学定义"><a href="#关系的数学定义" class="headerlink" title="关系的数学定义"></a>关系的数学定义</h4><ol>
+<li>笛卡尔积</li>
+<li>关系<br>子集称为关系</li>
+<li>关系的性质</li>
+</ol>
+<h4 id="关系代数"><a href="#关系代数" class="headerlink" title="关系代数"></a>关系代数</h4><ul>
+<li>传统的集合运算<ol>
+<li>并</li>
+<li>差</li>
+<li>交</li>
+<li>笛卡尔积运算</li>
+</ol>
+</li>
+<li>专门的关系运算符<ol>
+<li>投影 从关系的垂直方向进行运算，$\pi_A(R)=\{t[A]|t \isin R\}$</li>
+<li>选择 从关系的水平方向进行运算，$\sigma_F(R)=\{t\isin R \land F(t)=True\}$</li>
+<li>连接 <ol>
+<li>$\theta$连接</li>
+<li>等值连接</li>
+<li>自然连接</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
 
     </div>
 
@@ -278,6 +346,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#E-R%E5%9B%BE"><span class="nav-number">1.1.</span> <span class="nav-text">E-R图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E7%BA%A7%E6%A8%A1%E5%BC%8F%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.</span> <span class="nav-text">三级模式结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E7%BA%A7%E6%98%A0%E5%83%8F"><span class="nav-number">1.3.</span> <span class="nav-text">两级映像</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD"><span class="nav-number">1.3.1.</span> <span class="nav-text">关系模型中的基本术语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.3.2.</span> <span class="nav-text">关系模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E7%9A%84%E6%95%B0%E5%AD%A6%E5%AE%9A%E4%B9%89"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">关系的数学定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">关系代数</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
