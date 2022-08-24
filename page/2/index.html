@@ -160,6 +160,1007 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://scjie6.github.io/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="scj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/06/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-title-link" itemprop="url">计算机系统</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-06-21 17:45:14" itemprop="dateCreated datePublished" datetime="2022-06-21T17:45:14+08:00">2022-06-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-04 23:15:50" itemprop="dateModified" datetime="2022-07-04T23:15:50+08:00">2022-07-04</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="第一章计算机系统">第一章#计算机系统</h1>
+<p>计算机系统硬件基本组成 控制器，运算器，存储器，输入设备，输出设备 ## CPU 运算器，控制器被集成在CPU(Central Processing Unit,CPU,中央处理单元) CPU功能</p>
+<p>程序控制，操作控制，时间控制，数据处理</p>
+<h3 id="运算器组成">运算器组成</h3>
+<ol type="1">
+<li>算术逻辑单元（ALU）arithmetic and logic unit</li>
+<li>累加寄存器（AC）accumulation register</li>
+<li>数据缓冲寄存器（DR）Data register</li>
+<li>状态条件寄存器（PSW）program status word</li>
+</ol>
+<h3 id="控制器组成">控制器组成</h3>
+<ol type="1">
+<li>指令寄存器（IR）Instruction Register</li>
+<li>程序计数器（PC）Program Counter</li>
+<li>地址寄存器（AR）Address Register</li>
+<li>指令译码器（ID）Instruction Decoder</li>
+</ol>
+<p>指令：操作码+地址码</p>
+<h2 id="计算机基本单位">计算机基本单位</h2>
+<table>
+<thead>
+<tr class="header">
+<th>名称</th>
+<th>EN</th>
+<th>简称</th>
+<th>换算</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>位（比特）</td>
+<td>bit</td>
+<td>b</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>字节</td>
+<td>byte</td>
+<td>B</td>
+<td>1B=8b</td>
+</tr>
+<tr class="odd">
+<td>千字节</td>
+<td></td>
+<td>KB</td>
+<td>1KB=1024B</td>
+</tr>
+<tr class="even">
+<td>兆字节</td>
+<td></td>
+<td>MB</td>
+<td>1MB=1024KB</td>
+</tr>
+<tr class="odd">
+<td>吉字节</td>
+<td></td>
+<td>GB</td>
+<td>1GB=1024MB</td>
+</tr>
+<tr class="even">
+<td>太字节</td>
+<td></td>
+<td>TB</td>
+<td>1TB=1024GB</td>
+</tr>
+</tbody>
+</table>
+<p>最小的数据单位：b</p>
+<p>最小的存储单位：byte</p>
+<h2 id="进制转换">进制转换</h2>
+<table>
+<thead>
+<tr class="header">
+<th>名称</th>
+<th>简称</th>
+<th>EN</th>
+<th>一位表示范围</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>十进制</td>
+<td>D</td>
+<td>Decimal System</td>
+<td>0～9</td>
+</tr>
+<tr class="even">
+<td>二进制</td>
+<td>B</td>
+<td>Binary number</td>
+<td>0～1</td>
+</tr>
+<tr class="odd">
+<td>八进制</td>
+<td>O</td>
+<td>Octal</td>
+<td>0～7</td>
+</tr>
+<tr class="even">
+<td>十六进制</td>
+<td>H</td>
+<td>Hex</td>
+<td>0～15 （0～9 a～f）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="方法">方法</h3>
+<ol type="1">
+<li>按权展开求和 n进制-&gt;十进制</li>
+<li>除n取余法 十进制-&gt;n进制</li>
+</ol>
+<p>一位十六进制的数=4位二进制的数 一位八进制的数=3位二进制的数</p>
+<h3 id="进制加减法">进制加减法</h3>
+<p>加法 逢n进1</p>
+<p>减法 逢n借1</p>
+<h3 id="数据表示">数据表示</h3>
+<p>原码表示法：最高位为符号位，0表示正号，1表示负号，其余的n-1表示数值的绝对值。</p>
+<p>0的原码有两种形式：[+0]原=0 0000000，[-0]原=1 0000000</p>
+<p>反码表示法：最高位为符号位，0表示正号，1表示负号，正数的反码与原码相同，负数的反码则是其绝对值按位求反。</p>
+<p>0的反码有两种形式：[+0]反=0 0000000，[-0]反=1 1111111</p>
+<p>补码表示法：最高位为符号位，0表示正号，1表示负号，正数的补码与原码，反码相同，负数的补码等于其反码的末尾加1</p>
+<p>0有唯一的编码：[+0]补=0 000000，[-0]补=0 000000</p>
+<p>移码表示法：补码的符号取反</p>
+<p>补码的补码等于原码</p>
+<table>
+<thead>
+<tr class="header">
+<th>码制</th>
+<th>定点整数</th>
+<th>定点小数</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>原码</td>
+<td><span class="math inline">\(-(2^{n-1}-1)\)</span> ~ <span class="math inline">\(+(2^{n-1}-1)\)</span></td>
+<td><span class="math inline">\(-(1-2^{-(n-1)})\)</span> ~ <span class="math inline">\(+(1-2^{-(n-1)})\)</span></td>
+</tr>
+<tr class="even">
+<td>反码</td>
+<td><span class="math inline">\(-(2^{n-1}-1)\)</span> ~ <span class="math inline">\(+(2^{n-1}-1)\)</span></td>
+<td><span class="math inline">\(-(1-2^{-(n-1)})\)</span> ~ <span class="math inline">\(+(1-2^{-(n-1)})\)</span></td>
+</tr>
+<tr class="odd">
+<td>补码</td>
+<td><span class="math inline">\(-2^{n-1}\)</span> ~ <span class="math inline">\(+(2^{n-1}-1)\)</span></td>
+<td><span class="math inline">\(-1\)</span> ~ <span class="math inline">\(+(1-2^{-(n-1)})\)</span></td>
+</tr>
+<tr class="even">
+<td>移码</td>
+<td><span class="math inline">\(-2^{n-1}\)</span> ~ <span class="math inline">\(+(2^{n-1}-1)\)</span></td>
+<td><span class="math inline">\(-1\)</span> ~ <span class="math inline">\(+(1-2^{-(n-1)})\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="寻址">寻址</h2>
+<p>立即寻址：操作数就在指令中。</p>
+<p>直接寻址：操作数存放在内存单元中，指令中直接给出操作数所在存储单元的地址。</p>
+<p>寄存器寻址：操作数存放在某一寄存器中，指令中给出存放操作数的寄存器名。</p>
+<p>寄存器间接寻址：操作数存放在内存单元中，操作数所在存储单元的地址在某个寄存器中。</p>
+<p>间接寻址：指令中给出操作数地址的地址。</p>
+<h2 id="校验码">校验码</h2>
+<p>码距=2，有检错能力 码距&gt;=3，才可能有纠错能力 1. 奇偶检验码 2. 海明码（设数据位是n位，校验位是k位，则n和k必须满足以下关系：<span class="math inline">\(2^k -1 \ge n+k\)</span> （利用多组数位的奇偶性来检错和纠错） 3. 循环冗余校验码(可以检错，不能纠错，码距=2)</p>
+<h2 id="指令集">指令集</h2>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>精简指令集RISC</th>
+<th>复杂指令集CISC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>指令种类</td>
+<td>少，精简</td>
+<td>多，丰富</td>
+</tr>
+<tr class="even">
+<td>指令复杂度</td>
+<td>低（简单）</td>
+<td>高（复杂）</td>
+</tr>
+<tr class="odd">
+<td>指令长度</td>
+<td>固定</td>
+<td>变化</td>
+</tr>
+<tr class="even">
+<td>寻址方式</td>
+<td>少</td>
+<td>复杂多样</td>
+</tr>
+<tr class="odd">
+<td>实现（译码）方式</td>
+<td>硬布线控制逻辑（组合逻辑控制器）</td>
+<td>微程序控制技术</td>
+</tr>
+<tr class="even">
+<td>通用寄存器数量</td>
+<td>多，大量</td>
+<td>一般</td>
+</tr>
+<tr class="odd">
+<td>流水线技术</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+</tbody>
+</table>
+<h2 id="指令流水线">指令流水线</h2>
+<p>流水线:第1条指令的执行时间+（n-1）*(最长的时间段)</p>
+<p>加速比=不采用流水线/采用流水线</p>
+<p>操作周期=最长时间段</p>
+<p>吞吐率=1/最长时间段</p>
+<p>执行n条指令的吞吐率=n/流水线</p>
+<h2 id="存储器">存储器</h2>
+<p>按存储器所处位置可分为：内存，外存</p>
+<p>按存储器工作方式可分为：</p>
+<ol type="1">
+<li>读写存储器RAM</li>
+<li>只读存储器ROM</li>
+<li>闪速存储器Flash Memory,可以整块删除</li>
+</ol>
+<p>按访问方式可分为：地址访问存储器，内容访问存储器</p>
+<p>按寻址方式可分为：</p>
+<ol type="1">
+<li>随机存储器 RAM</li>
+<li>顺序存储器 SAM</li>
+<li>直接存储器 DAM</li>
+</ol>
+<p>相联存储器是一种按内容访问的存储器</p>
+<p>虚拟存储器由主存，辅存构成</p>
+<p>DRAM 动态随机存储，是一种需要通过周期性刷新来保持数据的存储器件</p>
+<h2 id="cache">Cache</h2>
+<p>高速缓存用于存放最活跃的程序和数据，特点：位于CPU与主存之间；容量一般在几千字节到几兆字节之间</p>
+<p>高速缓存对程序员来说是透明的</p>
+<p>Cache与主存地址的映射是由硬件自动完成</p>
+<h3 id="替换算法">替换算法</h3>
+<p>替换算法的目标就是使Cache获得尽可能高的命中率</p>
+<p>高速缓存中的地址映像方法</p>
+<ol type="1">
+<li>直接映像(冲突大)</li>
+<li>全相联映像(冲突小)</li>
+<li>组相联映像(冲突较小)</li>
+</ol>
+<h2 id="中断">中断</h2>
+<ol type="1">
+<li>中断向量:把所有中断服务程序的入口地址（或称为中断向量）汇集为中断向量表</li>
+<li>中断响应时间：发出中断请求开始，到进入中断服务程序</li>
+<li>保存现场：返回执行源程序</li>
+</ol>
+<h2 id="输入输出io控制方式">输入输出（IO）控制方式</h2>
+<ol type="1">
+<li>程序查询方式:</li>
+<li>cpu和I/O（外设）只能串行工作，CPU需要一直轮询检查，长期处于忙等状态。CPU利用率低</li>
+<li>一次只能读/写一个字8bit</li>
+<li>由CPU将数放入内存</li>
+<li>中断驱动方式：
+<ol type="1">
+<li>I/O设备通过中断信号主动报告I/O操作已完成</li>
+<li>CPU和I/O（外设）可并行工作</li>
+<li>CPU利用率得到提升</li>
+<li>一次只能读/写一个字8bit</li>
+<li>由CPU将数据放入内存</li>
+</ol></li>
+<li>直接存储器方式（DMA）
+<ol type="1">
+<li>CPU和I/O（外设）可并行工作</li>
+<li>仅在传输数据块的开始和结束时才需要CPU的干预</li>
+<li>有外设直接将数据放入内存</li>
+<li>一次读写的单位为快而不是字</li>
+<li>DMA操作占用系统总线资源</li>
+</ol></li>
+</ol>
+<h2 id="总线bus了解">总线Bus（了解）</h2>
+<p>数据总线，地址总线，控制总线</p>
+<p>PCI总线，内总线，采用并行传输方式</p>
+<p>SCSI:并行外总线</p>
+<p>总线复用可以减少总线中信号线的数量</p>
+<h2 id="加密技术与认证技术">加密技术与认证技术</h2>
+<p>窃听 ：加密</p>
+<p>篡改：摘要</p>
+<p>假冒，否认：数字证书，数字签名</p>
+<h3 id="加密技术">加密技术：</h3>
+<pre><code>1. 对称加密（私有密钥加密）：加密和解密是同一把密钥，密钥分发有缺陷
+        优点：加密解密速度快，适合大量明文数据
+2. 非对称加密（公开密钥加密）：加密和解密不是同一把密钥，一共有两把密钥，分别是公钥和私钥
+        公钥加密，验证
+        私钥解密，签名
+        不能通过一把推出另一把
+        
+        用接收方的公钥加密明文可以实现防止窃听的效果
+        密钥分发没有缺陷
+        1. 加密解密速度慢
+3. 混合加密</code></pre>
+<h3 id="认证技术">认证技术：</h3>
+<p>认证处理主动攻击 1. 摘要：将发送的明文进行Hash算法后得到摘要放在密文后一起发出，与接收方解密后的明文进行相同Hash算法得到的摘要进行对比，如果一致则没有篡改，否则有篡改 2. 数字签名：发送方用自己的私钥对摘要进行签名（加密），得到数字签名放在密文后一起发送过去 接收方用发送方的公钥对数字签名进行验证（解密）如果验证成功则该消息没有被假冒且不能否认，否则该消息的真实性为假冒发送</p>
+<ol start="3" type="1">
+<li><p>数字证书：</p>
+<pre><code>     用户向CA机构申请数字证书
+     将个人信息和公钥发给CA机构
+     CA机构颁发给用户数字证书
+     数字证书用CA的私钥进行签名（加密）
+     用CA的公钥验证（解密）数字证书
+     得到用户的公钥</code></pre></li>
+</ol>
+<h3 id="加密算法">加密算法：</h3>
+<p>对称密钥（私钥，私有密钥加密）算法： （共享密钥加密算法）</p>
+<ol type="1">
+<li>DES</li>
+<li>3DES</li>
+<li>RC-5</li>
+<li>IDEA</li>
+<li>AES（分组加密）</li>
+<li>RC4</li>
+</ol>
+<p>非对称密钥（公钥，公开密钥加密）算法：</p>
+<ol type="1">
+<li>RSA</li>
+<li>ECC</li>
+<li>DSA</li>
+</ol>
+<p>Hash函数</p>
+<p>MD5摘要算法（生成128位）</p>
+<p>SHA-1安全散列算法</p>
+<p>###可靠性公式： 1. 串联系统：R=R1R2...Rn 2. 并联系统:R=1-(1-R1)(1-R2)...(1-Rn)</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://scjie6.github.io/2022/06/14/%E8%BD%AF%E8%80%83%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="scj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/06/14/%E8%BD%AF%E8%80%83%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">软考笔记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-06-14 17:56:57" itemprop="dateCreated datePublished" datetime="2022-06-14T17:56:57+08:00">2022-06-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-06-21 17:14:31" itemprop="dateModified" datetime="2022-06-21T17:14:31+08:00">2022-06-21</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="计算机系统基础知识">计算机系统基础知识</h1>
+<p>计算机系统硬件基本组成 控制器，运算器，存储器，输入设备，输出设备 ## CPU 运算器，控制器被集成在CPU(Central Processing Unit,CPU,中央处理单元) CPU功能</p>
+<p>程序控制，操作控制，时间控制，数据处理</p>
+<h3 id="运算器组成">运算器组成</h3>
+<ol type="1">
+<li>算术逻辑单元（ALU）arithmetic and logic unit</li>
+<li>累加寄存器（AC）accumulation register</li>
+<li>数据缓冲寄存器（DR）Data register</li>
+<li>状态条件寄存器（PSW）program status word</li>
+</ol>
+<h3 id="控制器组成">控制器组成</h3>
+<ol type="1">
+<li>指令寄存器（IR）Instruction Register</li>
+<li>程序计数器（PC）Program Counter</li>
+<li>地址寄存器（AR）Address Register</li>
+<li>指令译码器（ID）Instruction Decoder</li>
+</ol>
+<p>指令：操作码+地址码</p>
+<h2 id="计算机基本单位">计算机基本单位</h2>
+<table>
+<thead>
+<tr class="header">
+<th>名称</th>
+<th>EN</th>
+<th>简称</th>
+<th>换算</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>位（比特）</td>
+<td>bit</td>
+<td>b</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>字节</td>
+<td>byte</td>
+<td>B</td>
+<td>1B=8b</td>
+</tr>
+<tr class="odd">
+<td>千字节</td>
+<td></td>
+<td>KB</td>
+<td>1KB=1024B</td>
+</tr>
+<tr class="even">
+<td>兆字节</td>
+<td></td>
+<td>MB</td>
+<td>1MB=1024KB</td>
+</tr>
+<tr class="odd">
+<td>吉字节</td>
+<td></td>
+<td>GB</td>
+<td>1GB=1024MB</td>
+</tr>
+<tr class="even">
+<td>太字节</td>
+<td></td>
+<td>TB</td>
+<td>1TB=1024GB</td>
+</tr>
+</tbody>
+</table>
+<p>最小的数据单位：b</p>
+<p>最小的存储单位：byte</p>
+<h2 id="进制转换">进制转换</h2>
+<table>
+<thead>
+<tr class="header">
+<th>名称</th>
+<th>简称</th>
+<th>EN</th>
+<th>一位表示范围</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>十进制</td>
+<td>D</td>
+<td>Decimal System</td>
+<td>0～9</td>
+</tr>
+<tr class="even">
+<td>二进制</td>
+<td>B</td>
+<td>Binary number</td>
+<td>0～1</td>
+</tr>
+<tr class="odd">
+<td>八进制</td>
+<td>O</td>
+<td>Octal</td>
+<td>0～7</td>
+</tr>
+<tr class="even">
+<td>十六进制</td>
+<td>H</td>
+<td>Hex</td>
+<td>0～15 （0～9 a～f）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="方法">方法</h3>
+<ol type="1">
+<li>按权展开求和 n进制-&gt;十进制</li>
+<li>除n取余法 十进制-&gt;n进制</li>
+</ol>
+<p>一位十六进制的数=4位二进制的数 一位八进制的数=3位二进制的数</p>
+<h3 id="进制加减法">进制加减法</h3>
+<p>加法 逢n进1</p>
+<p>减法 逢n借1</p>
+<h3 id="数据表示">数据表示</h3>
+<p>原码表示法：最高位为符号位，0表示正号，1表示负号，其余的n-1表示数值的绝对值。</p>
+<p>0的原码有两种形式：[+0]原=0 0000000，[-0]原=1 0000000</p>
+<p>反码表示法：最高位为符号位，0表示正号，1表示负号，正数的反码与原码相同，负数的反码则是其绝对值按位求反。</p>
+<p>0的反码有两种形式：[+0]反=0 0000000，[-0]反=1 1111111</p>
+<p>补码表示法：最高位为符号位，0表示正号，1表示负号，正数的补码与原码，反码相同，负数的补码等于其反码的末尾加1</p>
+<p>0有唯一的编码：[+0]补=0 000000，[-0]补=0 000000</p>
+<p>移码表示法：补码的符号取反</p>
+<p>补码的补码等于原码</p>
+<table>
+<thead>
+<tr class="header">
+<th>码制</th>
+<th>定点整数</th>
+<th>定点小数</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>原码</td>
+<td>-(2^n-1 -1) ~ +(2^n-1 -1)</td>
+<td>-(1-2<sup>-(n-1))~+(1-2</sup>-(n-1))</td>
+</tr>
+<tr class="even">
+<td>反码</td>
+<td>-(2^n-1 -1) ~ +(2^n-1 -1)</td>
+<td>-(1-2<sup>-(n-1))~+(1-2</sup>-(n-1))</td>
+</tr>
+<tr class="odd">
+<td>补码</td>
+<td>-2^n-1 ~ +(2^n-1 -1)</td>
+<td>-1 ~ +(1-2^-(n-1))</td>
+</tr>
+<tr class="even">
+<td>移码</td>
+<td>-2^n-1 ~ +(2^n-1 -1)</td>
+<td>-1 ~ +(1-2^-(n-1))</td>
+</tr>
+</tbody>
+</table>
+<h2 id="寻址">寻址</h2>
+<p>立即寻址：操作数就在指令中。</p>
+<p>直接寻址：操作数存放在内存单元中，指令中直接给出操作数所在存储单元的地址。</p>
+<p>寄存器寻址：操作数存放在某一寄存器中，指令中给出存放操作数的寄存器名。</p>
+<p>寄存器间接寻址：操作数存放在内存单元中，操作数所在存储单元的地址在某个寄存器中。</p>
+<p>间接寻址：指令中给出操作数地址的地址。</p>
+<h2 id="校验码">校验码</h2>
+<p>码距=2，有检错能力 码距&gt;=3，才可能有纠错能力 1. 奇偶检验码 2. 海明码（设数据位是n位，校验位是k位，则n和k必须满足以下关系： 2^k -1 &gt;= n+k）（利用多组数位的奇偶性来检错和纠错） 3. 循环冗余校验码(可以检错，不能纠错，码距=2)</p>
+<h2 id="指令集">指令集</h2>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>精简指令集RISC</th>
+<th>复杂指令集CISC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>指令种类</td>
+<td>少，精简</td>
+<td>多，丰富</td>
+</tr>
+<tr class="even">
+<td>指令复杂度</td>
+<td>低（简单）</td>
+<td>高（复杂）</td>
+</tr>
+<tr class="odd">
+<td>指令长度</td>
+<td>固定</td>
+<td>变化</td>
+</tr>
+<tr class="even">
+<td>寻址方式</td>
+<td>少</td>
+<td>复杂多样</td>
+</tr>
+<tr class="odd">
+<td>实现（译码）方式</td>
+<td>硬布线控制逻辑（组合逻辑控制器）</td>
+<td>微程序控制技术</td>
+</tr>
+<tr class="even">
+<td>通用寄存器数量</td>
+<td>多，大量</td>
+<td>一般</td>
+</tr>
+<tr class="odd">
+<td>流水线技术</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+</tbody>
+</table>
+<h2 id="指令流水线">指令流水线</h2>
+<p>流水线:第1条指令的执行时间+（n-1）*(最长的时间段)</p>
+<p>加速比=不采用流水线/采用流水线</p>
+<p>操作周期=最长时间段</p>
+<p>吞吐率=1/最长时间段</p>
+<p>执行n条指令的吞吐率=n/流水线</p>
+<h2 id="存储器">存储器</h2>
+<p>按存储器所处位置可分为：内存，外存</p>
+<p>按存储器工作方式可分为：</p>
+<ol type="1">
+<li>读写存储器RAM</li>
+<li>只读存储器ROM</li>
+<li>闪速存储器Flash Memory,可以整块删除</li>
+</ol>
+<p>按访问方式可分为：地址访问存储器，内容访问存储器</p>
+<p>按寻址方式可分为：</p>
+<ol type="1">
+<li>随机存储器 RAM</li>
+<li>顺序存储器 SAM</li>
+<li>直接存储器 DAM</li>
+</ol>
+<p>相联存储器是一种按内容访问的存储器</p>
+<p>虚拟存储器由主存，辅存构成</p>
+<p>DRAM 动态随机存储，是一种需要通过周期性刷新来保持数据的存储器件</p>
+<h2 id="cache">Cache</h2>
+<p>高速缓存用于存放最活跃的程序和数据，特点：位于CPU与主存之间；容量一般在几千字节到几兆字节之间</p>
+<p>高速缓存对程序员来说是透明的</p>
+<p>Cache与主存地址的映射是由硬件自动完成</p>
+<h3 id="替换算法">替换算法</h3>
+<p>替换算法的目标就是使Cache获得尽可能高的命中率</p>
+<p>高速缓存中的地址映像方法</p>
+<ol type="1">
+<li>直接映像(冲突大)</li>
+<li>全相联映像(冲突小)</li>
+<li>组相联映像(冲突较小)</li>
+</ol>
+<h2 id="中断">中断</h2>
+<ol type="1">
+<li>中断向量:把所有中断服务程序的入口地址（或称为中断向量）汇集为中断向量表</li>
+<li>中断响应时间：发出中断请求开始，到进入中断服务程序</li>
+<li>保存现场：返回执行源程序</li>
+</ol>
+<h2 id="输入输出io控制方式">输入输出（IO）控制方式</h2>
+<ol type="1">
+<li>程序查询方式:</li>
+<li>cpu和I/O（外设）只能串行工作，CPU需要一直轮询检查，长期处于忙等状态。CPU利用率低</li>
+<li>一次只能读/写一个字8bit</li>
+<li>由CPU将数放入内存</li>
+<li>中断驱动方式：
+<ol type="1">
+<li>I/O设备通过中断信号主动报告I/O操作已完成</li>
+<li>CPU和I/O（外设）可并行工作</li>
+<li>CPU利用率得到提升</li>
+<li>一次只能读/写一个字8bit</li>
+<li>由CPU将数据放入内存</li>
+</ol></li>
+<li>直接存储器方式（DMA）
+<ol type="1">
+<li>CPU和I/O（外设）可并行工作</li>
+<li>仅在传输数据块的开始和结束时才需要CPU的干预</li>
+<li>有外设直接将数据放入内存</li>
+<li>一次读写的单位为快而不是字</li>
+<li>DMA操作占用系统总线资源</li>
+</ol></li>
+</ol>
+<h2 id="总线bus了解">总线Bus（了解）</h2>
+<p>数据总线，地址总线，控制总线</p>
+<p>PCI总线，内总线，采用并行传输方式</p>
+<p>SCSI:并行外总线</p>
+<p>总线复用可以减少总线中信号线的数量</p>
+<h2 id="加密技术与认证技术">加密技术与认证技术</h2>
+<p>窃听 ：加密</p>
+<p>篡改：摘要</p>
+<p>假冒，否认：数字证书，数字签名</p>
+<h3 id="加密技术">加密技术：</h3>
+<pre><code>1. 对称加密（私有密钥加密）：加密和解密是同一把密钥，密钥分发有缺陷
+        优点：加密解密速度快，适合大量明文数据
+2. 非对称加密（公开密钥加密）：加密和解密不是同一把密钥，一共有两把密钥，分别是公钥和私钥
+        公钥加密，验证
+        私钥解密，签名
+        不能通过一把推出另一把
+        
+        用接收方的公钥加密明文可以实现防止窃听的效果
+        密钥分发没有缺陷
+        1. 加密解密速度慢
+3. 混合加密</code></pre>
+<h3 id="认证技术">认证技术：</h3>
+<p>认证处理主动攻击 1. 摘要：将发送的明文进行Hash算法后得到摘要放在密文后一起发出，与接收方解密后的明文进行相同Hash算法得到的摘要进行对比，如果一致则没有篡改，否则有篡改 2. 数字签名：发送方用自己的私钥对摘要进行签名（加密），得到数字签名放在密文后一起发送过去 接收方用发送方的公钥对数字签名进行验证（解密）如果验证成功则该消息没有被假冒且不能否认，否则该消息的真实性为假冒发送</p>
+<ol start="3" type="1">
+<li><p>数字证书：</p>
+<pre><code>     用户向CA机构申请数字证书
+     将个人信息和公钥发给CA机构
+     CA机构颁发给用户数字证书
+     数字证书用CA的私钥进行签名（加密）
+     用CA的公钥验证（解密）数字证书
+     得到用户的公钥</code></pre></li>
+</ol>
+<h3 id="加密算法">加密算法：</h3>
+<p>对称密钥（私钥，私有密钥加密）算法： （共享密钥加密算法）</p>
+<ol type="1">
+<li>DES</li>
+<li>3DES</li>
+<li>RC-5</li>
+<li>IDEA</li>
+<li>AES（分组加密）</li>
+<li>RC4</li>
+</ol>
+<p>非对称密钥（公钥，公开密钥加密）算法：</p>
+<ol type="1">
+<li>RSA</li>
+<li>ECC</li>
+<li>DSA</li>
+</ol>
+<p>Hash函数</p>
+<p>MD5摘要算法（生成128位）</p>
+<p>SHA-1安全散列算法</p>
+<p>###可靠性公式： 1. 串联系统：R=R1R2...Rn 2. 并联系统:R=1-(1-R1)(1-R2)...(1-Rn)</p>
+<h1 id="程序设计语言基础知识">程序设计语言基础知识</h1>
+<p>低级语言：机器语言和汇编语言</p>
+<p>高级语言：C,C++,JAVA....</p>
+<p>解释器：</p>
+<pre><code>    翻译源程序时不生成独立的目标程序
+    解释程序和源程序要参与到程序的运行过程中</code></pre>
+<p>编译器：</p>
+<pre><code>    翻译时将源程序翻译成独立保存的目标程序
+    源程序和编译程序都不再参与目标程序的运行过程</code></pre>
+<p>程序三种基本控制结构：</p>
+<pre><code>1. 顺序
+2. 选择
+3. 重复</code></pre>
+<p>程序设计语言规定其程序中的数据必须具有类型，则有利于：</p>
+<pre><code>1. 便于为数据合理分配存储单元
+2. 便于对参与表达式计算的数据对象进行检查
+3. 便于规定数据对象的取值范围及能够进行的运算</code></pre>
+<h3 id="函数定义">函数定义</h3>
+<p>返回值类型 函数名（形式参数） {函数体；}</p>
+<ol type="1">
+<li>值调用（Call by Value）:将实参的值传递给形参，实参可以是变量，常量和表达式。不可以实现形参和实参间双向传递数据的效果</li>
+<li>引用调用（Call by Reference）:将实参的地址传递给形参，形参必须有地址，实参不能是常量（值），表达式。可以实现形参和实参间双向传递数据的效果，即改变形参的值同时也改变了实参的值</li>
+</ol>
+<h3 id="编译方式">编译方式</h3>
+<p>词法分析，语法分析，语义分析，中间代码生成，代码优化，目标代码生成</p>
+<h3 id="解释方式">解释方式</h3>
+<p>词法分析，语法分析，语义分析</p>
+<p>编译器和解释器都不可省略词法分析，语法分析，语义分析且顺序不可交换</p>
+<p>即词法分析，语法分析，语义分析是必须的</p>
+<p>编译器方式中中间代码生成和代码优化不是必要，可省略</p>
+<p>即编译器方式可以在词法分析，语法分析，语义分析阶段后直接生成目标代码</p>
+<h3 id="符号表">符号表：</h3>
+<pre><code>不断收集，记录和使用源程序中一些相关符号的类型和特征等信息，并将其存入符号表中
+记录源程序中各个字符的必要信息，以辅助语义的正确性检查和代码生成</code></pre>
+<h3 id="词法分析">词法分析</h3>
+<pre><code>输入：源程序
+输出：记号流
+词法分析阶段的主要作用是分析构成程序的字符及由字符按照构造规则构成的符号是否符合程序语言的规定</code></pre>
+<h3 id="语法分析">语法分析</h3>
+<pre><code>输入：记号流
+输出：语法树（分析树）
+语法分析阶段的主要作用是
+对各条语句的结构进行合法性分析
+分析程序中的句子结构是否正确</code></pre>
+<h3 id="语义分析">语义分析</h3>
+<p>分析个语法结构的含义，检查源程序是否包含静态语义错误</p>
+<pre><code>输入：语法树（分析树）
+语义分析阶段的主要作用是进行类型分析和检查
+
+语义分析阶段不能发现程序中所有的语义错误
+语义分析阶段可以发现静态语义错误
+不能发现动态语义错误，动态语义错误运行时才能发现</code></pre>
+<h3 id="目标代码生成">目标代码生成</h3>
+<pre><code>目标代码生成阶段的工作与具体的机器密切相关
+寄存器的分配处于目标代码生成阶段</code></pre>
+<h3 id="中间代码生成">中间代码生成</h3>
+<p>中间代码与具体的机器无关（不依赖具体的机器），可以将不同的高级程序语言翻译成同一种中间代码。</p>
+<p>中间代码可以跨平台。</p>
+<p>因为与具体的机器无关，使用中间代码有利于进行与机器无关的优化处理和提高编译程序的可移植性。</p>
+<p>常见的中间代码有：后缀式，三地址码，三元式，四元式和树（图）等形式</p>
+<h3 id="有限自动机finite-automata">有限自动机（finite automata）</h3>
+<p>有限自动机是词法分析的一个工具，它能正确地识别正规集</p>
+<p>确定的有限自动机（DFA）:对每一个状态来说识别字符后转移的状态是唯一的</p>
+<p>不确定的有限自动机（NFA）:对每一个状态来说识别字符后转移的状态是不唯一的</p>
+<h3 id="上下文无关文法">上下文无关文法</h3>
+<p>被广泛地用于表示各种程序设计语言的语法规则</p>
+<h3 id="中缀后缀表达式转换">中缀，后缀表达式转换</h3>
+<p>优先级（优先级相同，从右向左） 1. （） 2. x,/ 3. +-</p>
+<p>中缀式：a?b</p>
+<p>后缀式：ab？</p>
+<p>栈：先进后出，后进先出</p>
+<h1 id="数据结构算法9分左右">数据结构+算法（9分左右）</h1>
+<p>时间空间复杂度，线性表，矩阵，树，图，查找，排序</p>
+<h2 id="时间复杂度">时间复杂度</h2>
+<p>算法时间复杂度以算法中基本操作重复执行的次数（简称为频度）作为算法的时间度量。</p>
+<p>O(1)&lt;O(log2n)&lt;O(n)&lt;O(nlog2n)&lt;O(n<sup>2)&lt;O(n</sup>3)&lt;O(2<sup>n)&lt;O(n!)&lt;O(n</sup>n)</p>
+<p>常数阶&lt;对数阶&lt;线性阶&lt;线性对数阶&lt;平方阶&lt;立方阶&lt;指数阶&lt;阶乘阶&lt;N次方阶</p>
+<p>加法规则：多项相加，保留最高阶项，并将系数化为1</p>
+<p>乘法规则：多项相乘都保留，并将系数化为1</p>
+<p>加法乘法混合规则：小括号再乘法规则最后加法规则</p>
+<h2 id="空间复杂度">空间复杂度</h2>
+<p>O(1),O(n),O(n^2)</p>
+<h2 id="渐进符号">渐进符号</h2>
+<ol type="1">
+<li>O记号，渐进上界</li>
+<li>Ω记号，渐进下界</li>
+<li>Θ记号，渐进紧致界</li>
+</ol>
+<h2 id="递归式-时间复杂度空间复杂度">递归式 时间复杂度，空间复杂度</h2>
+<p>（每次递归的时间复杂度不变的情况）时间复杂度=递归的次数 * 每次递归的时间复杂度</p>
+<p>主方法，主定理，求解递归</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://scjie6.github.io/2022/02/15/Aura%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="scj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/15/Aura%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">Aura异常处理</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-15 22:48:19 / 修改时间：23:12:14" itemprop="dateCreated datePublished" datetime="2022-02-15T22:48:19+08:00">2022-02-15</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在重写自定义报价单对象列表页新建按钮时，复用了详情页自定义按钮对应的 lightning component 组件。在点击列表页新建按钮后，加载出lightning component 组件后，关闭该组件后发现其他对象标准的新建按钮弹出的modal框样式被lightning component 组件覆盖。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aura:html</span> <span class="attr">tag</span>=<span class="string">&quot;style&quot;</span>&gt;</span></span><br><span class="line">	.slds-modal__container&#123;</span><br><span class="line">		width:90% !important;</span><br><span class="line">		max-width: 90% !important;</span><br><span class="line">		height:auto;</span><br><span class="line">		top: 10%;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">aura:html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>处理方法： 判断在列表页时，样式覆盖加上 .THIS 确定作用域 在详情页时，去掉 .THIS，覆盖modal框固定宽度</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aura:renderif</span> <span class="attr">istrue</span>=<span class="string">&quot;&#123;! v.recordId != undefined&#125;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aura:html</span> <span class="attr">tag</span>=<span class="string">&quot;style&quot;</span>&gt;</span></span><br><span class="line">        .slds-modal__container&#123;</span><br><span class="line">                width:90% !important;</span><br><span class="line">                max-width: 90% !important;</span><br><span class="line">                height:auto;</span><br><span class="line">                top: 10%;</span><br><span class="line">            &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">aura:html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aura:renderif</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">aura:renderif</span> <span class="attr">istrue</span>=<span class="string">&quot;&#123;! v.recordId == undefined&#125;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aura:html</span> <span class="attr">tag</span>=<span class="string">&quot;style&quot;</span>&gt;</span></span><br><span class="line">        .THIS .slds-modal__container&#123;</span><br><span class="line">                width:90% !important;</span><br><span class="line">                max-width: 90% !important;</span><br><span class="line">                height:auto;</span><br><span class="line">                top: 10%;</span><br><span class="line">            &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">aura:html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aura:renderif</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://scjie6.github.io/2022/02/05/mianshi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="scj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/05/mianshi/" class="post-title-link" itemprop="url">mianshi</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-02-05 23:51:59" itemprop="dateCreated datePublished" datetime="2022-02-05T23:51:59+08:00">2022-02-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-25 09:36:12" itemprop="dateModified" datetime="2022-02-25T09:36:12+08:00">2022-02-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>https://mp.weixin.qq.com/s/bF4aAAti2Ec-sv8h-Xrwzg</p>
+<p>如何设置代理登陆用户 在设置--〉安全性控制--〉登陆访问权限政策</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://scjie6.github.io/2022/02/04/scjTestFirst/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -355,7 +1356,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

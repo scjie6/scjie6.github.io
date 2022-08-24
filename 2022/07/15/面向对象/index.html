@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"scjie6.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="面向对象分析  认定对象 组织对象 描述对象间的相互作用 确定对象的操作 定义对象的内部信息  面向对象设计  识别类及对象 定义属性 定义服务 识别关系 识别包">
+  <meta name="description" content="面向对象分析  认定对象 组织对象 描述对象间的相互作用 确定对象的操作 定义对象的内部信息  面向对象设计  识别类及对象 定义属性 定义服务 识别关系 识别包  UML 事物  结构事物（静态） 行为事物（动态） 分组事物 注释事物  关系  依赖 关联（聚合，组合） 泛化 实现  图  类图(静态) 对象图(静态) 用例图(静态) 序列图，顺序图（动态，交互图） 通信图 状态图（状态，转换，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面向对象">
 <meta property="og:url" content="https://scjie6.github.io/2022/07/15/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="面向对象分析  认定对象 组织对象 描述对象间的相互作用 确定对象的操作 定义对象的内部信息  面向对象设计  识别类及对象 定义属性 定义服务 识别关系 识别包">
+<meta property="og:description" content="面向对象分析  认定对象 组织对象 描述对象间的相互作用 确定对象的操作 定义对象的内部信息  面向对象设计  识别类及对象 定义属性 定义服务 识别关系 识别包  UML 事物  结构事物（静态） 行为事物（动态） 分组事物 注释事物  关系  依赖 关联（聚合，组合） 泛化 实现  图  类图(静态) 对象图(静态) 用例图(静态) 序列图，顺序图（动态，交互图） 通信图 状态图（状态，转换，">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-15T14:04:17.000Z">
-<meta property="article:modified_time" content="2022-07-15T14:09:02.559Z">
+<meta property="article:modified_time" content="2022-07-21T11:58:56.262Z">
 <meta property="article:author" content="scj">
 <meta name="twitter:card" content="summary">
 
@@ -187,10 +187,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-07-15 22:04:17 / 修改时间：22:09:02" itemprop="dateCreated datePublished" datetime="2022-07-15T22:04:17+08:00">2022-07-15</time>
+              <time title="创建时间：2022-07-15 22:04:17" itemprop="dateCreated datePublished" datetime="2022-07-15T22:04:17+08:00">2022-07-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-21 19:58:56" itemprop="dateModified" datetime="2022-07-21T19:58:56+08:00">2022-07-21</time>
+              </span>
 
           
 
@@ -219,6 +225,33 @@
 <li>识别关系</li>
 <li>识别包</li>
 </ol>
+<h1 id="uml">UML</h1>
+<h2 id="事物">事物</h2>
+<ol type="1">
+<li>结构事物（静态）</li>
+<li>行为事物（动态）</li>
+<li>分组事物</li>
+<li>注释事物</li>
+</ol>
+<h2 id="关系">关系</h2>
+<ol type="1">
+<li>依赖</li>
+<li>关联（聚合，组合）</li>
+<li>泛化</li>
+<li>实现</li>
+</ol>
+<h2 id="图">图</h2>
+<ol type="1">
+<li>类图(静态)</li>
+<li>对象图(静态)</li>
+<li>用例图(静态)</li>
+<li>序列图，顺序图（动态，交互图）</li>
+<li>通信图</li>
+<li>状态图（状态，转换，事件，活动组成）</li>
+<li>活动图</li>
+<li>构建图</li>
+<li>部署图</li>
+</ol>
 
     </div>
 
@@ -237,7 +270,10 @@
     <a href="/2022/07/10/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="prev" title="数据库">
       <i class="fa fa-chevron-left"></i> 数据库
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/07/18/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="next" title="设计模式">
+      设计模式 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -296,7 +332,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">面向对象分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1"><span class="nav-number">2.</span> <span class="nav-text">面向对象设计</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">面向对象分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1"><span class="nav-number">2.</span> <span class="nav-text">面向对象设计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#uml"><span class="nav-number">3.</span> <span class="nav-text">UML</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E7%89%A9"><span class="nav-number">3.1.</span> <span class="nav-text">事物</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB"><span class="nav-number">3.2.</span> <span class="nav-text">关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE"><span class="nav-number">3.3.</span> <span class="nav-text">图</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -310,7 +346,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
