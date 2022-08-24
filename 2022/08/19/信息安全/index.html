@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"scjie6.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="防火墙技术包过滤，应用代理网关和状态检测技术三个发展阶段 包过滤防火墙 低水平控制 ：每个IP包的字段都被检查（源地址，目的地址，协议和端口） 对用户完全透明，速度较快  应用代理网关防火墙用代理网关防火墙彻底隔断内网与外网的直接通信，内网用户对外网的访问变成防火墙对外网的访问，然后再由防火墙转发给内网用户。  优点是可以检查应用层，传输层和网络层的协议特征，对数据包的检测能力比较强 缺点是难以配">
+  <meta name="description" content="防火墙技术 包过滤，应用代理网关和状态检测技术三个发展阶段 包过滤防火墙  低水平控制 ：每个IP包的字段都被检查（源地址，目的地址，协议和端口） 对用户完全透明，速度较快  应用代理网关防火墙 用代理网关防火墙彻底隔断内网与外网的直接通信，内网用户对外网的访问变成防火墙对外网的访问，然后再由防火墙转发给内网用户。 * 优点是可以检查应用层，传输层和网络层的协议特征，对数据包的检测能力比较强 *">
 <meta property="og:type" content="article">
 <meta property="og:title" content="信息安全">
 <meta property="og:url" content="https://scjie6.github.io/2022/08/19/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="防火墙技术包过滤，应用代理网关和状态检测技术三个发展阶段 包过滤防火墙 低水平控制 ：每个IP包的字段都被检查（源地址，目的地址，协议和端口） 对用户完全透明，速度较快  应用代理网关防火墙用代理网关防火墙彻底隔断内网与外网的直接通信，内网用户对外网的访问变成防火墙对外网的访问，然后再由防火墙转发给内网用户。  优点是可以检查应用层，传输层和网络层的协议特征，对数据包的检测能力比较强 缺点是难以配">
+<meta property="og:description" content="防火墙技术 包过滤，应用代理网关和状态检测技术三个发展阶段 包过滤防火墙  低水平控制 ：每个IP包的字段都被检查（源地址，目的地址，协议和端口） 对用户完全透明，速度较快  应用代理网关防火墙 用代理网关防火墙彻底隔断内网与外网的直接通信，内网用户对外网的访问变成防火墙对外网的访问，然后再由防火墙转发给内网用户。 * 优点是可以检查应用层，传输层和网络层的协议特征，对数据包的检测能力比较强 *">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-19T04:01:23.000Z">
 <meta property="article:modified_time" content="2022-08-19T09:37:47.983Z">
@@ -203,24 +203,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="防火墙技术"><a href="#防火墙技术" class="headerlink" title="防火墙技术"></a>防火墙技术</h1><p>包过滤，应用代理网关和状态检测技术三个发展阶段</p>
-<h2 id="包过滤防火墙"><a href="#包过滤防火墙" class="headerlink" title="包过滤防火墙"></a>包过滤防火墙</h2><ul>
+        <h1 id="防火墙技术">防火墙技术</h1>
+<p>包过滤，应用代理网关和状态检测技术三个发展阶段</p>
+<h2 id="包过滤防火墙">包过滤防火墙</h2>
+<ul>
 <li>低水平控制 ：每个IP包的字段都被检查（源地址，目的地址，协议和端口）</li>
 <li>对用户完全透明，速度较快</li>
 </ul>
-<h2 id="应用代理网关防火墙"><a href="#应用代理网关防火墙" class="headerlink" title="应用代理网关防火墙"></a>应用代理网关防火墙</h2><p>用代理网关防火墙彻底隔断内网与外网的直接通信，内网用户对外网的访问变成防火墙对外网的访问，然后再由防火墙转发给内网用户。</p>
+<h2 id="应用代理网关防火墙">应用代理网关防火墙</h2>
+<p>用代理网关防火墙彻底隔断内网与外网的直接通信，内网用户对外网的访问变成防火墙对外网的访问，然后再由防火墙转发给内网用户。 * 优点是可以检查应用层，传输层和网络层的协议特征，对数据包的检测能力比较强 * 缺点是难以配置，处理速度非常慢</p>
+<h1 id="病毒">病毒</h1>
+<p>计算机病毒的特征包括：传播性，隐蔽性，感染性，潜伏性，触发性，破坏性等 * 蠕虫病毒：欢乐时光，熊猫烧香，红色代码，爱虫病毒，震网 * 木马软件：冰河 * 后门病毒 * 宏病毒</p>
+<h1 id="网络攻击">网络攻击</h1>
 <ul>
-<li>优点是可以检查应用层，传输层和网络层的协议特征，对数据包的检测能力比较强</li>
-<li>缺点是难以配置，处理速度非常慢</li>
-</ul>
-<h1 id="病毒"><a href="#病毒" class="headerlink" title="病毒"></a>病毒</h1><p>计算机病毒的特征包括：传播性，隐蔽性，感染性，潜伏性，触发性，破坏性等</p>
-<ul>
-<li>蠕虫病毒：欢乐时光，熊猫烧香，红色代码，爱虫病毒，震网</li>
-<li>木马软件：冰河</li>
-<li>后门病毒</li>
-<li>宏病毒</li>
-</ul>
-<h1 id="网络攻击"><a href="#网络攻击" class="headerlink" title="网络攻击"></a>网络攻击</h1><ul>
 <li>拒绝服务攻击（DDOS攻击）</li>
 <li>重放攻击</li>
 <li>口令入侵攻击</li>
@@ -230,8 +225,10 @@
 <li>IP欺骗攻击</li>
 <li>Sql注入攻击</li>
 </ul>
-<h2 id="入侵检测技术"><a href="#入侵检测技术" class="headerlink" title="入侵检测技术"></a>入侵检测技术</h2><p>专家系统，模型检测，简单匹配</p>
-<h1 id="网络安全"><a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><ul>
+<h2 id="入侵检测技术">入侵检测技术</h2>
+<p>专家系统，模型检测，简单匹配</p>
+<h1 id="网络安全">网络安全</h1>
+<ul>
 <li>SSL 安全套接层,端口号443</li>
 <li>TLS</li>
 <li>SSH</li>
