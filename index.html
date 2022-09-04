@@ -160,6 +160,168 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://scjie6.github.io/2022/09/02/UML/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="scj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/02/UML/" class="post-title-link" itemprop="url">UML</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-02 17:50:43" itemprop="dateCreated datePublished" datetime="2022-09-02T17:50:43+08:00">2022-09-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-04 11:47:56" itemprop="dateModified" datetime="2022-09-04T11:47:56+08:00">2022-09-04</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>--&gt; # UML 统一建模语言 Unified Modeling Language * 事物 * 关系 * 图 * <!-- START doctoc generated TOC please keep comment here to allow auto update --> <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --> <strong>Table of Contents</strong> <em>generated with <a target="_blank" rel="noopener" href="https://github.com/thlorenz/doctoc">DocToc</a></em></p>
+<ul>
+<li><a href="#uml">UML</a>
+<ul>
+<li><a href="#%E4%BA%8B%E7%89%A9">事物</a></li>
+<li><a href="#%E5%85%B3%E7%B3%BB">关系</a>
+<ul>
+<li><a href="#%E4%BE%9D%E8%B5%96%E4%B8%80%E6%9D%A1%E5%8F%AF%E8%83%BD%E6%9C%89%E6%96%B9%E5%90%91%E7%9A%84%E8%99%9A%E7%BA%BF">依赖(一条可能有方向的虚线)</a></li>
+<li><a href="#%E5%85%B3%E8%81%94">关联</a>
+<ul>
+<li><a href="#%E8%81%9A%E5%90%88%E5%AE%9E%E7%BA%BF%E7%A9%BA%E5%BF%83%E8%8F%B1%E5%BD%A2%E6%8C%87%E5%90%91%E6%95%B4%E4%BD%93">聚合(实线空心菱形，指向整体)</a></li>
+<li><a href="#%E7%BB%84%E5%90%88%E5%AE%9E%E7%BA%BF%E5%AE%9E%E5%BF%83%E8%8F%B1%E5%BD%A2%E6%8C%87%E5%90%91%E6%95%B4%E4%BD%93">组合(实线实心菱形，指向整体)</a></li>
+<li><a href="#%E5%85%B3%E8%81%94%E5%A4%9A%E9%87%8D%E5%BA%A6">关联多重度</a></li>
+</ul></li>
+<li><a href="#%E6%B3%9B%E5%8C%96%E5%AE%9E%E7%BA%BF%E7%A9%BA%E5%BF%83%E7%AE%AD%E5%A4%B4%E6%8C%87%E5%90%91%E7%88%B6%E7%B1%BB">泛化(实线空心箭头，指向父类)</a></li>
+<li><a href="#%E5%AE%9E%E7%8E%B0%E8%99%9A%E7%BA%BF%E7%A9%BA%E5%BF%83%E7%AE%AD%E5%A4%B4%E6%8C%87%E5%90%91%E7%88%B6%E7%B1%BB">实现(虚线空心箭头，指向父类)</a></li>
+</ul></li>
+<li><a href="#%E5%9B%BE">图</a>
+<ul>
+<li><a href="#%E7%B1%BB%E5%9B%BE">类图</a></li>
+<li><a href="#%E5%AF%B9%E8%B1%A1%E5%9B%BE">对象图</a></li>
+<li><a href="#%E7%94%A8%E4%BE%8B%E5%9B%BE">用例图</a>
+<ul>
+<li><a href="#%E5%8C%85%E5%90%AB%E5%85%B3%E7%B3%BB">包含关系</a></li>
+<li><a href="#%E6%89%A9%E5%B1%95%E5%85%B3%E7%B3%BB">扩展关系</a></li>
+</ul></li>
+<li><a href="#%E4%BA%A4%E4%BA%92%E5%9B%BE">交互图</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update 
+
+## 事物
+* 结构事物 UML模型的静态部分，描述概念或物理元素
+* 行为事物 UML模型的动态部分
+* 分组事物
+* 注释事物
+
+## 关系
+* 依赖
+* 关联
+* 泛化
+* 实现
+
+### 依赖(一条可能有方向的虚线)
+依赖是两个事物间的语义关系，其中一个事物（独立事物）发生变化会影响另一个事物（依赖事物）的语义。一条可能有方向的虚线
+
+### 关联
+是一种结构关系，它描述了一组链，链是对象之间的连接。
+* 聚合
+* 组合
+
+#### 聚合(实线空心菱形，指向整体)
+部分和整体的生命周期不一致，整体消失了，部分仍然存在，部分可以脱离整体存在
+
+#### 组合(实线实心菱形，指向整体)
+部分和整体的生命周期一致，整体消失了，部分也消失，部分不可以脱离整体存在
+
+#### 关联多重度
+* 单项关联(一条有方向的实线)
+
+### 泛化(实线空心箭头，指向父类)
+泛化是一种特殊/一般关系，特殊元素(子元素)的对象可替代为一般元素(父元素)的对象。用这种方法，子元素共享父元素的结构和行为。
+
+### 实现(虚线空心箭头，指向父类)
+一种是在接口和实现类之间，另一种是在用例和实现它们的协作之间
+
+## 图
+* 类图
+* 对象图
+* 用例图
+* 序列图（交互图）
+* 通信图（交互图）
+* 状态图
+* 活动图
+* 构建图
+* 部署图
+
+### 类图
+1. 对系统的词汇建模
+2. 对简单的协作建模
+3. 对逻辑数据库模式建模
+
+### 对象图
+展示了某一时刻一组对象以及它们之间的关系，描述了在类图中所建立的事物的实例的静态快照。
+
+### 用例图
+展现了一组用例，参与者以及它们之间的关系。
+1. 用例（椭圆）
+2. 参与者
+3. 用例之间的扩展关系(<<extend>>)和包含关系(<<include>>)，参与者和用例之间的关联关系，用例与用例以及参与者与参与者之间的泛化关系。
+
+#### 包含关系
+(基本用例---->
+<p>被包含用例)</p>
+<h4 id="扩展关系">扩展关系</h4>
+<p>一个用例执行的时候，可能会发生一些特殊的情况或可选的情况，这种情况就是这个用例的扩展用例。(扩展用例----&gt;基本用例)</p>
+<h3 id="交互图">交互图</h3>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://scjie6.github.io/2022/08/19/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -652,10 +814,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-07-18 15:30:40 / 修改时间：16:09:14" itemprop="dateCreated datePublished" datetime="2022-07-18T15:30:40+08:00">2022-07-18</time>
+              <time title="创建时间：2022-07-18 15:30:40" itemprop="dateCreated datePublished" datetime="2022-07-18T15:30:40+08:00">2022-07-18</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-08-24 16:25:35" itemprop="dateModified" datetime="2022-08-24T16:25:35+08:00">2022-08-24</time>
+              </span>
 
           
 
@@ -668,41 +836,45 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="类型">类型</h1>
+          <h1 id="设计模式">设计模式</h1>
+<ul>
+<li>创建型模式与对象的创建有关</li>
+<li>结构型模式处理类或对象的组合</li>
+<li>行为型模式对类或对象怎样交互和怎样分配职责进行描述</li>
+</ul>
+<h1 id="类型">类型</h1>
 <ol type="1">
 <li>创建型模式
 <ul>
-<li>工厂模式</li>
-<li>抽象工厂模式</li>
-<li>单例模式</li>
-<li>建造者模式</li>
-<li>原型模式</li>
+<li>工厂模式 Factory Method</li>
+<li>抽象工厂模式 Abstract Factory</li>
+<li>单例模式 Singleton</li>
+<li>建造者模式 Builder</li>
+<li>原型模式 Prototype</li>
 </ul></li>
 <li>结构型模式
 <ul>
-<li>适配器模式</li>
-<li>桥接模式</li>
-<li>过滤器模式</li>
-<li>组合模式</li>
-<li>装饰器模式</li>
-<li>外观模式</li>
-<li>享元模式</li>
-<li>代理模式</li>
+<li>适配器模式 Adapter</li>
+<li>桥接模式 Bridge</li>
+<li>组合模式 Composite</li>
+<li>装饰器模式 Decorator</li>
+<li>外观模式 Facade</li>
+<li>享元模式 Flyweight</li>
+<li>代理模式 Proxy</li>
 </ul></li>
 <li>行为型模式
 <ul>
-<li>责任链模式</li>
-<li>命令模式</li>
-<li>解释器模式</li>
-<li>迭代器模式</li>
-<li>中介者模式</li>
-<li>备忘录模式</li>
-<li>观察者模式</li>
-<li>状态模式</li>
-<li>空对象模式</li>
-<li>策略模式</li>
-<li>模版模式</li>
-<li>访问者漠视</li>
+<li>责任链模式 Chain of Responsibility</li>
+<li>命令模式 Command</li>
+<li>解释器模式 Interpreter</li>
+<li>迭代器模式 Iterator</li>
+<li>中介者模式 Mediator</li>
+<li>备忘录模式 Memento</li>
+<li>观察者模式 Observer</li>
+<li>状态模式 State</li>
+<li>策略模式 Strategy</li>
+<li>模版方法模式 Template Method</li>
+<li>访问者模式 Visitor</li>
 </ul></li>
 </ol>
 
@@ -1520,135 +1692,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://scjie6.github.io/2022/06/21/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="scj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/06/21/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-title-link" itemprop="url">程序设计语言基础知识</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-06-21 17:45:32 / 修改时间：17:47:43" itemprop="dateCreated datePublished" datetime="2022-06-21T17:45:32+08:00">2022-06-21</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="程序设计语言基础知识">程序设计语言基础知识</h1>
-<p>低级语言：机器语言和汇编语言</p>
-<p>高级语言：C,C++,JAVA....</p>
-<p>解释器：</p>
-<pre><code>    翻译源程序时不生成独立的目标程序
-    解释程序和源程序要参与到程序的运行过程中</code></pre>
-<p>编译器：</p>
-<pre><code>    翻译时将源程序翻译成独立保存的目标程序
-    源程序和编译程序都不再参与目标程序的运行过程</code></pre>
-<p>程序三种基本控制结构：</p>
-<pre><code>1. 顺序
-2. 选择
-3. 重复</code></pre>
-<p>程序设计语言规定其程序中的数据必须具有类型，则有利于：</p>
-<pre><code>1. 便于为数据合理分配存储单元
-2. 便于对参与表达式计算的数据对象进行检查
-3. 便于规定数据对象的取值范围及能够进行的运算</code></pre>
-<h3 id="函数定义">函数定义</h3>
-<p>返回值类型 函数名（形式参数） {函数体；}</p>
-<ol type="1">
-<li>值调用（Call by Value）:将实参的值传递给形参，实参可以是变量，常量和表达式。不可以实现形参和实参间双向传递数据的效果</li>
-<li>引用调用（Call by Reference）:将实参的地址传递给形参，形参必须有地址，实参不能是常量（值），表达式。可以实现形参和实参间双向传递数据的效果，即改变形参的值同时也改变了实参的值</li>
-</ol>
-<h3 id="编译方式">编译方式</h3>
-<p>词法分析，语法分析，语义分析，中间代码生成，代码优化，目标代码生成</p>
-<h3 id="解释方式">解释方式</h3>
-<p>词法分析，语法分析，语义分析</p>
-<p>编译器和解释器都不可省略词法分析，语法分析，语义分析且顺序不可交换</p>
-<p>即词法分析，语法分析，语义分析是必须的</p>
-<p>编译器方式中中间代码生成和代码优化不是必要，可省略</p>
-<p>即编译器方式可以在词法分析，语法分析，语义分析阶段后直接生成目标代码</p>
-<h3 id="符号表">符号表：</h3>
-<pre><code>不断收集，记录和使用源程序中一些相关符号的类型和特征等信息，并将其存入符号表中
-记录源程序中各个字符的必要信息，以辅助语义的正确性检查和代码生成</code></pre>
-<h3 id="词法分析">词法分析</h3>
-<pre><code>输入：源程序
-输出：记号流
-词法分析阶段的主要作用是分析构成程序的字符及由字符按照构造规则构成的符号是否符合程序语言的规定</code></pre>
-<h3 id="语法分析">语法分析</h3>
-<pre><code>输入：记号流
-输出：语法树（分析树）
-语法分析阶段的主要作用是
-对各条语句的结构进行合法性分析
-分析程序中的句子结构是否正确</code></pre>
-<h3 id="语义分析">语义分析</h3>
-<p>分析个语法结构的含义，检查源程序是否包含静态语义错误</p>
-<pre><code>输入：语法树（分析树）
-语义分析阶段的主要作用是进行类型分析和检查
-
-语义分析阶段不能发现程序中所有的语义错误
-语义分析阶段可以发现静态语义错误
-不能发现动态语义错误，动态语义错误运行时才能发现</code></pre>
-<h3 id="目标代码生成">目标代码生成</h3>
-<pre><code>目标代码生成阶段的工作与具体的机器密切相关
-寄存器的分配处于目标代码生成阶段</code></pre>
-<h3 id="中间代码生成">中间代码生成</h3>
-<p>中间代码与具体的机器无关（不依赖具体的机器），可以将不同的高级程序语言翻译成同一种中间代码。</p>
-<p>中间代码可以跨平台。</p>
-<p>因为与具体的机器无关，使用中间代码有利于进行与机器无关的优化处理和提高编译程序的可移植性。</p>
-<p>常见的中间代码有：后缀式，三地址码，三元式，四元式和树（图）等形式</p>
-<h3 id="有限自动机finite-automata">有限自动机（finite automata）</h3>
-<p>有限自动机是词法分析的一个工具，它能正确地识别正规集</p>
-<p>确定的有限自动机（DFA）:对每一个状态来说识别字符后转移的状态是唯一的</p>
-<p>不确定的有限自动机（NFA）:对每一个状态来说识别字符后转移的状态是不唯一的</p>
-<h3 id="上下文无关文法">上下文无关文法</h3>
-<p>被广泛地用于表示各种程序设计语言的语法规则</p>
-<h3 id="中缀后缀表达式转换">中缀，后缀表达式转换</h3>
-<p>优先级（优先级相同，从右向左） 1. （） 2. x,/ 3. +-</p>
-<p>中缀式：a?b</p>
-<p>后缀式：ab？</p>
-<p>栈：先进后出，后进先出</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1718,7 +1761,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
