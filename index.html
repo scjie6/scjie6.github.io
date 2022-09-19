@@ -191,7 +191,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-04 23:05:33" itemprop="dateModified" datetime="2022-09-04T23:05:33+08:00">2022-09-04</time>
+                <time title="修改时间：2022-09-09 17:43:12" itemprop="dateModified" datetime="2022-09-09T17:43:12+08:00">2022-09-09</time>
               </span>
 
           
@@ -207,7 +207,10 @@
       
           <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <h1 id="uml">UML</h1>
-<p>统一建模语言 Unified Modeling Language * 事物 * 关系 * 图 * <!-- START doctoc generated TOC please keep comment here to allow auto update --> <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --> <strong>Table of Contents</strong> <em>generated with <a target="_blank" rel="noopener" href="https://github.com/thlorenz/doctoc">DocToc</a></em></p>
+<p>统一建模语言 Unified Modeling Language * 事物 * 关系 * 图</p>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<p><strong>Table of Contents</strong> <em>generated with <a target="_blank" rel="noopener" href="https://github.com/thlorenz/doctoc">DocToc</a></em></p>
 <ul>
 <li><a href="#uml">UML</a>
 <ul>
@@ -294,6 +297,35 @@
 <h4 id="扩展关系">扩展关系</h4>
 <p>一个用例执行的时候，可能会发生一些特殊的情况或可选的情况，这种情况就是这个用例的扩展用例。(扩展用例----&gt;基本用例)</p>
 <h3 id="交互图">交互图</h3>
+<ul>
+<li>序列图 强调消息时间顺序的交互图</li>
+<li>通信图 强调接收和发送消息的对象的结构组织的交互图</li>
+<li>交互概览图 强调控制流的交互图</li>
+<li>计时图</li>
+</ul>
+<h3 id="序列图">序列图</h3>
+<p>描述了以时间顺序组织的对象之间的交互活动。 1. 序列图有对象生命线 2. 序列图有控制焦点</p>
+<h3 id="通信图">通信图</h3>
+<p>强调的是接收和发送消息的对象的结构组织 1. 通信图有路径 2. 通信图有顺序号</p>
+<h3 id="状态图">状态图</h3>
+<p>可以用状态图对系统的动态方面建模，这些动态方面可以包括出现在系统体系结构的任何视图中的任何一种对象的按事件排序的行为</p>
+<ul>
+<li>状态 （超状态：组合状态）</li>
+<li>转换 转换包括两个状态，源状态和目标状态（事件，监护条件，动作）</li>
+<li>事件 事件触发转换（迁移）</li>
+<li>活动 活动（动作）可以在状态（迁移）内执行，也可以在状态（迁移）转换时执行</li>
+</ul>
+<h3 id="活动图">活动图</h3>
+<h3 id="构件组件图">构件（组件）图</h3>
+<p>展现了一组构件之间的组织和依赖。构件图专注于系统的静态实现视图。</p>
+<h3 id="部署图">部署图</h3>
+<h2 id="分类考察">分类考察</h2>
+<ul>
+<li>静态建模: 类图,对象图,用例图</li>
+<li>动态建模: 序列图(顺序图,时序图),通信图(协作图),状态图,活动图</li>
+<li>物理建模: 构件图(组件图),部署图</li>
+<li>交互图: 序列图(顺序图,时序图),通信图(协作图)</li>
+</ul>
 
       
     </div>
