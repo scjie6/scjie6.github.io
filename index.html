@@ -205,56 +205,55 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="salesforce-apex-keywords">Salesforce Apex keywords</h1>
-<h2 id="defaultwith-sharingwith-out-sharinginherited-sharing-keywords">default,with sharing,with out sharing,inherited sharing Keywords</h2>
-<h3 id="default">default</h3>
-<ul>
-<li>If the class is not declared as With Sharing or Without Sharing then the class is by default taken as Without Sharing. ### with sharing</li>
-<li>If you declare a class as a With Sharing, sharing rules given to the current user will be taken into consideration and the user can access and perform the operations based on the permissions given to him on objects and fields. (field level security, sharing rules) ### with out sharing</li>
+          <h1 id="Salesforce-Apex-keywords"><a href="#Salesforce-Apex-keywords" class="headerlink" title="Salesforce Apex keywords"></a>Salesforce Apex keywords</h1><h2 id="default-with-sharing-with-out-sharing-inherited-sharing-Keywords"><a href="#default-with-sharing-with-out-sharing-inherited-sharing-Keywords" class="headerlink" title="default,with sharing,with out sharing,inherited sharing Keywords"></a>default,with sharing,with out sharing,inherited sharing Keywords</h2><h3 id="default"><a href="#default" class="headerlink" title="default"></a>default</h3><ul>
+<li>If the class is not declared as With Sharing or Without Sharing then the class is by default taken as Without Sharing.<h3 id="with-sharing"><a href="#with-sharing" class="headerlink" title="with sharing"></a>with sharing</h3></li>
+<li>If you declare a class as a With Sharing, sharing rules given to the current user will be taken into consideration and the user can access and perform the operations based on the permissions given to him on objects and fields. (field level security, sharing rules)<h3 id="with-out-sharing"><a href="#with-out-sharing" class="headerlink" title="with out sharing"></a>with out sharing</h3></li>
 <li>If you declare a class as a Without Sharing then this apex class runs in system mode which means apex code has access to all the objects and fields irrespective of current users sharing rules, fields level security, object permissions.</li>
 <li>Both inner class and outer classes can be declared as With Sharing.</li>
 <li>If inner class is declared as With Sharing and top-level class is declared as without sharing, then the entire context will run in With Sharing context.</li>
-<li>Outer class is declared as With Sharing and inner class is declared as Without Sharing then inner class runs in Without Sharing context only. (Inner classes don't take the sharing properties from outer class). ### inherited sharing Keywords</li>
-<li>Salesforce "Inherited Sharing" is a newly introduced modifier for class declaration. It's surely better than Apex classes with no sharing declaration, as it mostly enforces WITH SHARING context, the official documentation screenshot describes Aura, VF, and Apex REST to auto enforce WITH SHARING context.</li>
+<li>Outer class is declared as With Sharing and inner class is declared as Without Sharing then inner class runs in Without Sharing context only. (Inner classes don’t take the sharing properties from outer class).<h3 id="inherited-sharing-Keywords"><a href="#inherited-sharing-Keywords" class="headerlink" title="inherited sharing Keywords"></a>inherited sharing Keywords</h3></li>
+<li>Salesforce “Inherited Sharing” is a newly introduced modifier for class declaration. It’s surely better than Apex classes with no sharing declaration, as it mostly enforces WITH SHARING context, the official documentation screenshot describes Aura, VF, and Apex REST to auto enforce WITH SHARING context. </li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
-<tr class="header">
-<th>Context Inherited</th>
+<tr>
+<th>Context    Inherited</th>
 <th>Sharing Implication</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>Aura</td>
 <td>WITH SHARING</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Batch Apex</td>
 <td>WITH SHARING</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Inbound Email Handler</td>
 <td>WITH SHARING</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Scheduled Apex</td>
 <td>WITH SHARING</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Trigger</td>
 <td>WITHOUT SHARING</td>
 </tr>
-<tr class="even">
+<tr>
 <td>Invocable Actions</td>
 <td>WITH SHARING</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>RESTful Apex</td>
 <td>WITH SHARING</td>
 </tr>
 </tbody>
 </table>
+</div>
 
       
     </div>
@@ -320,72 +319,70 @@
 
       
           <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<h1 id="uml">UML</h1>
-<p>统一建模语言 Unified Modeling Language * 事物 * 关系 * 图</p>
+<h1 id="UML"><a href="#UML" class="headerlink" title="UML"></a>UML</h1><p>统一建模语言 Unified Modeling Language</p>
+<ul>
+<li>事物</li>
+<li>关系</li>
+<li>图</li>
+</ul>
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<p><strong>Table of Contents</strong> <em>generated with <a target="_blank" rel="noopener" href="https://github.com/thlorenz/doctoc">DocToc</a></em></p>
+<p><strong>Table of Contents</strong>  <em>generated with <a target="_blank" rel="noopener" href="https://github.com/thlorenz/doctoc">DocToc</a></em></p>
 <ul>
-<li><a href="#uml">UML</a>
-<ul>
+<li><a href="#uml">UML</a><ul>
 <li><a href="#%E4%BA%8B%E7%89%A9">事物</a></li>
-<li><a href="#%E5%85%B3%E7%B3%BB">关系</a>
-<ul>
+<li><a href="#%E5%85%B3%E7%B3%BB">关系</a><ul>
 <li><a href="#%E4%BE%9D%E8%B5%96%E4%B8%80%E6%9D%A1%E5%8F%AF%E8%83%BD%E6%9C%89%E6%96%B9%E5%90%91%E7%9A%84%E8%99%9A%E7%BA%BF">依赖(一条可能有方向的虚线)</a></li>
-<li><a href="#%E5%85%B3%E8%81%94">关联</a>
-<ul>
+<li><a href="#%E5%85%B3%E8%81%94">关联</a><ul>
 <li><a href="#%E8%81%9A%E5%90%88%E5%AE%9E%E7%BA%BF%E7%A9%BA%E5%BF%83%E8%8F%B1%E5%BD%A2%E6%8C%87%E5%90%91%E6%95%B4%E4%BD%93">聚合(实线空心菱形，指向整体)</a></li>
 <li><a href="#%E7%BB%84%E5%90%88%E5%AE%9E%E7%BA%BF%E5%AE%9E%E5%BF%83%E8%8F%B1%E5%BD%A2%E6%8C%87%E5%90%91%E6%95%B4%E4%BD%93">组合(实线实心菱形，指向整体)</a></li>
 <li><a href="#%E5%85%B3%E8%81%94%E5%A4%9A%E9%87%8D%E5%BA%A6">关联多重度</a></li>
-</ul></li>
+</ul>
+</li>
 <li><a href="#%E6%B3%9B%E5%8C%96%E5%AE%9E%E7%BA%BF%E7%A9%BA%E5%BF%83%E7%AE%AD%E5%A4%B4%E6%8C%87%E5%90%91%E7%88%B6%E7%B1%BB">泛化(实线空心箭头，指向父类)</a></li>
 <li><a href="#%E5%AE%9E%E7%8E%B0%E8%99%9A%E7%BA%BF%E7%A9%BA%E5%BF%83%E7%AE%AD%E5%A4%B4%E6%8C%87%E5%90%91%E7%88%B6%E7%B1%BB">实现(虚线空心箭头，指向父类)</a></li>
-</ul></li>
-<li><a href="#%E5%9B%BE">图</a>
-<ul>
+</ul>
+</li>
+<li><a href="#%E5%9B%BE">图</a><ul>
 <li><a href="#%E7%B1%BB%E5%9B%BE">类图</a></li>
 <li><a href="#%E5%AF%B9%E8%B1%A1%E5%9B%BE">对象图</a></li>
-<li><a href="#%E7%94%A8%E4%BE%8B%E5%9B%BE">用例图</a>
-<ul>
+<li><a href="#%E7%94%A8%E4%BE%8B%E5%9B%BE">用例图</a><ul>
 <li><a href="#%E5%8C%85%E5%90%AB%E5%85%B3%E7%B3%BB">包含关系</a></li>
 <li><a href="#%E6%89%A9%E5%B1%95%E5%85%B3%E7%B3%BB">扩展关系</a></li>
-</ul></li>
-<li><a href="#%E4%BA%A4%E4%BA%92%E5%9B%BE">交互图</a></li>
-</ul></li>
-</ul></li>
 </ul>
-<h2 id="事物">事物</h2>
-<ul>
+</li>
+<li><a href="#%E4%BA%A4%E4%BA%92%E5%9B%BE">交互图</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="事物"><a href="#事物" class="headerlink" title="事物"></a>事物</h2><ul>
 <li>结构事物 UML模型的静态部分，描述概念或物理元素</li>
 <li>行为事物 UML模型的动态部分</li>
 <li>分组事物</li>
 <li>注释事物</li>
 </ul>
-<h2 id="关系">关系</h2>
-<ul>
+<h2 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h2><ul>
 <li>依赖</li>
 <li>关联</li>
 <li>泛化</li>
 <li>实现</li>
 </ul>
-<h3 id="依赖一条可能有方向的虚线">依赖(一条可能有方向的虚线)</h3>
-<p>依赖是两个事物间的语义关系，其中一个事物（独立事物）发生变化会影响另一个事物（依赖事物）的语义。一条可能有方向的虚线</p>
-<h3 id="关联">关联</h3>
-<p>是一种结构关系，它描述了一组链，链是对象之间的连接。 * 聚合 * 组合</p>
-<h4 id="聚合实线空心菱形指向整体">聚合(实线空心菱形，指向整体)</h4>
-<p>部分和整体的生命周期不一致，整体消失了，部分仍然存在，部分可以脱离整体存在</p>
-<h4 id="组合实线实心菱形指向整体">组合(实线实心菱形，指向整体)</h4>
-<p>部分和整体的生命周期一致，整体消失了，部分也消失，部分不可以脱离整体存在</p>
-<h4 id="关联多重度">关联多重度</h4>
+<h3 id="依赖-一条可能有方向的虚线"><a href="#依赖-一条可能有方向的虚线" class="headerlink" title="依赖(一条可能有方向的虚线)"></a>依赖(一条可能有方向的虚线)</h3><p>依赖是两个事物间的语义关系，其中一个事物（独立事物）发生变化会影响另一个事物（依赖事物）的语义。一条可能有方向的虚线</p>
+<h3 id="关联"><a href="#关联" class="headerlink" title="关联"></a>关联</h3><p>是一种结构关系，它描述了一组链，链是对象之间的连接。</p>
 <ul>
+<li>聚合</li>
+<li>组合</li>
+</ul>
+<h4 id="聚合-实线空心菱形，指向整体"><a href="#聚合-实线空心菱形，指向整体" class="headerlink" title="聚合(实线空心菱形，指向整体)"></a>聚合(实线空心菱形，指向整体)</h4><p>部分和整体的生命周期不一致，整体消失了，部分仍然存在，部分可以脱离整体存在</p>
+<h4 id="组合-实线实心菱形，指向整体"><a href="#组合-实线实心菱形，指向整体" class="headerlink" title="组合(实线实心菱形，指向整体)"></a>组合(实线实心菱形，指向整体)</h4><p>部分和整体的生命周期一致，整体消失了，部分也消失，部分不可以脱离整体存在</p>
+<h4 id="关联多重度"><a href="#关联多重度" class="headerlink" title="关联多重度"></a>关联多重度</h4><ul>
 <li>单项关联(一条有方向的实线)</li>
 </ul>
-<h3 id="泛化实线空心箭头指向父类">泛化(实线空心箭头，指向父类)</h3>
-<p>泛化是一种特殊/一般关系，特殊元素(子元素)的对象可替代为一般元素(父元素)的对象。用这种方法，子元素共享父元素的结构和行为。</p>
-<h3 id="实现虚线空心箭头指向父类">实现(虚线空心箭头，指向父类)</h3>
-<p>一种是在接口和实现类之间，另一种是在用例和实现它们的协作之间</p>
-<h2 id="图">图</h2>
-<ul>
+<h3 id="泛化-实线空心箭头，指向父类"><a href="#泛化-实线空心箭头，指向父类" class="headerlink" title="泛化(实线空心箭头，指向父类)"></a>泛化(实线空心箭头，指向父类)</h3><p>泛化是一种特殊/一般关系，特殊元素(子元素)的对象可替代为一般元素(父元素)的对象。用这种方法，子元素共享父元素的结构和行为。</p>
+<h3 id="实现-虚线空心箭头，指向父类"><a href="#实现-虚线空心箭头，指向父类" class="headerlink" title="实现(虚线空心箭头，指向父类)"></a>实现(虚线空心箭头，指向父类)</h3><p>一种是在接口和实现类之间，另一种是在用例和实现它们的协作之间</p>
+<h2 id="图"><a href="#图" class="headerlink" title="图"></a>图</h2><ul>
 <li>类图</li>
 <li>对象图</li>
 <li>用例图</li>
@@ -396,45 +393,45 @@
 <li>构建图</li>
 <li>部署图</li>
 </ul>
-<h3 id="类图">类图</h3>
-<ol type="1">
+<h3 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h3><ol>
 <li>对系统的词汇建模</li>
 <li>对简单的协作建模</li>
 <li>对逻辑数据库模式建模</li>
 </ol>
-<h3 id="对象图">对象图</h3>
-<p>展示了某一时刻一组对象以及它们之间的关系，描述了在类图中所建立的事物的实例的静态快照。</p>
-<h3 id="用例图">用例图</h3>
-<p>展现了一组用例，参与者以及它们之间的关系。 1. 用例（椭圆） 2. 参与者 3. 用例之间的扩展关系(&lt;<extend>&gt;)和包含关系(&lt;<include>&gt;)，参与者和用例之间的关联关系，用例与用例以及参与者与参与者之间的泛化关系。</p>
-<h4 id="包含关系">包含关系</h4>
-<p>(基本用例----&gt;被包含用例)</p>
-<h4 id="扩展关系">扩展关系</h4>
-<p>一个用例执行的时候，可能会发生一些特殊的情况或可选的情况，这种情况就是这个用例的扩展用例。(扩展用例----&gt;基本用例)</p>
-<h3 id="交互图">交互图</h3>
-<ul>
+<h3 id="对象图"><a href="#对象图" class="headerlink" title="对象图"></a>对象图</h3><p>展示了某一时刻一组对象以及它们之间的关系，描述了在类图中所建立的事物的实例的静态快照。</p>
+<h3 id="用例图"><a href="#用例图" class="headerlink" title="用例图"></a>用例图</h3><p>展现了一组用例，参与者以及它们之间的关系。</p>
+<ol>
+<li>用例（椭圆）</li>
+<li>参与者</li>
+<li>用例之间的扩展关系(&lt;<extend>&gt;)和包含关系(&lt;<include>&gt;)，参与者和用例之间的关联关系，用例与用例以及参与者与参与者之间的泛化关系。</li>
+</ol>
+<h4 id="包含关系"><a href="#包含关系" class="headerlink" title="包含关系"></a>包含关系</h4><p>(基本用例——&gt;被包含用例)</p>
+<h4 id="扩展关系"><a href="#扩展关系" class="headerlink" title="扩展关系"></a>扩展关系</h4><p>一个用例执行的时候，可能会发生一些特殊的情况或可选的情况，这种情况就是这个用例的扩展用例。(扩展用例——&gt;基本用例)</p>
+<h3 id="交互图"><a href="#交互图" class="headerlink" title="交互图"></a>交互图</h3><ul>
 <li>序列图 强调消息时间顺序的交互图</li>
 <li>通信图 强调接收和发送消息的对象的结构组织的交互图</li>
 <li>交互概览图 强调控制流的交互图</li>
-<li>计时图</li>
+<li>计时图 </li>
 </ul>
-<h3 id="序列图">序列图</h3>
-<p>描述了以时间顺序组织的对象之间的交互活动。 1. 序列图有对象生命线 2. 序列图有控制焦点</p>
-<h3 id="通信图">通信图</h3>
-<p>强调的是接收和发送消息的对象的结构组织 1. 通信图有路径 2. 通信图有顺序号</p>
-<h3 id="状态图">状态图</h3>
-<p>可以用状态图对系统的动态方面建模，这些动态方面可以包括出现在系统体系结构的任何视图中的任何一种对象的按事件排序的行为</p>
+<h3 id="序列图"><a href="#序列图" class="headerlink" title="序列图"></a>序列图</h3><p>描述了以时间顺序组织的对象之间的交互活动。</p>
+<ol>
+<li>序列图有对象生命线</li>
+<li>序列图有控制焦点</li>
+</ol>
+<h3 id="通信图"><a href="#通信图" class="headerlink" title="通信图"></a>通信图</h3><p>强调的是接收和发送消息的对象的结构组织</p>
+<ol>
+<li>通信图有路径</li>
+<li>通信图有顺序号</li>
+</ol>
+<h3 id="状态图"><a href="#状态图" class="headerlink" title="状态图"></a>状态图</h3><p>可以用状态图对系统的动态方面建模，这些动态方面可以包括出现在系统体系结构的任何视图中的任何一种对象的按事件排序的行为</p>
 <ul>
 <li>状态 （超状态：组合状态）</li>
 <li>转换 转换包括两个状态，源状态和目标状态（事件，监护条件，动作）</li>
 <li>事件 事件触发转换（迁移）</li>
 <li>活动 活动（动作）可以在状态（迁移）内执行，也可以在状态（迁移）转换时执行</li>
 </ul>
-<h3 id="活动图">活动图</h3>
-<h3 id="构件组件图">构件（组件）图</h3>
-<p>展现了一组构件之间的组织和依赖。构件图专注于系统的静态实现视图。</p>
-<h3 id="部署图">部署图</h3>
-<h2 id="分类考察">分类考察</h2>
-<ul>
+<h3 id="活动图"><a href="#活动图" class="headerlink" title="活动图"></a>活动图</h3><h3 id="构件（组件）图"><a href="#构件（组件）图" class="headerlink" title="构件（组件）图"></a>构件（组件）图</h3><p>展现了一组构件之间的组织和依赖。构件图专注于系统的静态实现视图。</p>
+<h3 id="部署图"><a href="#部署图" class="headerlink" title="部署图"></a>部署图</h3><h2 id="分类考察"><a href="#分类考察" class="headerlink" title="分类考察"></a>分类考察</h2><ul>
 <li>静态建模: 类图,对象图,用例图</li>
 <li>动态建模: 序列图(顺序图,时序图),通信图(协作图),状态图,活动图</li>
 <li>物理建模: 构件图(组件图),部署图</li>
@@ -498,19 +495,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="防火墙技术">防火墙技术</h1>
-<p>包过滤，应用代理网关和状态检测技术三个发展阶段</p>
-<h2 id="包过滤防火墙">包过滤防火墙</h2>
-<ul>
+          <h1 id="防火墙技术"><a href="#防火墙技术" class="headerlink" title="防火墙技术"></a>防火墙技术</h1><p>包过滤，应用代理网关和状态检测技术三个发展阶段</p>
+<h2 id="包过滤防火墙"><a href="#包过滤防火墙" class="headerlink" title="包过滤防火墙"></a>包过滤防火墙</h2><ul>
 <li>低水平控制 ：每个IP包的字段都被检查（源地址，目的地址，协议和端口）</li>
 <li>对用户完全透明，速度较快</li>
 </ul>
-<h2 id="应用代理网关防火墙">应用代理网关防火墙</h2>
-<p>用代理网关防火墙彻底隔断内网与外网的直接通信，内网用户对外网的访问变成防火墙对外网的访问，然后再由防火墙转发给内网用户。 * 优点是可以检查应用层，传输层和网络层的协议特征，对数据包的检测能力比较强 * 缺点是难以配置，处理速度非常慢</p>
-<h1 id="病毒">病毒</h1>
-<p>计算机病毒的特征包括：传播性，隐蔽性，感染性，潜伏性，触发性，破坏性等 * 蠕虫病毒：欢乐时光，熊猫烧香，红色代码，爱虫病毒，震网 * 木马软件：冰河 * 后门病毒 * 宏病毒</p>
-<h1 id="网络攻击">网络攻击</h1>
+<h2 id="应用代理网关防火墙"><a href="#应用代理网关防火墙" class="headerlink" title="应用代理网关防火墙"></a>应用代理网关防火墙</h2><p>用代理网关防火墙彻底隔断内网与外网的直接通信，内网用户对外网的访问变成防火墙对外网的访问，然后再由防火墙转发给内网用户。</p>
 <ul>
+<li>优点是可以检查应用层，传输层和网络层的协议特征，对数据包的检测能力比较强</li>
+<li>缺点是难以配置，处理速度非常慢</li>
+</ul>
+<h1 id="病毒"><a href="#病毒" class="headerlink" title="病毒"></a>病毒</h1><p>计算机病毒的特征包括：传播性，隐蔽性，感染性，潜伏性，触发性，破坏性等</p>
+<ul>
+<li>蠕虫病毒：欢乐时光，熊猫烧香，红色代码，爱虫病毒，震网</li>
+<li>木马软件：冰河</li>
+<li>后门病毒</li>
+<li>宏病毒</li>
+</ul>
+<h1 id="网络攻击"><a href="#网络攻击" class="headerlink" title="网络攻击"></a>网络攻击</h1><ul>
 <li>拒绝服务攻击（DDOS攻击）</li>
 <li>重放攻击</li>
 <li>口令入侵攻击</li>
@@ -520,10 +522,8 @@
 <li>IP欺骗攻击</li>
 <li>Sql注入攻击</li>
 </ul>
-<h2 id="入侵检测技术">入侵检测技术</h2>
-<p>专家系统，模型检测，简单匹配</p>
-<h1 id="网络安全">网络安全</h1>
-<ul>
+<h2 id="入侵检测技术"><a href="#入侵检测技术" class="headerlink" title="入侵检测技术"></a>入侵检测技术</h2><p>专家系统，模型检测，简单匹配</p>
+<h1 id="网络安全"><a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h1><ul>
 <li>SSL 安全套接层,端口号443</li>
 <li>TLS</li>
 <li>SSH</li>
@@ -596,127 +596,137 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="软件工程">软件工程</h1>
-<h2 id="能力成熟度模型cmm">能力成熟度模型（CMM）</h2>
-<ol type="1">
+          <h1 id="软件工程"><a href="#软件工程" class="headerlink" title="软件工程"></a>软件工程</h1><h2 id="能力成熟度模型（CMM）"><a href="#能力成熟度模型（CMM）" class="headerlink" title="能力成熟度模型（CMM）"></a>能力成熟度模型（CMM）</h2><ol>
 <li>初始级</li>
 <li>可重复级</li>
 <li>已定义级</li>
 <li>已管理级</li>
 <li>优化级</li>
 </ol>
-<h2 id="能力成熟度模型集成cmmi">能力成熟度模型集成（CMMI）</h2>
-<ul>
+<h2 id="能力成熟度模型集成（CMMI）"><a href="#能力成熟度模型集成（CMMI）" class="headerlink" title="能力成熟度模型集成（CMMI）"></a>能力成熟度模型集成（CMMI）</h2><ul>
 <li>阶段式模型</li>
-<li>连续式模型
-<ul>
+<li>连续式模型<ul>
 <li>CL0(未完成的)</li>
 <li>CL1(已执行的)</li>
 <li>CL2(已管理的)</li>
 <li>CL3(已定义级的)</li>
 <li>CL4(定量管理的)</li>
 <li>CL5(优化的)</li>
-</ul></li>
 </ul>
-<h2 id="软件过程模型">软件过程模型</h2>
-<ul>
+</li>
+</ul>
+<h2 id="软件过程模型"><a href="#软件过程模型" class="headerlink" title="软件过程模型"></a>软件过程模型</h2><ul>
 <li>瀑布模型（V模型）</li>
 <li>增量模型</li>
 <li>演化模型（原型模型，螺旋模型）</li>
 <li>喷泉模型</li>
 </ul>
-<h2 id="系统可维护性评价指标">系统可维护性评价指标</h2>
-<p>系统可维护性的评价指标 * 可理解性 * 可测试性 * 可修改性</p>
-<h2 id="维护与软件文档">维护与软件文档</h2>
-<p>文档是软件可维护性的决定因素</p>
-<h2 id="软件文档">软件文档</h2>
-<h2 id="系统维护">系统维护</h2>
+<h2 id="系统可维护性评价指标"><a href="#系统可维护性评价指标" class="headerlink" title="系统可维护性评价指标"></a>系统可维护性评价指标</h2><p>系统可维护性的评价指标</p>
 <ul>
+<li>可理解性</li>
+<li>可测试性</li>
+<li>可修改性</li>
+</ul>
+<h2 id="维护与软件文档"><a href="#维护与软件文档" class="headerlink" title="维护与软件文档"></a>维护与软件文档</h2><p>文档是软件可维护性的决定因素</p>
+<h2 id="软件文档"><a href="#软件文档" class="headerlink" title="软件文档"></a>软件文档</h2><h2 id="系统维护"><a href="#系统维护" class="headerlink" title="系统维护"></a>系统维护</h2><ul>
 <li>硬件维护</li>
 <li>软件维护 （正确性，适应性，完善性，预防性）</li>
 <li>数据维护</li>
 </ul>
-<h2 id="软件可靠性可用性可维护性">软件可靠性，可用性，可维护性</h2>
-<p>用0-1之间的数来度量</p>
+<h2 id="软件可靠性，可用性，可维护性"><a href="#软件可靠性，可用性，可维护性" class="headerlink" title="软件可靠性，可用性，可维护性"></a>软件可靠性，可用性，可维护性</h2><p>用0-1之间的数来度量</p>
 <ul>
-<li>可靠性 MTTF(Mean Time To Failure)为平均无故障时间 MTTF/(1+MTTF)</li>
-<li>可用性 MTBF(Mean Time Between Failure)为平均失效间隔时间 MTBF/(1+MTBF)</li>
-<li>可维护性 MTTR(Mean Time To Repair)为平均修复时间 1/(1+MTTR)</li>
+<li>可靠性 MTTF(Mean Time To Failure)为平均无故障时间 MTTF/(1+MTTF) </li>
+<li>可用性 MTBF(Mean Time Between Failure)为平均失效间隔时间 MTBF/(1+MTBF) </li>
+<li>可维护性 MTTR(Mean Time To Repair)为平均修复时间 1/(1+MTTR) </li>
 </ul>
-<h2 id="沟通路径">沟通路径</h2>
-<h2 id="软件项目估算">软件项目估算</h2>
-<h3 id="cocomo模型">COCOMO模型</h3>
-<ul>
+<h2 id="沟通路径"><a href="#沟通路径" class="headerlink" title="沟通路径"></a>沟通路径</h2><h2 id="软件项目估算"><a href="#软件项目估算" class="headerlink" title="软件项目估算"></a>软件项目估算</h2><h3 id="COCOMO模型"><a href="#COCOMO模型" class="headerlink" title="COCOMO模型"></a>COCOMO模型</h3><ul>
 <li>基本COCOMO模型 是一个静态单变量模型</li>
 <li>中级COCOMO模型 是一个静态多变量模型</li>
-<li>详细COCOMO模型</li>
+<li>详细COCOMO模型 </li>
 </ul>
-<h3 id="cocomo2模型">COCOMO2模型</h3>
-<ul>
+<h3 id="COCOMO2模型"><a href="#COCOMO2模型" class="headerlink" title="COCOMO2模型"></a>COCOMO2模型</h3><ul>
 <li>应用组装模型 (对象点)</li>
-<li>早期设计阶段模型 (功能点--》代码行)</li>
+<li>早期设计阶段模型 (功能点—》代码行)</li>
 <li>体系结构阶段模型</li>
 </ul>
-<h2 id="进度管理">进度管理</h2>
-<h3 id="甘特图gantt图">甘特图（Gantt图）</h3>
-<h3 id="项目计划评审技术图pert">项目计划评审技术图（PERT）</h3>
-<h3 id="项目活动图重要">项目活动图（重要）</h3>
-<h2 id="软件配置管理">软件配置管理</h2>
-<ul>
+<h2 id="进度管理"><a href="#进度管理" class="headerlink" title="进度管理"></a>进度管理</h2><h3 id="甘特图（Gantt图）"><a href="#甘特图（Gantt图）" class="headerlink" title="甘特图（Gantt图）"></a>甘特图（Gantt图）</h3><h3 id="项目计划评审技术图（PERT）"><a href="#项目计划评审技术图（PERT）" class="headerlink" title="项目计划评审技术图（PERT）"></a>项目计划评审技术图（PERT）</h3><h3 id="项目活动图（重要）"><a href="#项目活动图（重要）" class="headerlink" title="项目活动图（重要）"></a>项目活动图（重要）</h3><h2 id="软件配置管理"><a href="#软件配置管理" class="headerlink" title="软件配置管理"></a>软件配置管理</h2><ul>
 <li>主要目标包括： 变更标识，变更控制，版本控制，确保变更正确的实现，变更报告</li>
 <li>主要内容包括（版本1）： 版本管理，配置支持，变更支持，过程支持，团队支持，变化报告，审计支持</li>
 <li>主要内容包括（版本2）： 软件配置标识，变更管理，版本控制，系统建立，配置审核，配置状态报告</li>
 <li>配置数据库：开发库，受控库，产品库</li>
 </ul>
-<h2 id="风险管理">风险管理</h2>
-<ul>
+<h2 id="风险管理"><a href="#风险管理" class="headerlink" title="风险管理"></a>风险管理</h2><ul>
 <li>软件风险包含两个特性：不确定性和损失</li>
 <li>项目风险</li>
 <li>技术风险</li>
-<li>商业风险
-<ul>
+<li>商业风险 <ul>
 <li>市场风险</li>
 <li>策略风险</li>
 <li>销售风险</li>
 <li>管理风险</li>
 <li>预算风险</li>
-</ul></li>
 </ul>
-<h3 id="风险识别">风险识别</h3>
-<p>风险因素包括性能，成本，支持和进度 * 性能风险 * 成本风险 * 支持风险 * 进度风险</p>
-<h3 id="风险预测">风险预测</h3>
-<h3 id="风险评估">风险评估</h3>
-<h3 id="风险控制">风险控制</h3>
+</li>
+</ul>
+<h3 id="风险识别"><a href="#风险识别" class="headerlink" title="风险识别"></a>风险识别</h3><p>风险因素包括性能，成本，支持和进度</p>
 <ul>
+<li>性能风险</li>
+<li>成本风险</li>
+<li>支持风险</li>
+<li>进度风险</li>
+</ul>
+<h3 id="风险预测"><a href="#风险预测" class="headerlink" title="风险预测"></a>风险预测</h3><h3 id="风险评估"><a href="#风险评估" class="headerlink" title="风险评估"></a>风险评估</h3><h3 id="风险控制"><a href="#风险控制" class="headerlink" title="风险控制"></a>风险控制</h3><ul>
 <li>风险避免</li>
 <li>风险监控</li>
 <li>RMMM计划</li>
 </ul>
-<h2 id="软件质量">软件质量</h2>
-<h3 id="软件质量特性">软件质量特性</h3>
-<ul>
+<h2 id="软件质量"><a href="#软件质量" class="headerlink" title="软件质量"></a>软件质量</h2><h3 id="软件质量特性"><a href="#软件质量特性" class="headerlink" title="软件质量特性"></a>软件质量特性</h3><ul>
 <li>ISO/IEC 9126 软件质量模型</li>
 <li>Mc Call 软件质量模型</li>
 </ul>
-<h4 id="isoiec-9126-软件质量模型">ISO/IEC 9126 软件质量模型</h4>
-<h4 id="mc-call-软件质量模型">Mc Call 软件质量模型</h4>
-<h2 id="软件评审">软件评审</h2>
-<ul>
-<li>设计质量 * 功能结构 * 数据结构 * 功能结构 * 数据结构和功能结构之间的对应关系 * 功能的通用性 * 模块的层次 * 模块结构 * 控制流结构 * 数据流结构 * 模块结构与功能结构之间的对应关系 * 处理过程的结构</li>
+<h4 id="ISO-IEC-9126-软件质量模型"><a href="#ISO-IEC-9126-软件质量模型" class="headerlink" title="ISO/IEC 9126 软件质量模型"></a>ISO/IEC 9126 软件质量模型</h4><h4 id="Mc-Call-软件质量模型"><a href="#Mc-Call-软件质量模型" class="headerlink" title="Mc Call 软件质量模型"></a>Mc Call 软件质量模型</h4><h2 id="软件评审"><a href="#软件评审" class="headerlink" title="软件评审"></a>软件评审</h2><ul>
+<li>设计质量<pre><code>* 功能结构
+    * 数据结构
+    * 功能结构
+    * 数据结构和功能结构之间的对应关系
+* 功能的通用性
+* 模块的层次
+* 模块结构
+    * 控制流结构
+    * 数据流结构
+    * 模块结构与功能结构之间的对应关系
+* 处理过程的结构
+</code></pre></li>
 <li>程序质量</li>
 </ul>
-<h2 id="软件容错技术">软件容错技术</h2>
-<p>容错的主要手段是冗余 * 结构冗余 * 静态冗余 * 动态冗余 * 混合冗余 * 信息冗余 * 时间冗余 * 冗余附加技术 * 屏蔽硬件错误的容错技术 1. 关键程序和数据的冗余存储及调用 2. 检测，表决，切换，重构，纠错和复算的实现 * 屏蔽软件错误的容错技术 1. 冗余备份程序的存储及调用 2. 实现错误检测和错误恢复的程序 3. 实现容错软件所需的固化程序</p>
-<h2 id="软件工具">软件工具</h2>
-<h3 id="软件开发工具">软件开发工具</h3>
+<h2 id="软件容错技术"><a href="#软件容错技术" class="headerlink" title="软件容错技术"></a>软件容错技术</h2><p>容错的主要手段是冗余</p>
 <ul>
+<li>结构冗余<ul>
+<li>静态冗余</li>
+<li>动态冗余</li>
+<li>混合冗余</li>
+</ul>
+</li>
+<li>信息冗余</li>
+<li>时间冗余</li>
+<li>冗余附加技术<ul>
+<li>屏蔽硬件错误的容错技术<pre><code>1. 关键程序和数据的冗余存储及调用
+2. 检测，表决，切换，重构，纠错和复算的实现
+</code></pre></li>
+<li>屏蔽软件错误的容错技术<pre><code>1. 冗余备份程序的存储及调用
+2. 实现错误检测和错误恢复的程序
+3. 实现容错软件所需的固化程序
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h2 id="软件工具"><a href="#软件工具" class="headerlink" title="软件工具"></a>软件工具</h2><h3 id="软件开发工具"><a href="#软件开发工具" class="headerlink" title="软件开发工具"></a>软件开发工具</h3><ul>
 <li>需求分析工具</li>
 <li>设计工具</li>
 <li>编码与排错工具</li>
 <li>测试工具</li>
 </ul>
-<h3 id="软件维护工具">软件维护工具</h3>
-<ul>
+<h3 id="软件维护工具"><a href="#软件维护工具" class="headerlink" title="软件维护工具"></a>软件维护工具</h3><ul>
 <li>版本控制工具</li>
 <li>文档分析工具</li>
 <li>开发信息库工具</li>
@@ -787,32 +797,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="操作系统地位">操作系统地位</h1>
-<p>计算机硬件（裸机）--&gt;操作系统--&gt;系统软件（汇编，编译，数据库）--&gt;应用软件--&gt;最终个户</p>
-<h1 id="程序顺序执行">程序顺序执行</h1>
-<h2 id="进程管理">进程管理</h2>
-<p>前趋图是有向无循环图</p>
+          <h1 id="操作系统地位"><a href="#操作系统地位" class="headerlink" title="操作系统地位"></a>操作系统地位</h1><p>计算机硬件（裸机）—&gt;操作系统—&gt;系统软件（汇编，编译，数据库）—&gt;应用软件—&gt;最终个户</p>
+<h1 id="程序顺序执行"><a href="#程序顺序执行" class="headerlink" title="程序顺序执行"></a>程序顺序执行</h1><h2 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h2><p>前趋图是有向无循环图</p>
 <p>程序顺序执行时的主要特征包括顺序性，封闭性和可再现性。</p>
 <p>并发 前驱图</p>
 <ul>
 <li>进程的状态及其状态间的切换</li>
 </ul>
-<ol type="1">
-<li>三态模型
-<ul>
+<ol>
+<li>三态模型<ul>
 <li>运行</li>
 <li>就绪</li>
-<li>阻塞<br />
+<li>阻塞   </li>
+</ul>
 </li>
-</ul></li>
 <li>五态模型（了解）</li>
 </ol>
-<h3 id="进程间的通信">进程间的通信</h3>
-<p>同步与互斥</p>
+<h3 id="进程间的通信"><a href="#进程间的通信" class="headerlink" title="进程间的通信"></a>进程间的通信</h3><p>同步与互斥</p>
 <ul>
 <li>临界区管理的原则</li>
 </ul>
-<ol type="1">
+<ol>
 <li>有空即进</li>
 <li>无空则等</li>
 <li>有限等待</li>
@@ -821,95 +826,73 @@
 <ul>
 <li>信号量机制和PV操作</li>
 </ul>
-<ol type="1">
+<ol>
 <li>公用信号量。实现进程间互斥，初值为1或资源的数目</li>
 <li>私用信号量。实现进程间同步，初值为0或某个正整数</li>
 </ol>
 <p>S&gt;=0表示某资源的可用数，s&lt;0，则其绝对值表示阻塞队列中等待该资源的进程数。</p>
 <p>P（s=s-1）表示申请一个资源，V（s=s+1）表示释放一个资源</p>
 <ul>
-<li>死锁 m(资源),n(进程),k(进程最大需求)</li>
+<li>死锁<br>m(资源),n(进程),k(进程最大需求)</li>
 </ul>
 <p>边界条件:m&gt;=n*(k-1)+1</p>
 <ul>
 <li>进程资源图</li>
 </ul>
-<ol type="1">
+<ol>
 <li>先分配，再申请</li>
 <li>先申请，再分配</li>
 </ol>
 <ul>
 <li>死锁的处理</li>
 </ul>
-<ol type="1">
+<ol>
 <li>不理睬策略</li>
 <li>预防策略</li>
 <li>避免策略（关键）</li>
 <li>检测与解除死锁</li>
 </ol>
-<h2 id="线程">线程</h2>
-<p>线程作为调度和分配的基本单位</p>
-<h2 id="程序局部性原理">程序局部性原理</h2>
-<ol type="1">
+<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><p>线程作为调度和分配的基本单位</p>
+<h2 id="程序局部性原理"><a href="#程序局部性原理" class="headerlink" title="程序局部性原理"></a>程序局部性原理</h2><ol>
 <li>时间局限性</li>
 <li>空间局限性</li>
 </ol>
-<h2 id="分页存储管理">分页存储管理</h2>
-<h2 id="段页存储管理">段页存储管理</h2>
-<h2 id="单缓冲区">单缓冲区</h2>
-<hr />
+<h2 id="分页存储管理"><a href="#分页存储管理" class="headerlink" title="分页存储管理"></a>分页存储管理</h2><h2 id="段页存储管理"><a href="#段页存储管理" class="headerlink" title="段页存储管理"></a>段页存储管理</h2><h2 id="单缓冲区"><a href="#单缓冲区" class="headerlink" title="单缓冲区"></a>单缓冲区</h2><hr>
 <pre><code>15     10
    --------
         5
             ---------
-                 1</code></pre>
-<h2 id="双缓冲区">双缓冲区</h2>
-<h2 id="磁盘调度算法">磁盘调度算法</h2>
-<ol type="1">
+                 1
+</code></pre><h2 id="双缓冲区"><a href="#双缓冲区" class="headerlink" title="双缓冲区"></a>双缓冲区</h2><h2 id="磁盘调度算法"><a href="#磁盘调度算法" class="headerlink" title="磁盘调度算法"></a>磁盘调度算法</h2><ol>
 <li>先来先访问（FCFS）</li>
 <li>最短寻道</li>
 </ol>
-<h2 id="旋转调度算法">旋转调度算法</h2>
-<h2 id="多级索引结构">多级索引结构</h2>
-<h2 id="文件目录">文件目录</h2>
-<p>文件控制块（FCB）</p>
-<ol type="1">
+<h2 id="旋转调度算法"><a href="#旋转调度算法" class="headerlink" title="旋转调度算法"></a>旋转调度算法</h2><h2 id="多级索引结构"><a href="#多级索引结构" class="headerlink" title="多级索引结构"></a>多级索引结构</h2><h2 id="文件目录"><a href="#文件目录" class="headerlink" title="文件目录"></a>文件目录</h2><p>文件控制块（FCB）</p>
+<ol>
 <li>基本信息类</li>
 <li>存取控制信息类</li>
 <li>使用信息类</li>
 </ol>
-<h2 id="位示图">位示图</h2>
-<p>用二进制的一位来表示一个物理块的使用情况。</p>
-<h1 id="计算机网络">计算机网络</h1>
-<h2 id="网络设备">网络设备</h2>
-<ul>
-<li><p>物理层互联设备：中继器，集线器（多端口中继器）</p></li>
-<li><p>数据链路层互联设备：网桥，交换机（多端口网桥）</p></li>
-<li><p>网络层互联设备：路由器</p></li>
-<li><p>应用层互联设备：网关</p></li>
+<h2 id="位示图"><a href="#位示图" class="headerlink" title="位示图"></a>位示图</h2><p>用二进制的一位来表示一个物理块的使用情况。</p>
+<h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><h2 id="网络设备"><a href="#网络设备" class="headerlink" title="网络设备"></a>网络设备</h2><ul>
+<li><p>物理层互联设备：中继器，集线器（多端口中继器）</p>
+</li>
+<li><p>数据链路层互联设备：网桥，交换机（多端口网桥）</p>
+</li>
+<li><p>网络层互联设备：路由器</p>
+</li>
+<li><p>应用层互联设备：网关</p>
+</li>
 </ul>
-<h2 id="协议簇">协议簇</h2>
-<h3 id="网络层协议ip">网络层协议IP</h3>
-<p>无连接，不可靠</p>
-<h3 id="传输层协议tcpudp">传输层协议TCP,UDP</h3>
-<p>TCP可靠的，面向连接的，全双工的数据传输服务。三次握手 UDP不可靠的，无连接的</p>
-<h3 id="电子邮件服务">电子邮件服务</h3>
-<p>SMTP：25,发送，只能传送ASCII文本，只能传输文本附件 POP3:110，接收</p>
-<h3 id="arp和rarp">ARP和RARP</h3>
-<p>地址解析协议</p>
-<h3 id="dhcp">DHCP</h3>
-<p>动态主机配置协议</p>
-<h3 id="url">URL</h3>
-<p>协议名://主机名.域名.域名后缀.域名分类/目录/网页文件</p>
-<h3 id="ip地址和子网掩码计算题">IP地址和子网掩码（计算题）</h3>
-<h3 id="ipv6">IPV6</h3>
-<p>IPv4地址是32位二进制，能表示 <span class="math inline">\(2^32\)</span> 40亿个地址 IPv6地址是128位，能表示 <span class="math inline">\(2^128\)</span></p>
-<h3 id="无线网络">无线网络</h3>
-<p>蓝牙 覆盖范围最小，通信距离最短</p>
-<h3 id="windows命令">windows命令</h3>
-<h1 id="信息安全">信息安全</h1>
-<h2 id="防火墙">防火墙</h2>
-
+<h2 id="协议簇"><a href="#协议簇" class="headerlink" title="协议簇"></a>协议簇</h2><h3 id="网络层协议IP"><a href="#网络层协议IP" class="headerlink" title="网络层协议IP"></a>网络层协议IP</h3><p>无连接，不可靠</p>
+<h3 id="传输层协议TCP-UDP"><a href="#传输层协议TCP-UDP" class="headerlink" title="传输层协议TCP,UDP"></a>传输层协议TCP,UDP</h3><p>TCP可靠的，面向连接的，全双工的数据传输服务。三次握手<br>UDP不可靠的，无连接的</p>
+<h3 id="电子邮件服务"><a href="#电子邮件服务" class="headerlink" title="电子邮件服务"></a>电子邮件服务</h3><p>SMTP：25,发送，只能传送ASCII文本，只能传输文本附件<br>POP3:110，接收</p>
+<h3 id="ARP和RARP"><a href="#ARP和RARP" class="headerlink" title="ARP和RARP"></a>ARP和RARP</h3><p>地址解析协议</p>
+<h3 id="DHCP"><a href="#DHCP" class="headerlink" title="DHCP"></a>DHCP</h3><p>动态主机配置协议</p>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p>协议名://主机名.域名.域名后缀.域名分类/目录/网页文件</p>
+<h3 id="IP地址和子网掩码（计算题）"><a href="#IP地址和子网掩码（计算题）" class="headerlink" title="IP地址和子网掩码（计算题）"></a>IP地址和子网掩码（计算题）</h3><h3 id="IPV6"><a href="#IPV6" class="headerlink" title="IPV6"></a>IPV6</h3><p>IPv4地址是32位二进制，能表示 $2^32$ 40亿个地址<br>IPv6地址是128位，能表示 $2^128$ </p>
+<h3 id="无线网络"><a href="#无线网络" class="headerlink" title="无线网络"></a>无线网络</h3><p>蓝牙 覆盖范围最小，通信距离最短</p>
+<h3 id="windows命令"><a href="#windows命令" class="headerlink" title="windows命令"></a>windows命令</h3><h1 id="信息安全"><a href="#信息安全" class="headerlink" title="信息安全"></a>信息安全</h1><h2 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h2>
       
     </div>
 
@@ -973,24 +956,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="设计模式">设计模式</h1>
-<ul>
+          <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><ul>
 <li>创建型模式与对象的创建有关</li>
 <li>结构型模式处理类或对象的组合</li>
 <li>行为型模式对类或对象怎样交互和怎样分配职责进行描述</li>
 </ul>
-<h1 id="类型">类型</h1>
-<ol type="1">
-<li>创建型模式
-<ul>
+<h1 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h1><ol>
+<li>创建型模式<ul>
 <li>工厂模式 Factory Method</li>
 <li>抽象工厂模式 Abstract Factory</li>
 <li>单例模式 Singleton</li>
 <li>建造者模式 Builder</li>
 <li>原型模式 Prototype</li>
-</ul></li>
-<li>结构型模式
-<ul>
+</ul>
+</li>
+<li>结构型模式<ul>
 <li>适配器模式 Adapter</li>
 <li>桥接模式 Bridge</li>
 <li>组合模式 Composite</li>
@@ -998,9 +978,9 @@
 <li>外观模式 Facade</li>
 <li>享元模式 Flyweight</li>
 <li>代理模式 Proxy</li>
-</ul></li>
-<li>行为型模式
-<ul>
+</ul>
+</li>
+<li>行为型模式<ul>
 <li>责任链模式 Chain of Responsibility</li>
 <li>命令模式 Command</li>
 <li>解释器模式 Interpreter</li>
@@ -1012,7 +992,8 @@
 <li>策略模式 Strategy</li>
 <li>模版方法模式 Template Method</li>
 <li>访问者模式 Visitor</li>
-</ul></li>
+</ul>
+</li>
 </ol>
 
       
@@ -1078,39 +1059,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="面向对象分析">面向对象分析</h1>
-<ol type="1">
+          <h1 id="面向对象分析"><a href="#面向对象分析" class="headerlink" title="面向对象分析"></a>面向对象分析</h1><ol>
 <li>认定对象</li>
 <li>组织对象</li>
 <li>描述对象间的相互作用</li>
 <li>确定对象的操作</li>
 <li>定义对象的内部信息</li>
 </ol>
-<h1 id="面向对象设计">面向对象设计</h1>
-<ol type="1">
+<h1 id="面向对象设计"><a href="#面向对象设计" class="headerlink" title="面向对象设计"></a>面向对象设计</h1><ol>
 <li>识别类及对象</li>
 <li>定义属性</li>
 <li>定义服务</li>
 <li>识别关系</li>
 <li>识别包</li>
 </ol>
-<h1 id="uml">UML</h1>
-<h2 id="事物">事物</h2>
-<ol type="1">
+<h1 id="UML"><a href="#UML" class="headerlink" title="UML"></a>UML</h1><h2 id="事物"><a href="#事物" class="headerlink" title="事物"></a>事物</h2><ol>
 <li>结构事物（静态）</li>
 <li>行为事物（动态）</li>
 <li>分组事物</li>
 <li>注释事物</li>
 </ol>
-<h2 id="关系">关系</h2>
-<ol type="1">
+<h2 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h2><ol>
 <li>依赖</li>
 <li>关联（聚合，组合）</li>
 <li>泛化</li>
 <li>实现</li>
 </ol>
-<h2 id="图">图</h2>
-<ol type="1">
+<h2 id="图"><a href="#图" class="headerlink" title="图"></a>图</h2><ol>
 <li>类图(静态)</li>
 <li>对象图(静态)</li>
 <li>用例图(静态)</li>
@@ -1185,24 +1160,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="数据库">数据库</h1>
-<h2 id="e-r图">E-R图</h2>
-<p>实体型用矩形表示，属性用椭圆形表示，联系用菱形表示。</p>
-<h2 id="三级模式结构">三级模式结构</h2>
-<ol type="1">
-<li>概念模式，也称为模式。--&gt;基本表</li>
-<li>外模式，也称为用户模式，子模式。--&gt;视图</li>
-<li>内模式，也称为存储模式。--&gt;存储文件</li>
+          <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="E-R图"><a href="#E-R图" class="headerlink" title="E-R图"></a>E-R图</h2><p>实体型用矩形表示，属性用椭圆形表示，联系用菱形表示。</p>
+<h2 id="三级模式结构"><a href="#三级模式结构" class="headerlink" title="三级模式结构"></a>三级模式结构</h2><ol>
+<li>概念模式，也称为模式。—&gt;基本表</li>
+<li>外模式，也称为用户模式，子模式。—&gt;视图</li>
+<li>内模式，也称为存储模式。—&gt;存储文件</li>
 </ol>
-<h2 id="两级映像">两级映像</h2>
-<p>两级映像保证了数据库中的数据具有较高的逻辑独立性和物理独立性 1. 模式/内模式映像（物理独立性） 存在于概念级和内部级之间，实现了概念模式和内模式之间的相互转换 2. 外模式/模式映像（逻辑独立性） 存在于外部级和概念级之间，实现了外模式和概念模式之间的相互转换</p>
-<h3 id="关系模型中的基本术语">关系模型中的基本术语</h3>
-<ul>
+<h2 id="两级映像"><a href="#两级映像" class="headerlink" title="两级映像"></a>两级映像</h2><p>两级映像保证了数据库中的数据具有较高的逻辑独立性和物理独立性</p>
+<ol>
+<li>模式/内模式映像（物理独立性） 存在于概念级和内部级之间，实现了概念模式和内模式之间的相互转换</li>
+<li>外模式/模式映像（逻辑独立性） 存在于外部级和概念级之间，实现了外模式和概念模式之间的相互转换</li>
+</ol>
+<h3 id="关系模型中的基本术语"><a href="#关系模型中的基本术语" class="headerlink" title="关系模型中的基本术语"></a>关系模型中的基本术语</h3><ul>
 <li>关系：一个关系就是一张二维表，每个关系有一个关系名。</li>
 <li>元组：表中的一行即为一个元组，对应存储文件中的一个记录值。</li>
 <li>属性：表中的列称为属性。</li>
 <li>域：属性的取值范围。</li>
-<li>关系模式：对关系的描述称为关系模式，由关系名和其属性集合构成，关系模式的格式为： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">关系名（属性名1，属性名2，...,属性名n）</span><br></pre></td></tr></table></figure></li>
+<li>关系模式：对关系的描述称为关系模式，由关系名和其属性集合构成，关系模式的格式为：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">关系名（属性名1，属性名2，...,属性名n）</span><br></pre></td></tr></table></figure></li>
 <li>候选码（或候选键）：属性或属性组合，其值能够唯一地标识一个元组。</li>
 <li>主码（或主键）：在一个关系中可能有多个候选码，从中选择一个作为主码。</li>
 <li>主属性：包含在任何候选码中诸属性称为主属性。</li>
@@ -1210,30 +1184,37 @@
 <li>全码：所有属性组是这个关系模式的候选码，称为全码。</li>
 <li>超码（超键）：一个包含码的属性集称为超码。</li>
 </ul>
-<h3 id="关系模型">关系模型</h3>
-<p>关系模型由关系数据结构，关系操作集合和关系完整性约束三部分组成。 1. 关系数据结构 关系模型中数据的逻辑关系是一张二维表格。 2. 关系操作集合（关系代数） 关系模型给出了关系操作的能力。常用的关系操作有：选择，投影，连接，除，并，交，差等查询操作和增加，删除操作等。 3. 关系完整性约束 * 实体完整性：关系中主码的值不能为空或部分为空。 * 参照完整性：外键必须对应上。 * 用户定义的完整性：指用户对某一具体数据指定的约束条件进行检验。</p>
-<h4 id="关系的数学定义">关系的数学定义</h4>
-<ol type="1">
+<h3 id="关系模型"><a href="#关系模型" class="headerlink" title="关系模型"></a>关系模型</h3><p>关系模型由关系数据结构，关系操作集合和关系完整性约束三部分组成。</p>
+<ol>
+<li>关系数据结构<br> 关系模型中数据的逻辑关系是一张二维表格。</li>
+<li>关系操作集合（关系代数）<br> 关系模型给出了关系操作的能力。常用的关系操作有：选择，投影，连接，除，并，交，差等查询操作和增加，删除操作等。</li>
+<li>关系完整性约束<ul>
+<li>实体完整性：关系中主码的值不能为空或部分为空。</li>
+<li>参照完整性：外键必须对应上。</li>
+<li>用户定义的完整性：指用户对某一具体数据指定的约束条件进行检验。</li>
+</ul>
+</li>
+</ol>
+<h4 id="关系的数学定义"><a href="#关系的数学定义" class="headerlink" title="关系的数学定义"></a>关系的数学定义</h4><ol>
 <li>笛卡尔积</li>
-<li>关系 子集称为关系</li>
+<li>关系<br>子集称为关系</li>
 <li>关系的性质</li>
 </ol>
-<h4 id="关系代数">关系代数</h4>
-<ul>
-<li>传统的集合运算
-<ol type="1">
+<h4 id="关系代数"><a href="#关系代数" class="headerlink" title="关系代数"></a>关系代数</h4><ul>
+<li>传统的集合运算<ol>
 <li>并</li>
 <li>差</li>
 <li>交</li>
 <li>笛卡尔积运算</li>
-</ol></li>
-<li>专门的关系运算符
-<ol type="1">
-<li>投影 从关系的垂直方向进行运算，<span class="math inline">\(\pi_A(R)=\{t[A]|t \isin R\}\)</span></li>
-<li>选择 从关系的水平方向进行运算，<span class="math inline">\(\sigma_F(R)=\{t\isin R \land F(t)=True\}\)</span></li>
-<li>连接
-<ol type="1">
-<li><span class="math inline">\(\theta\)</span>连接</li>
+</ol>
+</li>
+<li><p>专门的关系运算符</p>
+<ol>
+<li>投影 从关系的垂直方向进行运算，$\pi_A(R)=\{t[A]|t \isin R\}$</li>
+<li>选择 从关系的水平方向进行运算，$\sigma_F(R)=\{t\isin R \land F(t)=True\}$</li>
+<li><p>连接 </p>
+<ol>
+<li>$\theta$连接</li>
 <li>等值连接</li>
 <li>自然连接 是除去重复属性的等值连接</li>
 </ol>
@@ -1241,17 +1222,15 @@
 <li>左外连接 取出左侧关系中与右侧关系中任一元组都不匹配的元组，用空值null填充，构成新的元组，将其加入自然连接的结果中。</li>
 <li>右外连接</li>
 <li>全外连接</li>
-</ul></li>
-</ol></li>
 </ul>
-<h4 id="投影选择转sql语言">投影，选择转SQL语言</h4>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> 系别 <span class="keyword">FROM</span> teacher<span class="operator">/</span><span class="operator">/</span>去除重复项</span><br><span class="line"><span class="keyword">UNION</span><span class="operator">/</span><span class="operator">/</span>并</span><br><span class="line"><span class="keyword">INTERSECT</span><span class="operator">/</span><span class="operator">/</span>交</span><br><span class="line"><span class="keyword">EXCEPT</span><span class="operator">/</span><span class="operator">/</span>差</span><br></pre></td></tr></table></figure>
-<h2 id="sql语言">SQL语言</h2>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> 视图名（列表名）</span><br><span class="line"><span class="keyword">AS</span> <span class="keyword">SELECT</span> 查询子句</span><br><span class="line">[<span class="keyword">WITH</span> <span class="keyword">CHECK</span> OPTION];</span><br></pre></td></tr></table></figure>
-<h2 id="关系模式">关系模式</h2>
-<p><span class="math inline">\(R&lt;U,F&gt;\)</span></p>
-<h2 id="范式">范式</h2>
-<ul>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="投影，选择转SQL语言"><a href="#投影，选择转SQL语言" class="headerlink" title="投影，选择转SQL语言"></a>投影，选择转SQL语言</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> 系别 <span class="keyword">FROM</span> teacher<span class="operator">/</span><span class="operator">/</span>去除重复项</span><br><span class="line"><span class="keyword">UNION</span><span class="operator">/</span><span class="operator">/</span>并</span><br><span class="line"><span class="keyword">INTERSECT</span><span class="operator">/</span><span class="operator">/</span>交</span><br><span class="line"><span class="keyword">EXCEPT</span><span class="operator">/</span><span class="operator">/</span>差</span><br></pre></td></tr></table></figure>
+<h2 id="SQL语言"><a href="#SQL语言" class="headerlink" title="SQL语言"></a>SQL语言</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> 视图名（列表名）</span><br><span class="line"><span class="keyword">AS</span> <span class="keyword">SELECT</span> 查询子句</span><br><span class="line">[<span class="keyword">WITH</span> <span class="keyword">CHECK</span> OPTION];</span><br></pre></td></tr></table></figure>
+<h2 id="关系模式"><a href="#关系模式" class="headerlink" title="关系模式"></a>关系模式</h2><p>$R<U,F>$</p>
+<h2 id="范式"><a href="#范式" class="headerlink" title="范式"></a>范式</h2><ul>
 <li>第一范式(1NF) :不可分割的数据项，不能排除数据冗余和更新异常等问题，因为其中可能存在部分函数依赖。</li>
 <li>第二范式(2NF) :当切仅当R是1NF,且每个非主属性都完全函数依赖于候选码。可能存在传递函数依赖。</li>
 <li>第三范式(3NF) :当切仅当R是2NF,且每个非主属性都非传递函数依赖于候选码。可能存在主属性对码的部分依赖和传递依赖。</li>
@@ -1259,32 +1238,29 @@
 </ul>
 <p>1NF-消除非主属性对码的部分函数依赖-&gt;2NF-消除非主属性对码的传递函数依赖-&gt;3NF-消除主属性对码的部分和传递函数依赖-&gt;BCNF</p>
 <p>3NF（伪传递率：若X-&gt;Y,WY-&gt;Z,则XW-&gt;Z）</p>
-<h2 id="数据库设计">数据库设计</h2>
-<ol type="1">
+<h2 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h2><ol>
 <li>需求分析</li>
 </ol>
-<h3 id="e-r图-1">E-R图</h3>
-<ol type="1">
+<h3 id="E-R图-1"><a href="#E-R图-1" class="headerlink" title="E-R图"></a>E-R图</h3><ol>
 <li>实体 通常用矩形框</li>
 <li>联系 用菱形表示</li>
 <li>属性 椭圆</li>
 </ol>
-<h3 id="事务">事务</h3>
-<h3 id="封锁">封锁</h3>
-<ol type="1">
+<h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><h3 id="封锁"><a href="#封锁" class="headerlink" title="封锁"></a>封锁</h3><ol>
 <li>排他锁 加锁后，其他事务不能加任何锁</li>
 <li>共享锁 加锁后，其他事务可以加共享锁但是不能修改</li>
 </ol>
-<h3 id="分布式数据库">分布式数据库</h3>
-<ol type="1">
-<li><p>分片透明</p></li>
-<li><p>复制透明</p></li>
-<li><p>位置透明</p></li>
-<li><p>逻辑透明</p></li>
-<li><p>共享性</p></li>
-<li><p>自治性</p></li>
-<li><p>可用性</p></li>
-<li><p>分布性</p></li>
+<h3 id="分布式数据库"><a href="#分布式数据库" class="headerlink" title="分布式数据库"></a>分布式数据库</h3><ol>
+<li>分片透明</li>
+<li>复制透明</li>
+<li>位置透明</li>
+<li><p>逻辑透明</p>
+</li>
+<li><p>共享性</p>
+</li>
+<li>自治性</li>
+<li>可用性</li>
+<li>分布性</li>
 </ol>
 
       
@@ -1350,38 +1326,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="知识产权">知识产权</h1>
-<h2 id="工业产权">工业产权</h2>
-<p>专利，商标</p>
-<h2 id="著作权版权">著作权（版权）</h2>
-<p>分为人身权和财产权 1. 人身权：发表权（保护时间受限），署名权，修改权和保护作品完整权 2. 财产权 3. ## 专利地域性 专利在哪国申请就在哪国受保护</p>
-<h2 id="计算机软件著作权">计算机软件著作权</h2>
-<h3 id="计算机软件著作权的主体与客体">计算机软件著作权的主体与客体</h3>
-<ol type="1">
+          <h1 id="知识产权"><a href="#知识产权" class="headerlink" title="知识产权"></a>知识产权</h1><h2 id="工业产权"><a href="#工业产权" class="headerlink" title="工业产权"></a>工业产权</h2><p>专利，商标</p>
+<h2 id="著作权（版权）"><a href="#著作权（版权）" class="headerlink" title="著作权（版权）"></a>著作权（版权）</h2><p>分为人身权和财产权</p>
+<ol>
+<li>人身权：发表权（保护时间受限），署名权，修改权和保护作品完整权</li>
+<li>财产权</li>
+<li><h2 id="专利地域性"><a href="#专利地域性" class="headerlink" title="专利地域性"></a>专利地域性</h2>专利在哪国申请就在哪国受保护</li>
+</ol>
+<h2 id="计算机软件著作权"><a href="#计算机软件著作权" class="headerlink" title="计算机软件著作权"></a>计算机软件著作权</h2><h3 id="计算机软件著作权的主体与客体"><a href="#计算机软件著作权的主体与客体" class="headerlink" title="计算机软件著作权的主体与客体"></a>计算机软件著作权的主体与客体</h3><ol>
 <li>主体是指享有著作权的人。根据《中华人民共和国著作权法》和《计算机软件保护条例》（国务院颁布）</li>
 <li>客体是指计算机程序（源程序和目标程序）及计算机软件的文档（程序设计说明书，流程图和用户手册）</li>
 </ol>
-<h3 id="计算机软件著作权的权利">计算机软件著作权的权利</h3>
-<ol type="1">
+<h3 id="计算机软件著作权的权利"><a href="#计算机软件著作权的权利" class="headerlink" title="计算机软件著作权的权利"></a>计算机软件著作权的权利</h3><ol>
 <li>著作人身权，发表权，开发者身份权</li>
 </ol>
-<h3 id="计算机软件著作权的保护期">计算机软件著作权的保护期</h3>
-<p>计算机软件著作权的权利自软件开发完成之日起产生，保护期为50年。期满后，只保留开发者身份权</p>
-<h3 id="职务作品">职务作品</h3>
-<p>职务作品是指公民在单位任职期间为执行单位工作任务所开发的计算机软件作品。公民只享有署名权。</p>
-<h3 id="委托开发">委托开发</h3>
-<p>接受他人委托开发的软件，其著作权的归属由委托者与受委托者签订书面合同约定。无明确约定，其著作权由受托人（开发者）享有。</p>
-<h3 id="计算机软件著作权侵权">计算机软件著作权侵权</h3>
-<h3 id="商业秘密权">商业秘密权</h3>
-<p>商业秘密定义为“指不为公众所知悉的，能为权利人带来经济利益，具有实用性并经权利人采取保密措施的技术信息和经营信息”。</p>
-<h3 id="专利权申请">专利权申请</h3>
-<p>先申请先得，同一天申请协商解决。</p>
-<h3 id="商标权">商标权</h3>
-<p>保护期限自核准注册之日起10年内有效，可无限延长使用期限，在期限届满6个月内申请续展注册，每次有效期10年。</p>
-<h3 id="商标注册">商标注册</h3>
-<p>先注册先得。同一天注册，先使用先得。</p>
-<h3 id="翻译权">翻译权</h3>
-<p>翻译是指以不同于原软件作品的一种程序语言转换该作品原使用的程序语言，而重现软件作品内容的创作。</p>
+<h3 id="计算机软件著作权的保护期"><a href="#计算机软件著作权的保护期" class="headerlink" title="计算机软件著作权的保护期"></a>计算机软件著作权的保护期</h3><p>计算机软件著作权的权利自软件开发完成之日起产生，保护期为50年。期满后，只保留开发者身份权</p>
+<h3 id="职务作品"><a href="#职务作品" class="headerlink" title="职务作品"></a>职务作品</h3><p>职务作品是指公民在单位任职期间为执行单位工作任务所开发的计算机软件作品。公民只享有署名权。</p>
+<h3 id="委托开发"><a href="#委托开发" class="headerlink" title="委托开发"></a>委托开发</h3><p>接受他人委托开发的软件，其著作权的归属由委托者与受委托者签订书面合同约定。无明确约定，其著作权由受托人（开发者）享有。</p>
+<h3 id="计算机软件著作权侵权"><a href="#计算机软件著作权侵权" class="headerlink" title="计算机软件著作权侵权"></a>计算机软件著作权侵权</h3><h3 id="商业秘密权"><a href="#商业秘密权" class="headerlink" title="商业秘密权"></a>商业秘密权</h3><p>商业秘密定义为“指不为公众所知悉的，能为权利人带来经济利益，具有实用性并经权利人采取保密措施的技术信息和经营信息”。</p>
+<h3 id="专利权申请"><a href="#专利权申请" class="headerlink" title="专利权申请"></a>专利权申请</h3><p>先申请先得，同一天申请协商解决。</p>
+<h3 id="商标权"><a href="#商标权" class="headerlink" title="商标权"></a>商标权</h3><p>保护期限自核准注册之日起10年内有效，可无限延长使用期限，在期限届满6个月内申请续展注册，每次有效期10年。</p>
+<h3 id="商标注册"><a href="#商标注册" class="headerlink" title="商标注册"></a>商标注册</h3><p>先注册先得。同一天注册，先使用先得。</p>
+<h3 id="翻译权"><a href="#翻译权" class="headerlink" title="翻译权"></a>翻译权</h3><p>翻译是指以不同于原软件作品的一种程序语言转换该作品原使用的程序语言，而重现软件作品内容的创作。</p>
 
       
     </div>
@@ -1446,125 +1412,204 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="查找">查找</h1>
-<p>查找是一种常见的基本运算。查找表是指由同一类型的数据元素（或记录）构成的集合。查找表是一种非常灵活的数据结构。</p>
-<p>静态查找表有：顺序查找，折半（二分）查找，分块查找 1. 查询某个特定元素是否在查找表中 2. 检索某个特定的数据元素的各个属性</p>
-<p>动态查找表有：二叉排序树，平衡二叉树，B_树，哈希表 1. 在查找表中插入一个数据元素 2. 在查找表中删除一个数据元素</p>
+          <h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><p>查找是一种常见的基本运算。查找表是指由同一类型的数据元素（或记录）构成的集合。查找表是一种非常灵活的数据结构。</p>
+<p>静态查找表有：顺序查找，折半（二分）查找，分块查找</p>
+<ol>
+<li>查询某个特定元素是否在查找表中</li>
+<li>检索某个特定的数据元素的各个属性 </li>
+</ol>
+<p>动态查找表有：二叉排序树，平衡二叉树，B_树，哈希表</p>
+<ol>
+<li>在查找表中插入一个数据元素</li>
+<li>在查找表中删除一个数据元素</li>
+</ol>
 <p>关键字是数据元素（或记录）的某个数据项的值，用它来识别（标识）这个数据元素。主关键字是指能唯一标识一个数据元素的关键字。次关键字是指能标志多个数据元素的关键字。</p>
-<h2 id="顺序查找">顺序查找</h2>
-<p>顺序查找的方法对于顺序存储方式和链式存储方式的查找表都适用。</p>
-<p>顺序查找成功的平均查找长度为 <span class="math display">\[ASL_{ss}=\sum_{i=1}^nP_iC_i=\frac{1}{n}\sum_{i=1}^n(n-i+1)=\frac{n+1}{2}\]</span></p>
-<h2 id="折半查找">折半查找</h2>
-<p>顺序存储，有序</p>
-<p>最多的比较次数为 <span class="math display">\[\lfloor\log_2n\rfloor+1\]</span> 折半查找成功的平均查找长度为 <span class="math display">\[ASL_{bs}=\sum_{j=1}^nP_iC_i=\frac{1}{n}\sum_{j=1}^nj\times2^{j-1}=\frac{n+1}{n}\log_2{(n+1)}-1\]</span> 当n值较大时，<span class="math inline">\(ASL_{bs}\approx\log_2{(n+1)}-1\)</span> # 哈希表</p>
-<h2 id="哈希函数构造方法">哈希函数构造方法</h2>
-<p>n个元素，m取接近n但是不大于n的质数</p>
-<p>除留余数法<span class="math inline">\(H(key)=key\%m\)</span></p>
+<h2 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h2><p>顺序查找的方法对于顺序存储方式和链式存储方式的查找表都适用。</p>
+<p>顺序查找成功的平均查找长度为</p>
+<script type="math/tex; mode=display">ASL_{ss}=\sum_{i=1}^nP_iC_i=\frac{1}{n}\sum_{i=1}^n(n-i+1)=\frac{n+1}{2}</script><h2 id="折半查找"><a href="#折半查找" class="headerlink" title="折半查找"></a>折半查找</h2><p>顺序存储，有序</p>
+<p>最多的比较次数为</p>
+<script type="math/tex; mode=display">\lfloor\log_2n\rfloor+1</script><p>折半查找成功的平均查找长度为</p>
+<script type="math/tex; mode=display">ASL_{bs}=\sum_{j=1}^nP_iC_i=\frac{1}{n}\sum_{j=1}^nj\times2^{j-1}=\frac{n+1}{n}\log_2{(n+1)}-1</script><p>当n值较大时，$ASL_{bs}\approx\log_2{(n+1)}-1$</p>
+<h1 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h1><h2 id="哈希函数构造方法"><a href="#哈希函数构造方法" class="headerlink" title="哈希函数构造方法"></a>哈希函数构造方法</h2><p>n个元素，m取接近n但是不大于n的质数</p>
+<p>除留余数法$H(key)=key\%m$</p>
 <p>在构造哈希函数时，一般都要对关键字进行计算，且尽可能使关键字的所有组成部分都能起作用。</p>
-<h2 id="处理冲突的方法">处理冲突的方法</h2>
-<ol type="1">
-<li>开放定址法 <span class="math display">\[H_i=(H(key)+d_i)\%m i=1,2,...,k(k\le m-1)\]</span></li>
-<li>二次探测再散列 <span class="math inline">\(d_i=1^2,-1^2,2^2,-2^2,...,\pm k^2(k\le \frac{m}{2})\)</span></li>
+<h2 id="处理冲突的方法"><a href="#处理冲突的方法" class="headerlink" title="处理冲突的方法"></a>处理冲突的方法</h2><ol>
+<li>开放定址法<script type="math/tex; mode=display">H_i=(H(key)+d_i)\%m i=1,2,...,k(k\le m-1)</script></li>
+<li>二次探测再散列<br>$d_i=1^2,-1^2,2^2,-2^2,…,\pm k^2(k\le \frac{m}{2})$</li>
 <li>随机探测再散列</li>
 </ol>
 <p>解决冲突的方法：链地址法（或拉链法）</p>
-<h2 id="哈希表查找">哈希表查找</h2>
-<p>哈希函数，处理冲突的方法和哈希表的装填因子</p>
-<p>哈希表的装填因子定义为 <span class="math display">\[\alpha=\frac{表中装入的记录数}{哈希表的长度}\]</span> <span class="math inline">\(\alpha\)</span>标志着哈希表的装满程度，<span class="math inline">\(\alpha\)</span>越小，发生冲突可能性越小</p>
-<h1 id="堆">堆</h1>
-<p>n个关键码构成的序列<span class="math inline">\(\{k_1,k_2,...,k_n\}\)</span>,当且仅当满足以下关系</p>
-<p>小顶堆 <span class="math display">\[
+<h2 id="哈希表查找"><a href="#哈希表查找" class="headerlink" title="哈希表查找"></a>哈希表查找</h2><p>哈希函数，处理冲突的方法和哈希表的装填因子</p>
+<p>哈希表的装填因子定义为</p>
+<script type="math/tex; mode=display">\alpha=\frac{表中装入的记录数}{哈希表的长度}</script><p>$\alpha$标志着哈希表的装满程度，$\alpha$越小，发生冲突可能性越小</p>
+<h1 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h1><p>n个关键码构成的序列$\{k_1,k_2,…,k_n\}$,当且仅当满足以下关系</p>
+<p>小顶堆</p>
+<script type="math/tex; mode=display">
     \begin{cases}
     k_i \le k_{2i} \\
     k_i \le k_{2i+1}
-    \end{cases}
-\]</span> 大顶堆 <span class="math display">\[
+    \end{cases}</script><p>大顶堆</p>
+<script type="math/tex; mode=display">
     \begin{cases}
     k_i \ge k_{2i} \\
     k_i \ge k_{2i+1}
-    \end{cases}
-\]</span> # 排序 | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 | 归位 | | :----: | :----: | :----: | :----: | :----: | :----: | :----: | | 直接插入排序 | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n)\)</span> | <span class="math inline">\(O(1)\)</span> | 稳定 | |<br />
-| 希尔排序 | <span class="math inline">\(O(n^{1.3})\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n)\)</span> | <span class="math inline">\(O(1)\)</span> | 不稳定 | |<br />
-| 简单选择排序 | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(1)\)</span> | 不稳定 | 可以 |<br />
-| 堆排序 | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(1)\)</span> | 不稳定 | 可以 |<br />
-| 冒泡排序 | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n)\)</span> | <span class="math inline">\(O(1)\)</span> | 稳定 | 可以 |<br />
-| 快速排序 | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | 不稳定 | 可以 |<br />
-| 归并排序 | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(n)\)</span> | 稳定 | |</p>
-<h2 id="直接插入排序">直接插入排序</h2>
-<p>在插入第i个记录时，<span class="math inline">\(R_1,R_2,...,R_{i-1}\)</span> 已经排好序，这时将<span class="math inline">\(R_i\)</span>的关键字<span class="math inline">\(k_i\)</span>依次与关键字<span class="math inline">\(k_{i-1},k_{i-2}\)</span>等进行比较，从而找到应该插入的位置并将<span class="math inline">\(R_i\)</span>插入，插入位置及其后的记录依次向后移动。 | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 | | :----: | :----: | :----: | :----: | :----: | :----: | | 直接插入排序 | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n)\)</span> | <span class="math inline">\(O(1)\)</span> | 稳定 |</p>
-<h2 id="希尔排序了解">希尔排序（了解）</h2>
+    \end{cases}</script><h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><div class="table-container">
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">排序算法</th>
-<th style="text-align: center;">平均时间复杂度</th>
-<th style="text-align: center;">最坏时间复杂度</th>
-<th style="text-align: center;">最好时间复杂度</th>
-<th style="text-align: center;">空间复杂度</th>
-<th style="text-align: center;">稳定性</th>
+<tr>
+<th style="text-align:center">排序算法</th>
+<th style="text-align:center">平均时间复杂度</th>
+<th style="text-align:center">最坏时间复杂度</th>
+<th style="text-align:center">最好时间复杂度</th>
+<th style="text-align:center">空间复杂度</th>
+<th style="text-align:center">稳定性</th>
+<th style="text-align:center">归位</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;">希尔排序</td>
-<td style="text-align: center;"><span class="math inline">\(O(n^{1.3})\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(n^2)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(n)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(1)\)</span></td>
-<td style="text-align: center;">不稳定</td>
+<tr>
+<td style="text-align:center">直接插入排序</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">稳定</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">希尔排序</td>
+<td style="text-align:center">$O(n^{1.3})$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">不稳定</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">简单选择排序</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">不稳定</td>
+<td style="text-align:center">可以</td>
+</tr>
+<tr>
+<td style="text-align:center">堆排序</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">不稳定</td>
+<td style="text-align:center">可以</td>
+</tr>
+<tr>
+<td style="text-align:center">冒泡排序</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">稳定</td>
+<td style="text-align:center">可以</td>
+</tr>
+<tr>
+<td style="text-align:center">快速排序</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">不稳定</td>
+<td style="text-align:center">可以</td>
+</tr>
+<tr>
+<td style="text-align:center">归并排序</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">稳定</td>
 </tr>
 </tbody>
 </table>
-<h2 id="简单选择排序">简单选择排序</h2>
-<p>通过<span class="math inline">\(n-1(1\le i\le n)\)</span>在次关键字之间的比较，从<span class="math inline">\(n-i+1\)</span>个记录中选出关键字最小的记录，并和第i个记录进行交换</p>
-<p>每次遍历找到最小元素放在第一个 | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 | | :----: | :----: | :----: | :----: | :----: | :----: | | 简单选择排序 | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(1)\)</span> | 不稳定 |</p>
-<h2 id="堆排序">堆排序</h2>
-<p>可以进行归位 | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 | | :----: | :----: | :----: | :----: | :----: | :----: | | 堆排序 | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(nlog_2n)\)</span> | <span class="math inline">\(O(1)\)</span> | 不稳定 | ## 冒泡排序 可以进行归位 | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 | | :----: | :----: | :----: | :----: | :----: | :----: | | 冒泡排序 | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n^2)\)</span> | <span class="math inline">\(O(n)\)</span> | <span class="math inline">\(O(1)\)</span> | 稳定 | ## 快速排序 分治的思想</p>
+</div>
+<h2 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h2><p>在插入第i个记录时，$R_1,R_2,…,R_{i-1}$ 已经排好序，这时将$R_i$的关键字$k_i$依次与关键字$k_{i-1},k_{i-2}$等进行比较，从而找到应该插入的位置并将$R_i$插入，插入位置及其后的记录依次向后移动。<br> | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 |<br> | :——: | :——: | :——: | :——: | :——: | :——: |<br> | 直接插入排序 | $O(n^2)$ | $O(n^2)$ | $O(n)$ | $O(1)$ | 稳定 | </p>
+<h2 id="希尔排序（了解）"><a href="#希尔排序（了解）" class="headerlink" title="希尔排序（了解）"></a>希尔排序（了解）</h2><div class="table-container">
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">排序算法</th>
-<th style="text-align: center;">平均时间复杂度</th>
-<th style="text-align: center;">最坏时间复杂度</th>
-<th style="text-align: center;">最好时间复杂度</th>
-<th style="text-align: center;">空间复杂度</th>
-<th style="text-align: center;">稳定性</th>
+<tr>
+<th style="text-align:center">排序算法</th>
+<th style="text-align:center">平均时间复杂度</th>
+<th style="text-align:center">最坏时间复杂度</th>
+<th style="text-align:center">最好时间复杂度</th>
+<th style="text-align:center">空间复杂度</th>
+<th style="text-align:center">稳定性</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;">快速排序</td>
-<td style="text-align: center;"><span class="math inline">\(O(nlog_2n)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(n^2)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(nlog_2n)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(nlog_2n)\)</span></td>
-<td style="text-align: center;">不稳定</td>
+<tr>
+<td style="text-align:center">希尔排序</td>
+<td style="text-align:center">$O(n^{1.3})$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">不稳定</td>
 </tr>
 </tbody>
 </table>
-<h2 id="归并排序">归并排序</h2>
+</div>
+<h2 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h2><p>通过$n-1(1\le i\le n)$在次关键字之间的比较，从$n-i+1$个记录中选出关键字最小的记录，并和第i个记录进行交换</p>
+<p>每次遍历找到最小元素放在第一个<br> | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 |<br> | :——: | :——: | :——: | :——: | :——: | :——: |<br> | 简单选择排序 | $O(n^2)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | 不稳定 | </p>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>可以进行归位<br> | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 |<br> | :——: | :——: | :——: | :——: | :——: | :——: |<br> | 堆排序 | $O(nlog_2n)$ | $O(nlog_2n)$ | $O(nlog_2n)$ | $O(1)$ | 不稳定 | </p>
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>可以进行归位<br> | 排序算法 | 平均时间复杂度 | 最坏时间复杂度 | 最好时间复杂度 | 空间复杂度 | 稳定性 |<br> | :——: | :——: | :——: | :——: | :——: | :——: |<br> | 冒泡排序 | $O(n^2)$ | $O(n^2)$ | $O(n)$ | $O(1)$ | 稳定 | </p>
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>分治的思想</p>
+<div class="table-container">
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">排序算法</th>
-<th style="text-align: center;">平均时间复杂度</th>
-<th style="text-align: center;">最坏时间复杂度</th>
-<th style="text-align: center;">最好时间复杂度</th>
-<th style="text-align: center;">空间复杂度</th>
-<th style="text-align: center;">稳定性</th>
+<tr>
+<th style="text-align:center">排序算法</th>
+<th style="text-align:center">平均时间复杂度</th>
+<th style="text-align:center">最坏时间复杂度</th>
+<th style="text-align:center">最好时间复杂度</th>
+<th style="text-align:center">空间复杂度</th>
+<th style="text-align:center">稳定性</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;">归并排序</td>
-<td style="text-align: center;"><span class="math inline">\(O(nlog_2n)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(nlog_2n)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(nlog_2n)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(O(n)\)</span></td>
-<td style="text-align: center;">稳定</td>
+<tr>
+<td style="text-align:center">快速排序</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(n^2)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">不稳定</td>
 </tr>
 </tbody>
 </table>
+</div>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">排序算法</th>
+<th style="text-align:center">平均时间复杂度</th>
+<th style="text-align:center">最坏时间复杂度</th>
+<th style="text-align:center">最好时间复杂度</th>
+<th style="text-align:center">空间复杂度</th>
+<th style="text-align:center">稳定性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">归并排序</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(nlog_2n)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">稳定</td>
+</tr>
+</tbody>
+</table>
+</div>
 
       
     </div>
